@@ -11,7 +11,7 @@ const WhyUs = () => {
     }
   return (
     <div className="xl:container mx-auto">
-        <div class="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between">
             {content}
         </div>
     </div>
