@@ -1,7 +1,6 @@
 .hero-p {
   color: var(--black, #2e2e2e);
   font-family: "DM Sans", sans-serif;
-  font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 86px; /* 119.444% */
@@ -17,9 +16,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "DM Sans", sans-serif;
-  font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 86px;
-  letter-spacing: -1.44px;
+  letter-spacing: -1.3px;
 }
