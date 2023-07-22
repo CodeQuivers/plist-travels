@@ -4,10 +4,9 @@ import { BiSolidCalendar } from "react-icons/bi";
 
 const SearchTour = () => {
   return (
-    <div className="xl:container mx-auto mt-20">
+    <div className="xl:container mx-auto mt-20 px-12">
     <div
       className="
-        mx-8
         lg:mx-0
         border-[1px]
         rounded-[24px]
