@@ -28,3 +28,8 @@
   transition: all .5s ease;
   -webkit-transition: all .5s ease;
 }
+
+.tour-bg{
+background: linear-gradient(92deg, #0E55B1 0%, #169FC3 100%);
+box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
+}
