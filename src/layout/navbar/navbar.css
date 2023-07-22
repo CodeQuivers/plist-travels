@@ -1,0 +1,39 @@
+.btn-1 {
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid var(--neutrals-6, #e6e8ec);
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.btn-2 {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--neutrals-6, #e6e8ec);
+  background: #fff;
+}
+
+.btn-3 {
+  display: inline-flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  color: var(--neutrals-8, #fcfcfd);
+  text-align: center;
+  /* Button 1 */
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+}
