@@ -7,11 +7,11 @@ import CardWhyUs from './CardWhyUs';
 const WhyUs = () => {
     let content =null;
     if (whyAs){
-        content = whyAs.map(obj=><CardWhyUs cardInfo={obj}/>)
+        content = whyAs.map((obj, idx)=><CardWhyUs key={idx} cardInfo={obj}/>)
     }
   return (
     <div className="xl:container mx-auto">
-        <div class="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between">
             {content}
         </div>
     </div>

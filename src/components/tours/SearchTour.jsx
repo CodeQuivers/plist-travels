@@ -32,7 +32,7 @@ const SearchTour = () => {
         "
       >
         <form action="">
-          <div class="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
+          <div className="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
             {/* destination input */}
             <div className="
             w-[265px]
