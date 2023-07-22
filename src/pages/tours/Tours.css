@@ -1,8 +1,30 @@
-.search-now-button-bg{
-    background: linear-gradient(92deg, #0E55B1 0%, #169FC3 100%);
+.search-now-button-bg {
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
 }
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+
+.whyUsCard {
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
+
+  /* Shadow */
+  box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
+}
+
+.whyUsCard:hover h1{
+  color: #141416;
+}
+
+.whyUsCard:hover p{
+  color: #777E90;
+}
+
+.whyUsCard:hover a{
+  color: #1665C8;
+  cursor: pointer;
+}
+
+.whyUsCard:hover{
+  border: 1.18px solid #1665C8;
+  background: transparent;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
 }

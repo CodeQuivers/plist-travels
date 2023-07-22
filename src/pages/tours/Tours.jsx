@@ -1,15 +1,16 @@
 import React from 'react'
 import SearchTour from '../../components/tours/SearchTour'
 import './Tours.css'
+import Divider from '../../components/tours/Divider'
+import WhyUs from '../../components/tours/WhyUs'
 
 const Tours = () => {
   return (
-    <div className="
-    xl:container
-    mx-auto
-    ">
-        <SearchTour/>
-    </div>
+    <>
+    <SearchTour/>
+    <Divider/>
+    <WhyUs/>
+    </>
   )
 }
 
