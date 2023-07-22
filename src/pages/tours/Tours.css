@@ -1,0 +1,8 @@
+.search-now-button-bg{
+    background: linear-gradient(92deg, #0E55B1 0%, #169FC3 100%);
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
