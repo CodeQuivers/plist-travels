@@ -38,3 +38,11 @@ box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
   border: none;
   padding: 0;
 }
+.blue-border-with-radius{
+  border-radius: 16px;
+  border: 1px solid rgb(14, 85, 177);
+}
+.gray-border{
+  border-radius: 5px;
+  border: 1px solid #E6E8EC;
+}
