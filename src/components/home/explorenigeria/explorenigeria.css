@@ -111,3 +111,50 @@
   font-weight: 600;
   line-height: 20px; /* 166.667% */
 }
+
+.explore-nigeria-card1 {
+  padding: 20.893px;
+  gap: 16.714px;
+  border-radius: 0px 0px 16.714px 16.714px;
+  background: var(--neutrals-8, #fcfcfd);
+}
+
+.explore-nigeria-date1 {
+  color: var(--neutrals-4, #777e90);
+  font-size: 12.536px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.893px; /* 166.667% */
+}
+
+.explore-nigeria-name1 {
+  color: var(--neutrals-1, #141416);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.explore-nigera-location1 {
+  font-family: "Poppins", sans-serif;
+  color: var(--neutrals-3, #353945);
+  font-size: 12.536px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.893px; /* 166.667% */
+}
+
+.explore-nigeria-price1 {
+  border-radius: 4.179px;
+  border: 2.089px solid var(--primary-4, #58c27d);
+  padding: 8.357px 8.357px 6.268px 8.357px;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-4, #58c27d);
+  text-align: center;
+  font-size: 12.536px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.893px; /* 166.667% */
+}
