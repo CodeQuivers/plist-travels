@@ -7,53 +7,55 @@ import vast from "../../../assets/image/home/Vast.png";
 const ExploreTheWorld = () => {
   return (
     <div className="h-[463px] my-[100px]">
-      <div className="flex flex-col items-center">
-        <h1 className="explore-h1">Explore the world with Us</h1>
-        <p className="explore-p1 w-[576px] mt-[12px]">
-          Experience cost effective popular destinations, flights, unique
-          attractions and more
-        </p>
-      </div>
-
-      <div className="h-[291px] flex gap-[25px] mx-[135px] mt-[40px] ">
-        <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
-          <img src={travel} alt="" />
-          <h1 className="card-h1">Travel with Ease</h1>
-          <p className="card-p">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
+      <div className="mx-[135px]">
+        <div className="flex flex-col items-center">
+          <h1 className="explore-h1">Explore the world with Us</h1>
+          <p className="explore-p1 w-[576px] mt-[12px]">
+            Experience cost effective popular destinations, flights, unique
+            attractions and more
           </p>
-          <h2 className="card-h2">Explore</h2>
         </div>
 
-        <div className="card-alternative  border-blue-500 border-2 p-[24px] flex flex-col items-center gap-[12px] ">
-          <img src={support} alt="" />
-          <h1 className="card-a-h1">Trusted Support</h1>
-          <p className="card-a-p">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <h2 className="card-a-h2">Contact us</h2>
-        </div>
+        <div className="h-[291px] flex gap-[25px] mt-[40px] ">
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+            <img src={travel} alt="" />
+            <h1 className="card-h1">Travel with Ease</h1>
+            <p className="card-p">
+              Excepteur sint occae cupidatat non proident, sunt in culpa qui
+              officia.
+            </p>
+            <h2 className="card-h2">Explore</h2>
+          </div>
 
-        <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
-          <img src={vast} alt="" />
-          <h1 className="card-h1">Vast Selection</h1>
-          <p className="card-p">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <h2 className="card-h2">Book Now</h2>
-        </div>
+          <div className="card-alternative  border-blue-500 border-2 p-[24px] flex flex-col items-center gap-[12px] ">
+            <img src={support} alt="" />
+            <h1 className="card-a-h1">Trusted Support</h1>
+            <p className="card-a-p">
+              Excepteur sint occae cupidatat non proident, sunt in culpa qui
+              officia.
+            </p>
+            <h2 className="card-a-h2">Contact us</h2>
+          </div>
 
-        <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
-          <img src={partner} alt="" />
-          <h1 className="card-h1">Partner With Us </h1>
-          <p className="card-p">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <h2 className="card-h2">Become an agent</h2>
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+            <img src={vast} alt="" />
+            <h1 className="card-h1">Vast Selection</h1>
+            <p className="card-p">
+              Excepteur sint occae cupidatat non proident, sunt in culpa qui
+              officia.
+            </p>
+            <h2 className="card-h2">Book Now</h2>
+          </div>
+
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+            <img src={partner} alt="" />
+            <h1 className="card-h1">Partner With Us </h1>
+            <p className="card-p">
+              Excepteur sint occae cupidatat non proident, sunt in culpa qui
+              officia.
+            </p>
+            <h2 className="card-h2">Become an agent</h2>
+          </div>
         </div>
       </div>
     </div>

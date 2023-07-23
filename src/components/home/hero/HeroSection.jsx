@@ -13,7 +13,7 @@ const HeroSection = () => {
           </h1>
         </div>
         <div>
-          <img src={heroImg} alt="" className="w-[430px] h-[430px] ml-[8px]" />
+          <img src={heroImg} alt="" className="w-[430px] h-[430px] " />
         </div>
       </div>
     </div>

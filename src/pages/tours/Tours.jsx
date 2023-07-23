@@ -6,17 +6,18 @@ import WhyUs from '../../components/tours/WhyUs'
 import UpiCamTravel from '../../components/tours/UpiCamTravel'
 import WishList from '../../components/tours/wish_list/WishList'
 
+
 const Tours = () => {
   return (
     <>
-    <SearchTour/>
-    <Divider/>
-    <WhyUs/>
-    {/* <PlaceForStories/> */}
-    <UpiCamTravel/>
-    <WishList/>
+      <SearchTour />
+      <Divider />
+      <WhyUs />
+      {/* <PlaceForStories/> */}
+      <UpiCamTravel />
+      <WishList />
     </>
-  )
-}
+  );
+};
 
-export default Tours
+export default Tours;
