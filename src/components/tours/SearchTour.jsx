@@ -1,5 +1,4 @@
 import { FaBed } from "react-icons/fa";
-import { BiSolidCalendar } from "react-icons/bi";
 
 const SearchTour = () => {
   return (

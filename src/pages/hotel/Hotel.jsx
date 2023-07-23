@@ -1,3 +1,5 @@
+import HotelFaq from "../../components/hotel/HotelFaq";
+import HotelBanner from "../../components/hotel/hotelBanner/HotelBanner";
 import HotelSearch from "../../components/hotel/hotelSearch/HotelSearch";
 import HotelExploreCards from "../../components/hotel/landingCards/HotelExploreCards";
 import NearLogos from "../../components/hotel/landingCards/NearLogos";
@@ -13,6 +15,7 @@ const Hotel = () => {
       <HotelSearch />
       {/* hotel explore*/}
       <HotelExploreCards />
+      <HotelBanner />
       {/* Says Near Logos */}
       <NearLogos />
       {/* explore a variety of stays*/}
@@ -21,6 +24,8 @@ const Hotel = () => {
       <WishListItems />
       {/* search accordion */}
       <SearchAccordion />
+      {/* frequently asked question */}
+      <HotelFaq />
     </section>
   );
 };

@@ -9,18 +9,21 @@ const Accordion = ({ accordionItems }) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
   return (
-    <div className="space-y-2">
+    <div className="space-y-4 max-w-sm ">
       {accordionItems.map((item, index) => (
         <div
           key={index}
-          className={`border rounded-lg ${
-            index === activeIndex ? "border-[#0F58B2] " : ""
+          className={`border max-w-sm  rounded-lg ${
+            index === activeIndex ? "border-[#0F58B2] " : "border-transparent"
           }`}
         >
-          <div className="flex gap-1 px-3 items-center rounded-t-lg  focus:outline-none ">
+          <div
+            onClick={() => handleClick(index)}
+            className="flex gap-1 px-3 items-center cursor-pointer rounded-t-lg  focus:outline-none "
+          >
             {index === activeIndex ? (
               <img
-                className="duration-300 ease-in-out transition-all"
+                className="duration-300  ease-in-out transition-all"
                 src={accordionMinusImg}
                 alt=""
               />
@@ -33,10 +36,7 @@ const Accordion = ({ accordionItems }) => {
               </span>
             )}
 
-            <button
-              className="w-full text-left px-4 py-2 text-lg  font-medium "
-              onClick={() => handleClick(index)}
-            >
+            <button className="w-full  text-left px-4 py-2 font-semibold ">
               {item.title}
             </button>
           </div>

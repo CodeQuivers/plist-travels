@@ -4,6 +4,7 @@ import Home from "../components/home/Home";
 import Tours from "../pages/tours/Tours";
 import Flight from "../pages/flight/Flight";
 import Transfer from "../pages/transfer/Transfer";
+import Hotel from "../pages/hotel/Hotel";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "transfer",
         element: <Transfer />,
+      },
+      {
+        path: "/hotel",
+        element: <Hotel />,
       },
     ],
   },
