@@ -1,16 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
-// import App from "../App";
 import Main from "../layout/Main";
-import Home from "../components/home/Home";
 import Tours from "../pages/tours/Tours";
 import Flight from "../pages/flight/Flight";
+import Home from "../pages/home/Home";
+import Transfer from "../pages/transfer/Transfer";
+import Hotel from "../pages/hotel/Hotel";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    children:[
+    children: [
       {
         path: "/",
         element: <Home />,
@@ -20,10 +21,18 @@ export const router = createBrowserRouter([
         element: <Flight />,
       },
       {
-        path:'tours',
-        element:<Tours/>
-      }
-    ]
+        path: "tours",
+        element: <Tours />,
+      },
+      {
+        path: "transfer",
+        element: <Transfer />,
+      },
+      {
+        path: "/hotel",
+        element: <Hotel />,
+      },
+    ],
   },
 ]);
 

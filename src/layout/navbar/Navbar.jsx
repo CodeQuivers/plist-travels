@@ -7,7 +7,7 @@ import subMenu from "../../assets/image/navbar/align-justify.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#EBF3FB] h-[92px]">
+    <div className="bg-[#EBF3FB] h-[92px] sticky top-0 z-50">
       <div className="mx-auto py-[35px] flex items-center justify-center ">
         <div>
           <img src={logo} alt="" />
