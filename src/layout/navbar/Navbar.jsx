@@ -13,11 +13,11 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </div>
         <div className="flex gap-[23px] text-[#777E90] ml-[127px]">
-          <Link to="">Home</Link>
-          <Link to="">Hotel/Stays</Link>
-          <Link to="">Flight</Link>
-          <Link to="">Tours</Link>
-          <Link to="">Transfer</Link>
+          <Link to="/">Home</Link>
+          <Link to="/hotel">Hotel/Stays</Link>
+          <Link to="/flight">Flight</Link>
+          <Link to="/tours">Tours</Link>
+          <Link to="/transfer">Transfer</Link>
         </div>
         <div className="flex gap-[24px] ml-[31px] items-center">
           <div className=" btn-1 w-[116px] h-[40px] ">
