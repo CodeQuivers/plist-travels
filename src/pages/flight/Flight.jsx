@@ -1,24 +1,13 @@
-import Select from "react-dropdown-select";
 import flightFrom from "../../assets/image/flight/icons/FlightFrom.png";
 import depature from "../../assets/image/flight/icons/depature.png";
 import flightTo from "../../assets/image/flight/icons/flightTo.png";
 import returnCalender from "../../assets/image/flight/icons/return-calender.png";
-
-const options = [
-  {
-    value: 1,
-    label: "Leanne Graham",
-  },
-  {
-    value: 2,
-    label: "Ervin Howell",
-  },
-];
+import DropDown from "../../components/flight/DropDown";
 
 const Flight = () => {
   return (
     <div className="w-[1170px] mx-auto">
-      <div className="h-[416px] pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
+      <div className="h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
         <div className="inline-flex items-start gap-7">
           <div className="flex items-center gap-2">
             <input type="radio" name="" id="" />
@@ -92,37 +81,25 @@ const Flight = () => {
 
         {/*  */}
         <div>
-          <div className="mt-5 flex">
+          <div className="mt-5 flex gap-2">
             <div className="w-[265px] pt-[2px] pr-7">
-              <p>Flying From</p>
-              <div>
-                <Select
-                  className="mt-2 pl-10 w-[271px] border-2 border-gray-300 h-12 rounded"
-                  options={options}
-                  placeholder="Delhi and NCR, India"
-                />
-              </div>
+              <p>Traveler</p>
+              <DropDown />
             </div>
             <div className="w-[265px] pt-[2px] pr-7">
-              <p>Flying From</p>
-              <div>
-                <Select
-                  style={{
-                    border: "1px solid red",
-                    borderRadius: "5px",
-                    color: "blue",
-                    fontSize: "16px",
-                  }}
-                  className="mt-2 pl-10 w-[243px] border-red-700 h-12 rounded"
-                  options={options}
-                  placeholder="Delhi and NCR, India"
-                />
-              </div>
+              <p>Coach</p>
+              <DropDown />
+            </div>
+            <div className="flex items-end">
+              <input
+                className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
+                type="submit"
+                value="Search Now"
+              />
             </div>
           </div>
         </div>
       </div>
-      <h1>test</h1>
     </div>
   );
 };
