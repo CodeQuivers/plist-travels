@@ -7,7 +7,7 @@ import vast from "../../../assets/image/home/Vast.png";
 const ExploreTheWorld = () => {
   return (
     <div className="h-[463px] my-[100px]">
-      <div className="mx-[135px]">
+      <div>
         <div className="flex flex-col items-center">
           <h1 className="explore-h1">Explore the world with Us</h1>
           <p className="explore-p1 w-[576px] mt-[12px]">
