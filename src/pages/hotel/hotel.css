@@ -1,0 +1,50 @@
+.defaultTextColor {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgba(40, 125, 250, 1) 0%,
+    rgba(14, 85, 177, 1) 0%,
+    #169fc3 100%
+  );
+}
+
+.defaultColor {
+  background: rgb(40, 125, 250);
+  background: linear-gradient(
+    90deg,
+    #287dfa 0%,
+    rgba(14, 85, 177, 1) 0%,
+    #169fc3 100%
+  );
+}
+
+.hotelBg {
+  transition: 1s;
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
+  border: 1px solid #0e55b100;
+}
+
+.hotelBg:hover {
+  transition: 1s;
+  background: white;
+  color: black;
+  border: 1px solid #1665c8;
+  cursor: pointer;
+}
+
+.hotelCardBg {
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
+  border-radius: 20px;
+  border: 1px solid #c8481600;
+  transition: 0.5s all;
+}
+
+.hotelCardBg:hover {
+  background: white;
+  color: black;
+  border: 1px solid #1665c8;
+  border-radius: 20px;
+  transition-duration: 1s;
+}
