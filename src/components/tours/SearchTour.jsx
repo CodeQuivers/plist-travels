@@ -1,6 +1,31 @@
+import { useState } from "react";
+import ReactDatePicker from "react-datepicker";
 import { FaBed } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+
+import bedBlackIcon from "../../assets/image/tours/icons/bed-black.svg";
+import calenderBlackIcon from "../../assets/image/tours/icons/calender-black.svg";
+import Select from "react-dropdown-select";
 
 const SearchTour = () => {
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
+
+  const options = [
+    {
+      value: 1,
+      label: "1 Room(s) - 1 Guest(s)",
+    },
+    {
+      value: 2,
+      label: "1 Room(s) - 2 Guest(s)",
+    },
+    {
+      value: 3,
+      label: "2 Room(s) - 4 Guest(s)",
+    },
+  ];
+
   return (
     <div className="xl:container mx-auto mt-20 px-12">
       <div
@@ -31,114 +56,103 @@ const SearchTour = () => {
           <form action="">
             <div className="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
               {/* destination input */}
-              <div
-                className="
-            w-[265px]
-            h-[86px]
-            "
-              >
+              <div className="w-[265px] h-[86px]">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
                   Destination
                 </label>
                 <div
                   className="
-              border-[1px]
-              rounded-[4px]
-              border-gray-200
-              px-5
-              py-2.5
-              flex 
-              justify-center
-              items-center
-              text-sm
-              "
+                    max-w-[265px]
+                    max-h-[42px]
+                    border-[1px]
+                    rounded-[4px]
+                    border-gray-200
+                    px-5
+                    py-2.5
+                    flex 
+                    justify-center
+                    items-center
+                    text-sm
+                  "
                 >
-                  <FaBed
-                    style={{ color: "#7B7B7B" }}
-                    className="
-                text-3xl
-                pr-1.5"
+                  {/* <FaBed style={{ color: "#7B7B7B" }} className=" text-3xl pr-1.5" /> */}
+                  <img
+                    src={bedBlackIcon}
+                    className="w-[20px] h-[14px] pr-1.5"
+                    alt=""
                   />
                   <input
-                    className="
-                    outline-none
-                  "
+                    className="outline-none p-0"
                     type="text"
                     placeholder="Delhi and NCR, India"
                   />
                 </div>
               </div>
-              <div
-                className="
-            w-[265px]
-            h-[86px]
-            "
-              >
+              <div className="w-[265px] h-[86px]">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
-                  Destination
+                  Travel Date
                 </label>
                 <div
                   className="
-              border-[1px]
-              rounded-[4px]
-              border-gray-200
-              px-5
-              py-2.5
-              flex 
-              justify-center
-              items-center
-              text-sm
-              "
-                >
-                  <FaBed
-                    style={{ color: "#7B7B7B" }}
-                    className="
-                text-3xl
-                pr-1.5"
-                  />
-                  <input
-                    className="
-                    outline-none
+                    max-w-[265px]
+                    max-h-[42px]
+                    border-[1px]
+                    rounded-[4px]
+                    border-gray-200
+                    px-5
+                    py-2.5
+                    flex 
+                    justify-center
+                    items-center
+                    text-sm
                   "
-                    type="text"
-                    placeholder="Delhi and NCR, India"
+                >
+                  {/* <FaCalendarAlt style={{ color: "#7B7B7B" }} className="text-2xl pr-1.5"/> */}
+                  <img
+                    src={calenderBlackIcon}
+                    className="w-[20px] h-[14px]  pr-1.5"
+                    alt=""
+                  />
+                  <ReactDatePicker
+                    selectsRange={true}
+                    startDate={startDate}
+                    endDate={endDate}
+                    onChange={(update) => {
+                      setDateRange(update);
+                    }}
+                    isClearable={true}
+                    placeholderText="2023/06/27 - 2023/06/29"
+                    todayButton="TODAY"
+                    monthsShown={2}
                   />
                 </div>
               </div>
-              <div
-                className="
-            w-[265px]
-            h-[86px]
-            "
-              >
+              <div className="w-[265px]h-[86px]">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
-                  Destination
+                  Passengers
                 </label>
                 <div
                   className="
-              border-[1px]
-              rounded-[4px]
-              border-gray-200
-              px-5
-              py-2.5
-              flex 
-              justify-center
-              items-center
-              text-sm
-              "
-                >
-                  <FaBed
-                    style={{ color: "#7B7B7B" }}
-                    className="
-                text-3xl
-                pr-1.5"
-                  />
-                  <input
-                    className="
-                    outline-none
+                    max-w-[265px]
+                    max-h-[42px]
+                    border-[1px]
+                    rounded-[4px]
+                    border-gray-200
+                    px-5
+                    py-2.5
+                    flex 
+                    justify-center
+                    items-center
+                    text-sm
                   "
-                    type="text"
-                    placeholder="Delhi and NCR, India"
+                >
+                  <Select
+                    style={{
+                      border: "none",
+                      padding: "0",
+                    }}
+                    options={options}
+                    placeholder="1 Room(s) - 1 Guest(s)"
                   />
                 </div>
               </div>

@@ -8,6 +8,7 @@ import WishList from '../../components/tours/wish_list/WishList'
 import SearchCheapCar from '../../components/tours/searchCheapCar/SearchCheapCar'
 import HotelFaq from '../../components/hotel/HotelFaq'
 import TourFaq from '../../components/tours/TourFaq'
+import PlaceForStories from '../../components/tours/PlaceForStories'
 
 
 const Tours = () => {
@@ -16,7 +17,7 @@ const Tours = () => {
       <SearchTour />
       <Divider />
       <WhyUs />
-      {/* <PlaceForStories/> */}
+      <PlaceForStories/>
       <UpiCamTravel />
       <WishList />
       <SearchCheapCar/>
