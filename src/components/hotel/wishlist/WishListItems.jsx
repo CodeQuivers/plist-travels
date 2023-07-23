@@ -12,7 +12,7 @@ const WishListItems = () => {
       </div>
       {/* wishlist items */}
       <div className="grid grid-cols-1 md:grid-cols-2  gap-8 justify-between">
-        <div className="hotelCardBg ">
+        <div className="wishlistBg ">
           <div className="relative ">
             <img
               className="rounded-t-[20px] w-[700px]"
@@ -33,7 +33,7 @@ const WishListItems = () => {
             <p className="text-sm font-medium text-white">Karineside</p>
           </div>
         </div>
-        <div className="hotelCardBg ">
+        <div className="wishlistBg ">
           <div className="relative ">
             <img
               className="rounded-t-[20px] w-[700px]"
