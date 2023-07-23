@@ -1,5 +1,3 @@
-import React from "react";
-
 import { WHY_US as whyAs } from "../../utils/Data/ToursData.js";
 import CardWhyUs from "./CardWhyUs";
 

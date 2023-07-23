@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Flight = () => {
   return (
-    <div className="w-[1170px] mx-auto">
+    <div>
       <div className="h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
         <div className="inline-flex items-start gap-7">
           <div className="flex items-center gap-2">
