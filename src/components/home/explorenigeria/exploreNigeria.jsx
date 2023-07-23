@@ -8,7 +8,7 @@ import heart from "../../../assets/image/home/Vector.png";
 
 const ExploreNigeria = () => {
   return (
-    <div className="mx-[137px] my-[100px]">
+    <div className="my-[100px]">
       <div>
         <h1 className="explore-nigeria-h1">Explore Nigeria </h1>
         <p className="explore-nigeria-p">Keep calm & travel on</p>
@@ -129,7 +129,7 @@ const ExploreNigeria = () => {
           <div className="explore-nigeria-card1 flex flex-col items-start h-[141px] w-[267px]">
             <div className="flex items-start ">
               <div>
-                <h3 className="explore-nigeria-name1">The grand resort</h3>
+                <h3 className="explore-nigeria-name1">The Sea View</h3>
                 <p className="explore-nigera-location1">Karineside</p>
               </div>
               <div>
@@ -148,6 +148,7 @@ const ExploreNigeria = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
