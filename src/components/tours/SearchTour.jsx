@@ -5,8 +5,8 @@ import { BiSolidCalendar } from "react-icons/bi";
 const SearchTour = () => {
   return (
     <div className="xl:container mx-auto mt-20 px-12">
-    <div
-      className="
+      <div
+        className="
         lg:mx-0
         border-[1px]
         rounded-[24px]
@@ -19,9 +19,9 @@ const SearchTour = () => {
         items-center
         bg-[#FCFCFD]
     "
-    >
-      <div
-        className="
+      >
+        <div
+          className="
             w-full
             py-5
             bg-white
@@ -29,19 +29,21 @@ const SearchTour = () => {
             justify-center
             items-center
         "
-      >
-        <form action="">
-          <div className="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
-            {/* destination input */}
-            <div className="
-            w-[265px]
-            h-[86px]
-            ">
-              <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
-                Destination
-              </label>
+        >
+          <form action="">
+            <div className="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
+              {/* destination input */}
               <div
                 className="
+            w-[265px]
+            h-[86px]
+            "
+              >
+                <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
+                  Destination
+                </label>
+                <div
+                  className="
               border-[1px]
               rounded-[4px]
               border-gray-200
@@ -52,31 +54,33 @@ const SearchTour = () => {
               items-center
               text-sm
               "
-              >
-                <FaBed
-                  style={{ color: "#7B7B7B" }}
-                  className="
+                >
+                  <FaBed
+                    style={{ color: "#7B7B7B" }}
+                    className="
                 text-3xl
                 pr-1.5"
-                />
-                <input
-                  className="
+                  />
+                  <input
+                    className="
                     outline-none
                   "
-                  type="text"
-                  placeholder="Delhi and NCR, India"
-                />
+                    type="text"
+                    placeholder="Delhi and NCR, India"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="
-            w-[265px]
-            h-[86px]
-            ">
-              <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
-                Destination
-              </label>
               <div
                 className="
+            w-[265px]
+            h-[86px]
+            "
+              >
+                <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
+                  Destination
+                </label>
+                <div
+                  className="
               border-[1px]
               rounded-[4px]
               border-gray-200
@@ -87,31 +91,33 @@ const SearchTour = () => {
               items-center
               text-sm
               "
-              >
-                <FaBed
-                  style={{ color: "#7B7B7B" }}
-                  className="
+                >
+                  <FaBed
+                    style={{ color: "#7B7B7B" }}
+                    className="
                 text-3xl
                 pr-1.5"
-                />
-                <input
-                  className="
+                  />
+                  <input
+                    className="
                     outline-none
                   "
-                  type="text"
-                  placeholder="Delhi and NCR, India"
-                />
+                    type="text"
+                    placeholder="Delhi and NCR, India"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="
-            w-[265px]
-            h-[86px]
-            ">
-              <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
-                Destination
-              </label>
               <div
                 className="
+            w-[265px]
+            h-[86px]
+            "
+              >
+                <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
+                  Destination
+                </label>
+                <div
+                  className="
               border-[1px]
               rounded-[4px]
               border-gray-200
@@ -122,40 +128,44 @@ const SearchTour = () => {
               items-center
               text-sm
               "
-              >
-                <FaBed
-                  style={{ color: "#7B7B7B" }}
-                  className="
+                >
+                  <FaBed
+                    style={{ color: "#7B7B7B" }}
+                    className="
                 text-3xl
                 pr-1.5"
-                />
-                <input
-                  className="
+                  />
+                  <input
+                    className="
                     outline-none
                   "
-                  type="text"
-                  placeholder="Delhi and NCR, India"
-                />
+                    type="text"
+                    placeholder="Delhi and NCR, India"
+                  />
+                </div>
               </div>
-            </div>
-            {/* search button */}
-            
-            <div className="  w-[265px]
-            h-[86px] flex flex-column justify-center items-end ">
-              <button
-              className="
+              {/* search button */}
+
+              <div
+                className="  w-[265px]
+            h-[86px] flex flex-column justify-center items-end "
+              >
+                <button
+                  className="
               px-20 
               py-3.5 
               text-white
               rounded
               search-now-button-bg
               "
-              >Search Now</button>
+                >
+                  Search Now
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
