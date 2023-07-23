@@ -9,6 +9,7 @@ import SearchCheapCar from '../../components/tours/searchCheapCar/SearchCheapCar
 import HotelFaq from '../../components/hotel/HotelFaq'
 import TourFaq from '../../components/tours/TourFaq'
 import PlaceForStories from '../../components/tours/PlaceForStories'
+import TourSearchResult from '../../components/tours/tourSearchResult/TourSearchResult'
 
 
 const Tours = () => {
@@ -16,12 +17,14 @@ const Tours = () => {
     <>
       <SearchTour />
       <Divider />
-      <WhyUs />
+      {/* <WhyUs />
       <PlaceForStories/>
       <UpiCamTravel />
       <WishList />
       <SearchCheapCar/>
-      <TourFaq/>
+      <TourFaq/> */}
+      <TourSearchResult/>
+
     </>
   );
 };
