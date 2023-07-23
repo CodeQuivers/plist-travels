@@ -56,14 +56,14 @@ const SearchTour = () => {
           <form action="">
             <div className="w-full flex flex-wrap justify-center md:space-x-0 gap-8 lg:gap-0 lg:space-x-20">
               {/* destination input */}
-              <div className="w-[265px] h-[86px]">
+              <div className="w-[265px] h-[86px] flex flex-col justify-end">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
                   Destination
                 </label>
                 <div
                   className="
-                    max-w-[265px]
-                    max-h-[42px]
+                  w-[265px]
+                    h-[42px]
                     border-[1px]
                     rounded-[4px]
                     border-gray-200
@@ -88,14 +88,14 @@ const SearchTour = () => {
                   />
                 </div>
               </div>
-              <div className="w-[265px] h-[86px]">
+              <div className="w-[265px] h-[86px] flex flex-col justify-end">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
                   Travel Date
                 </label>
                 <div
                   className="
-                    max-w-[265px]
-                    max-h-[42px]
+                    w-[265px]
+                    h-[42px]
                     border-[1px]
                     rounded-[4px]
                     border-gray-200
@@ -127,14 +127,14 @@ const SearchTour = () => {
                   />
                 </div>
               </div>
-              <div className="w-[265px]h-[86px]">
+              <div className="w-[265px]h-[86px] flex flex-col justify-end">
                 <label htmlFor="" className="block mb-2.5 fs-base fw-medium">
                   Passengers
                 </label>
                 <div
                   className="
-                    max-w-[265px]
-                    max-h-[42px]
+                    w-[265px]
+                    h-[42px]
                     border-[1px]
                     rounded-[4px]
                     border-gray-200
@@ -158,21 +158,22 @@ const SearchTour = () => {
               </div>
               {/* search button */}
 
-              <div
-                className="  w-[265px]
-            h-[86px] flex flex-column justify-center items-end "
-              >
-                <button
+              <div className="w-[265px] h-[86px] flex flex-col justify-end ">
+              
+                  <button
                   className="
-              px-20 
-              py-3.5 
-              text-white
-              rounded
-              search-now-button-bg
-              "
+                  w-[250px]
+                  h-[42px]
+                    px-20 
+                    text-white
+                    rounded
+                    search-now-button-bg
+                    text-center
+                  "
                 >
                   Search Now
                 </button>
+                
               </div>
             </div>
           </form>
