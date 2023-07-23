@@ -4,12 +4,13 @@ import flightTo from "../../assets/image/flight/icons/flightTo.png";
 import returnCalender from "../../assets/image/flight/icons/return-calender.png";
 import DropDown from "../../components/flight/DropDown";
 import Divider from "../../components/tours/Divider";
-import Card1 from "../../components/flight/Card1";
 import globalWorld from "../../assets/image/flight/icons/globalWorld.svg";
-import suport from "../../assets/image/flight/icons/Suport.svg";
-import vast from "../../assets/image/flight/icons/Vast.svg";
-import partner from "../../assets/image/flight/icons/Partner.svg";
+// import suport from "../../assets/image/flight/icons/Suport.svg";
+// import vast from "../../assets/image/flight/icons/Vast.svg";
+// import partner from "../../assets/image/flight/icons/Partner.svg";
+
 import { Link } from "react-router-dom";
+import Banner from "../../components/flight/Banner";
 
 const Flight = () => {
   return (
@@ -163,6 +164,8 @@ const Flight = () => {
           <Link>Explore</Link>
         </div>
       </div>
+      {/* banner */}
+      <Banner />
     </div>
   );
 };
