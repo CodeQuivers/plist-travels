@@ -16,7 +16,7 @@ const ExploreTheWorld = () => {
           </p>
         </div>
 
-        <div className="h-[291px] flex gap-[25px] mt-[40px] ">
+        <div className="h-[291px] flex flex-col lg:flex-row gap-[25px] mt-[40px] ">
           <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
             <img src={travel} alt="" />
             <h1 className="card-h1">Travel with Ease</h1>

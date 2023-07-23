@@ -27,7 +27,7 @@ const ExploreNigeria = () => {
       </div>
 
       {/* Card Section */}
-      <div className="h-[381px]  flex items-center gap-[33px] ">
+      <div className="h-[381px] w-[265px]  flex flex-col lg:flex-row items-center gap-[33px] ">
         {/* card 1 */}
         <div className="flex flex-col  rounded-lg">
           <div className="relative">
@@ -148,7 +148,6 @@ const ExploreNigeria = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
