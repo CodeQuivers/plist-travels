@@ -48,3 +48,47 @@
   border-radius: 20px;
   transition-duration: 1s;
 }
+
+.wishlistBg {
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
+  border-radius: 20px;
+  border: 1px solid #c8481600;
+  transition: 0.5s all;
+}
+/* Optional custom styles for the DatePicker */
+.react-datepicker {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.react-datepicker__input-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: #fff;
+}
+/* custom-datepicker.css */
+.custom-datepicker {
+  /* Add your custom styles for the DatePicker component here */
+  /* For example: */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 16px;
+  color: #333;
+}
+.example-custom-input {
+  background: url("../../assets/image/hotel/calender-black.png.svg") no-repeat
+    right;
+  background-size: 20px;
+  width: 240px;
+  height: 24px;
+}
+.react-datepicker__input-container input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
