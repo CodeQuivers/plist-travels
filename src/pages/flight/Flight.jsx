@@ -3,6 +3,13 @@ import depature from "../../assets/image/flight/icons/depature.png";
 import flightTo from "../../assets/image/flight/icons/flightTo.png";
 import returnCalender from "../../assets/image/flight/icons/return-calender.png";
 import DropDown from "../../components/flight/DropDown";
+import Divider from "../../components/tours/Divider";
+import Card1 from "../../components/flight/Card1";
+import globalWorld from "../../assets/image/flight/icons/globalWorld.svg";
+import suport from "../../assets/image/flight/icons/Suport.svg";
+import vast from "../../assets/image/flight/icons/Vast.svg";
+import partner from "../../assets/image/flight/icons/Partner.svg";
+import { Link } from "react-router-dom";
 
 const Flight = () => {
   return (
@@ -98,6 +105,62 @@ const Flight = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <Divider />
+      {/* card */}
+      <div className="flex justify-center gap-6">
+        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
+          <img
+            className="pb-[15px] w-[69px]"
+            src={globalWorld}
+            alt="globalWorld"
+          />
+          <h3 className="pb-[10px]">Travel with Ease</h3>
+          <p className="pb-5">
+            Excepteur sint occae cupidatat non proident, sunt in culpa qui
+            officia.
+          </p>
+          <Link>Explore</Link>
+        </div>
+        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
+          <img
+            className="pb-[15px] w-[69px]"
+            src={globalWorld}
+            alt="globalWorld"
+          />
+          <h3 className="pb-[10px]">Travel with Ease</h3>
+          <p className="pb-5">
+            Excepteur sint occae cupidatat non proident, sunt in culpa qui
+            officia.
+          </p>
+          <Link>Explore</Link>
+        </div>
+        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
+          <img
+            className="pb-[15px] w-[69px]"
+            src={globalWorld}
+            alt="globalWorld"
+          />
+          <h3 className="pb-[10px]">Travel with Ease</h3>
+          <p className="pb-5">
+            Excepteur sint occae cupidatat non proident, sunt in culpa qui
+            officia.
+          </p>
+          <Link>Explore</Link>
+        </div>
+        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
+          <img
+            className="pb-[15px] w-[69px]"
+            src={globalWorld}
+            alt="globalWorld"
+          />
+          <h3 className="pb-[10px]">Travel with Ease</h3>
+          <p className="pb-5">
+            Excepteur sint occae cupidatat non proident, sunt in culpa qui
+            officia.
+          </p>
+          <Link>Explore</Link>
         </div>
       </div>
     </div>
