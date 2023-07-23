@@ -1,3 +1,4 @@
+import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
 import HeroSection from "../../components/home/hero/HeroSection";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <HeroSection />
       <ExploreTheWorld />
+      <ExploreNigeria />
     </div>
   );
 };

@@ -3,8 +3,8 @@ import "./heroSection.css";
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex items-center mx-[135px]">
+    <div className="flex items-center">
+      <div className="flex items-center">
         <div className="w-auto h-[175px]">
           <h1 className="hero-p text-[70px]">
             Amazing{" "}
@@ -13,7 +13,7 @@ const HeroSection = () => {
           </h1>
         </div>
         <div>
-          <img src={heroImg} alt="" className="w-[430px] h-[430px] ml-[8px]" />
+          <img src={heroImg} alt="" className="w-[430px] h-[430px] " />
         </div>
       </div>
     </div>
