@@ -1,4 +1,3 @@
-import React from "react";
 import CardCamTravel from "./CardCamTravel";
 
 const UpiCamTravel = () => {

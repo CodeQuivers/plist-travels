@@ -1,5 +1,3 @@
-import React from "react";
-
 import wishListImg1 from "../../../assets/image/tours/wish_list/wishlist-01.png";
 
 
