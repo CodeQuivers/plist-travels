@@ -3,8 +3,8 @@ import "./heroSection.css";
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center">
-      <div className="flex items-center">
+    <div className="py-5">
+      <div className="flex items-center justify-between">
         <div className="w-auto h-[175px]">
           <h1 className="hero-p text-[70px]">
             Amazing{" "}
