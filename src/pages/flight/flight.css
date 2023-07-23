@@ -1,0 +1,4 @@
+.test::before {
+    content: url(../../assets/image/flight/icons/location.svg);
+    
+  }

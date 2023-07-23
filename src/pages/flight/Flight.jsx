@@ -1,171 +1,354 @@
-import flightFrom from "../../assets/image/flight/icons/FlightFrom.png";
-import depature from "../../assets/image/flight/icons/depature.png";
-import flightTo from "../../assets/image/flight/icons/flightTo.png";
-import returnCalender from "../../assets/image/flight/icons/return-calender.png";
-import DropDown from "../../components/flight/DropDown";
 import Divider from "../../components/tours/Divider";
-import globalWorld from "../../assets/image/flight/icons/globalWorld.svg";
+import landscapeImage from "../../assets/image/hotel/landscape.png";
+import landscape from "../../assets/image/flight/images/landscape 09.png";
+import location from "../../assets/image/flight/icons/location.svg";
+import countryFlight from "../../assets/image/flight/images/country-flight.jpeg";
+import worldFlight from "../../assets/image/flight/images/worldFlight.png";
+import "./flight.css";
 // import suport from "../../assets/image/flight/icons/Suport.svg";
 // import vast from "../../assets/image/flight/icons/Vast.svg";
 // import partner from "../../assets/image/flight/icons/Partner.svg";
-
-import { Link } from "react-router-dom";
-import Banner from "../../components/flight/Banner";
-
+import { FaRegHeart } from "react-icons/fa";
+// import { GiRoundStar } from "react-icons/gi";
+import Pagination from "../../components/flight/Pagination";
+import FlightForm from "../../components/flight/FlightForm";
+import Card1 from "../../components/flight/Card1";
+import HotelBanner from "../../components/hotel/hotelBanner/HotelBanner";
 const Flight = () => {
   return (
     <div>
-      <div className="h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
-        <div className="inline-flex items-start gap-7">
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>One way</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>Round-Trip</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>Direct Flight</p>
-          </div>
+      {/* flight form strat */}
+      <FlightForm />
+      {/* flight form end */}
+      <Divider />
+
+      {/* card 1 strat*/}
+      <Card1 />
+      {/* card 1 end*/}
+
+      {/* banner */}
+      <HotelBanner />
+      {/*  */}
+
+      <div className="mt-20 max-md:px-5 ">
+        {/* section title */}
+        <div className="my-10">
+          <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+            Explore The World For Nigeria
+          </h1>
         </div>
 
-        {/*  */}
-        <div className="mt-5 flex gap-2">
-          <div className="w-[265px] pt-[2px] pr-[26px]">
-            <p>Flying From</p>
-            <div className="relative">
-              <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={flightFrom} alt="flightFromIcon" className="w-5" />
-              </span>
-              <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border-2 border-gray-300 h-12 rounded"
-                placeholder="Delhi and NCR, India"
-              />
+        {/* section cards */}
+
+        <div className="mb-16 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-around">
+          <div className="col-span-2 group duration-300 ease-linear  transition-all rounded-3xl h-[380px]">
+            <div className="hotelCardBg h-full group-hover:bg-white">
+              <div className="relative h-[240px]">
+                <img className="h-full w-full" src={landscape} alt="" />
+                <div>
+                  <button
+                    type="button"
+                    className="absolute top-3 right-3 bg-white p-1 rounded-lg"
+                  >
+                    <FaRegHeart size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="flex my-5 justify-between items-center px-5">
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    Sweet Dreams
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    Karineside
+                  </p>
+                </div>
+                <div>
+                  <h3 className="border-2 px-2 py-1 rounded-md text-sm font-semibold group-hover:text-green-600 border-white group-hover:border-green-600 text-white">
+                    $548
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="w-[265px] pt-[2px] pr-[26px]">
-            <p>Flying To</p>
-            <div className="relative">
-              <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={flightTo} alt="flightFromIcon" className="w-5" />
-              </span>
-              <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border-2 border-gray-300 h-12 rounded"
-                placeholder="Delhi and NCR, India"
-              />
+          <div className="group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className="hotelCardBg h-full group-hover:bg-white ">
+              <div className="relative">
+                <img className="w-full" src={landscapeImage} alt="" />
+
+                <div>
+                  <button
+                    type="button"
+                    className="absolute top-3 right-3 bg-white p-1 rounded-lg"
+                  >
+                    <FaRegHeart size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="flex my-5 justify-between items-center px-5">
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    Sweet Dreams
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    Karineside
+                  </p>
+                </div>
+                <div>
+                  <h3 className="border-2 px-2 py-1 rounded-md text-sm font-semibold group-hover:text-green-600 border-white group-hover:border-green-600 text-white">
+                    $548
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="w-[265px] pt-[2px] pr-[26px]">
-            <p>Flying From</p>
-            <div className="relative">
-              <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={depature} alt="flightFromIcon" />
-              </span>
-              <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border-2 border-gray-300 h-12 rounded"
-                placeholder="Delhi and NCR, India"
-              />
-            </div>
-          </div>
-          <div className="w-[265px] pt-[2px] pr-[26px]">
-            <p>Flying From</p>
-            <div className="relative">
-              <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={returnCalender} alt="flightFromIcon" />
-              </span>
-              <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border-2 border-gray-300 h-12 rounded"
-                placeholder="Delhi and NCR, India"
-              />
+          <div className="group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className="hotelCardBg h-full group-hover:bg-white ">
+              <div className="relative">
+                <img className="w-full" src={landscapeImage} alt="" />
+
+                <div>
+                  <button
+                    type="button"
+                    className="absolute top-3 right-3 bg-white p-1 rounded-lg"
+                  >
+                    <FaRegHeart size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="flex my-5 justify-between items-center px-5">
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    Sweet Dreams
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    Karineside
+                  </p>
+                </div>
+                <div>
+                  <h3 className="border-2 px-2 py-1 rounded-md text-sm font-semibold group-hover:text-green-600 border-white group-hover:border-green-600 text-white">
+                    $548
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Hop On, Hop Off */}
+      <div className="mt-20 max-md:px-5">
+        {/* section title */}
+        <div className="my-10">
+          <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+            Says Near Logos
+          </h1>
+        </div>
+
+        {/* section cards */}
+
+        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-around">
+          {/* single card start */}
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="old-logo-color group duration-300 ease-linear  transition-all w-full rounded-3xl h-[380px]">
+            <div className=" ">
+              <div className="relative overflow-hidden rounded-t-3xl">
+                <img className="w-full h-[293px]" src={countryFlight} alt="" />
+              </div>
+              <div className="flex my-5 px-5 gap-2">
+                <img className="mb-4" src={location} alt="location" />
+                <div>
+                  <h4 className="text-white font-medium group-hover:text-black">
+                    USA
+                  </h4>
+                  <p className="text-xs group-hover:text-black font-medium text-white">
+                    $ 2546
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* single card end */}
+        </div>
+        {/* Pagination */}
+        <Pagination />
 
         {/*  */}
         <div>
-          <div className="mt-5 flex gap-2">
-            <div className="w-[265px] pt-[2px] pr-7">
-              <p>Traveler</p>
-              <DropDown />
+          {/* section title */}
+          <div className="my-10">
+            <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+              Your Wishlist Starts Here
+            </h1>
+          </div>
+          {/* section cards */}
+
+          {/* card strats */}
+          <div className="grid grid-cols-2 gap-8 justify-around">
+            <div className="w-[570px] h-[336px]">
+              <div className="h-[240px] relative">
+                <img className="h-full w-full" src={worldFlight} alt="" />
+                <div>
+                  <button
+                    type="button"
+                    className="absolute top-3 right-3 bg-white p-1 rounded-lg"
+                  >
+                    <FaRegHeart size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="old-logo-color p-5 text-white rounded-b-3xl">
+                <h1>Sweet Dreams</h1>
+                <p>Karineside</p>
+              </div>
             </div>
-            <div className="w-[265px] pt-[2px] pr-7">
-              <p>Coach</p>
-              <DropDown />
-            </div>
-            <div className="flex items-end">
-              <input
-                className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
-                type="submit"
-                value="Search Now"
-              />
+            <div className="w-[570px] h-[336px]">
+              <div className="h-[240px] relative">
+                <img className="h-full w-full" src={worldFlight} alt="" />
+                <div>
+                  <button
+                    type="button"
+                    className="absolute top-3 right-3 bg-white p-1 rounded-lg"
+                  >
+                    <FaRegHeart size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="old-logo-color p-5 text-white rounded-b-3xl">
+                <h1>Sweet Dreams</h1>
+                <p>Karineside</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <Divider />
-      {/* card */}
-      <div className="flex justify-center gap-6">
-        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
-          <img
-            className="pb-[15px] w-[69px]"
-            src={globalWorld}
-            alt="globalWorld"
-          />
-          <h3 className="pb-[10px]">Travel with Ease</h3>
-          <p className="pb-5">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <Link>Explore</Link>
-        </div>
-        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
-          <img
-            className="pb-[15px] w-[69px]"
-            src={globalWorld}
-            alt="globalWorld"
-          />
-          <h3 className="pb-[10px]">Travel with Ease</h3>
-          <p className="pb-5">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <Link>Explore</Link>
-        </div>
-        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
-          <img
-            className="pb-[15px] w-[69px]"
-            src={globalWorld}
-            alt="globalWorld"
-          />
-          <h3 className="pb-[10px]">Travel with Ease</h3>
-          <p className="pb-5">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <Link>Explore</Link>
-        </div>
-        <div className="flex-col flex rounded-2xl items-center w-[274px] old-logo-color p-6 text-white">
-          <img
-            className="pb-[15px] w-[69px]"
-            src={globalWorld}
-            alt="globalWorld"
-          />
-          <h3 className="pb-[10px]">Travel with Ease</h3>
-          <p className="pb-5">
-            Excepteur sint occae cupidatat non proident, sunt in culpa qui
-            officia.
-          </p>
-          <Link>Explore</Link>
-        </div>
-      </div>
-      {/* banner */}
-      <Banner />
     </div>
   );
 };
