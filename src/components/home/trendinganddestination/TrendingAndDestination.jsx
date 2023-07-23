@@ -3,9 +3,9 @@ import pic2 from "../../../assets/image/home/b.png";
 import pic3 from "../../../assets/image/home/c.png";
 import location from "../../../assets/image/home/location.png";
 import location1 from "../../../assets/image/home/location1.png";
-import "./tarndinganddestination.css";
+import "./trendinganddestination.css";
 
-const TarndingAndDestination = () => {
+const TrendingAndDestination = () => {
   return (
     <div className="my-[100px]">
       <div>
@@ -32,14 +32,14 @@ const TarndingAndDestination = () => {
           <div>
             <img src={pic1} alt="" className="rounded-t-lg" />
           </div>
-          <div className="tranding-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
+          <div className="trending-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="rounded-t-xl">
                 <img src={location} alt="" className="w-[19px] h-[19px]" />
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="tranding-name">USA</h3>
-                <p className="tranding-km ">14456 KM</p>
+                <h3 className="trending-name">USA</h3>
+                <p className="trending-km ">14456 KM</p>
               </div>
             </div>
           </div>
@@ -49,14 +49,14 @@ const TarndingAndDestination = () => {
           <div>
             <img src={pic2} alt="" className="rounded-t-lg" />
           </div>
-          <div className="tranding-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
+          <div className="trending-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="rounded-t-xl">
                 <img src={location} alt="" className="w-[19px] h-[19px]" />
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="tranding-name">BANGLADESH</h3>
-                <p className="tranding-km ">14456 KM</p>
+                <h3 className="trending-name">BANGLADESH</h3>
+                <p className="trending-km ">14456 KM</p>
               </div>
             </div>
           </div>
@@ -66,14 +66,14 @@ const TarndingAndDestination = () => {
           <div>
             <img src={pic3} alt="" className="rounded-t-lg" />
           </div>
-          <div className="tranding-card1 rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
+          <div className="trending-card1 rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div>
                 <img src={location1} alt="" className="w-[19px] h-[19px]" />
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="tranding-name1">CANADA</h3>
-                <p className="tranding-km1 ">14456 KM</p>
+                <h3 className="trending-name1">CANADA</h3>
+                <p className="trending-km1 ">14456 KM</p>
               </div>
             </div>
           </div>
@@ -83,14 +83,14 @@ const TarndingAndDestination = () => {
           <div>
             <img src={pic1} alt="" className="rounded-t-lg" />
           </div>
-          <div className="tranding-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
+          <div className="trending-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="rounded-t-xl">
                 <img src={location} alt="" className="w-[19px] h-[19px]" />
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="tranding-name">USA</h3>
-                <p className="tranding-km ">14456 KM</p>
+                <h3 className="trending-name">USA</h3>
+                <p className="trending-km ">14456 KM</p>
               </div>
             </div>
           </div>
@@ -100,4 +100,4 @@ const TarndingAndDestination = () => {
   );
 };
 
-export default TarndingAndDestination;
+export default TrendingAndDestination;

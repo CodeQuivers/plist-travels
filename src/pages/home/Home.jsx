@@ -3,7 +3,7 @@ import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria"
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
 import HeroSection from "../../components/home/hero/HeroSection";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
-import TarndingAndDestination from "../../components/home/trandinganddestination/TarndingAndDestination";
+import TrendingAndDestination from "../../components/home/trendinganddestination/TrendingAndDestination";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <ExploreTheWorld />
       <ExploreNigeria />
       <ExploreAfrica />
-      <TarndingAndDestination />
+      <TrendingAndDestination />
       <PopularHotel />
     </div>
   );
