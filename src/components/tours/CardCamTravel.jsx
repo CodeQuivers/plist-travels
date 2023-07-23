@@ -1,5 +1,3 @@
-import React from "react";
-
 const CardCamTravel = () => {
   return (
     <div className="h-full w-[266px] border border-[#169FC3] rounded-2xl flex flex-col tour-bg text-white">

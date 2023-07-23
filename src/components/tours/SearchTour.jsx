@@ -1,4 +1,3 @@
-import React from "react";
 import { FaBed } from "react-icons/fa";
 import { BiSolidCalendar } from "react-icons/bi";
 

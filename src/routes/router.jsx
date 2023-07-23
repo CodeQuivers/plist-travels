@@ -3,7 +3,7 @@ import Main from "../layout/Main";
 import Home from "../components/home/Home";
 import Tours from "../pages/tours/Tours";
 import Flight from "../pages/flight/Flight";
-import Hotel from "../pages/hotel/Hotel";
+import Transfer from "../pages/transfer/Transfer";
 
 export const router = createBrowserRouter([
   {
@@ -23,8 +23,8 @@ export const router = createBrowserRouter([
         element: <Tours />,
       },
       {
-        path: "/hotel",
-        element: <Hotel />,
+        path: "transfer",
+        element: <Transfer />,
       },
     ],
   },
