@@ -1,4 +1,5 @@
 .tranding-card {
+  font-family: "Poppins", sans-serif;
   background: var(
     --old-logo-color,
     linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
@@ -14,8 +15,8 @@
 }
 
 .tranding-name {
-  color: #fff;
   font-family: "Poppins", sans-serif;
+  color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -23,8 +24,8 @@
 }
 
 .tranding-km {
-  color: #fff;
   font-family: "Poppins", sans-serif;
+  color: #fff;
   font-size: 12.536px;
   font-style: normal;
   font-weight: 400;

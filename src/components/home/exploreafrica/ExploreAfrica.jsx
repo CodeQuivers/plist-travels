@@ -9,7 +9,7 @@ const ExploreAfrica = () => {
   return (
     <div className="my-[100px]">
       <div>
-        <h1 className="explore-nigeria-h1">Explore Nigeria </h1>
+        <h1 className="explore-nigeria-h1">Explore Africa</h1>
         <p className="explore-nigeria-p">Keep calm & travel on</p>
       </div>
 

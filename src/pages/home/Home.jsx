@@ -2,6 +2,7 @@ import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
 import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
 import HeroSection from "../../components/home/hero/HeroSection";
+import PopularHotel from "../../components/home/popularhotel/PopularHotel";
 import TarndingAndDestination from "../../components/home/trandinganddestination/TarndingAndDestination";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <ExploreNigeria />
       <ExploreAfrica />
       <TarndingAndDestination />
+      <PopularHotel />
     </div>
   );
 };
