@@ -10,7 +10,7 @@ import "./hotel.css";
 
 const Hotel = () => {
   return (
-    <section className="max-w-7xl mx-auto ">
+    <section className="max-w-[1170px] mx-auto ">
       {/* Search Hotel */}
       <HotelSearch />
       {/* hotel explore*/}

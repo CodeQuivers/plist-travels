@@ -121,7 +121,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="container mx-auto">
+        <hr className="border w-[1170px] border-[#e4e7ec7c] " />
+        <div className="container mx-auto  ">
           <h1 className="rights">© 2023 . All rights reserved.</h1>
           <div className="flex gap-3 terms">
             <p>Terms</p>
