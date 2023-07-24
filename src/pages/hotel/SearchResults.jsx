@@ -18,6 +18,214 @@ const SearchResults = () => {
         rating: 5,
       },
     },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
+    {
+      category: "HOTEL",
+      title: "Oyo 12123 Hotel Sweet Dreams",
+      description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+      image: resultImg,
+      features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
+      status: "Not Available",
+      price: 254,
+      reviews: {
+        total: 23,
+        rating: 5,
+      },
+    },
   ];
   const options = [
     {
@@ -77,9 +285,12 @@ const SearchResults = () => {
       </div>
 
       {/* search results */}
-      <section className="p-4 searchResultsFont">
+      <section className="px-4 searchResultsFont  divide-y">
         {results?.map((result) => (
-          <div className="divide-x grid grid-cols-8 gap-5" key={Math.random()}>
+          <div
+            className="divide-x py-5 grid grid-cols-8 gap-5"
+            key={Math.random()}
+          >
             <div className="col-span-6 flex gap-4 w-full">
               <div>
                 <img
