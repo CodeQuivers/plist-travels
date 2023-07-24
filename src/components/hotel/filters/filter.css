@@ -1,0 +1,58 @@
+.input-range__label-container {
+  display: none !important;
+}
+
+.input-range__track--background {
+  top: 51% !important;
+}
+
+
+
+
+.input-range .input-range__slider {
+  border: 2px solid #fff !important;
+  background-color: #148BBE !important;
+  background: linear-gradient(90deg,
+      #287dfa 0%,
+      rgba(14, 85, 177, 1) 0%,
+      #169fc3 100%) !important;
+  width: 20px !important;
+  margin-top: -13px !important;
+  height: 20px !important;
+}
+
+.input-range .input-range__slider:active,
+.input-range .input-range__slider:focus {
+  border-color: #fff !important;
+}
+
+.input-range__track--active {
+  background: linear-gradient(90deg,
+      #287dfa 0%,
+      #0e55b1 0%,
+      #169fc3 100%) !important;
+}
+
+
+/*  */
+/* Custom CSS for circular radio-like buttons */
+.radio-button {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e0;
+  cursor: pointer;
+}
+
+.radio-button::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3182ce;
+  display: none;
+}

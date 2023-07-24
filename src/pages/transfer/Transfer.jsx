@@ -3,33 +3,37 @@ import PickDriveFromNazarian from "../../components/transfer/PickDriveFromNazari
 import PopularCars from "../../components/transfer/PopularCars/PopularCars";
 import TransferAccordianLists from "../../components/transfer/TransferAccordian/TransferAccordianLists";
 import TransferBanner from "../../components/transfer/TransferBanner/TransferBanner";
+import TransferFAQ from "../../components/transfer/TransferFAQ/TransferFAQ";
 import TransferPagination from "../../components/transfer/TransferPagination/TransferPagination";
 import TransferSearchForm from "../../components/transfer/TransferSearchForm/TransferSearchForm";
 
 const Transfer = () => {
-    
+
 
     return (
         <div className="w-auto lg:w-[1170px] mx-auto">
             <div>
-                <TransferSearchForm/>
+                <TransferSearchForm />
             </div>
             <Divider />
             {/* Pick Your Drive From Nazarian   */}
             <div>
-                <PickDriveFromNazarian/>
+                <PickDriveFromNazarian />
             </div>
             <div>
-                <TransferBanner/>
+                <TransferBanner />
             </div>
             <div>
-                <PopularCars/>
+                <PopularCars />
             </div>
             <div>
-                <TransferPagination/>
+                <TransferPagination />
             </div>
             <div>
-                <TransferAccordianLists/>
+                <TransferAccordianLists />
+            </div>
+            <div>
+                <TransferFAQ />
             </div>
         </div>
     );

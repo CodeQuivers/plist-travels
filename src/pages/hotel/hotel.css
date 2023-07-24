@@ -1,23 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.searchResultsFont {
+  font-family: "Poppins", sans-serif;
+}
+
 .defaultTextColor {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    rgba(40, 125, 250, 1) 0%,
-    rgba(14, 85, 177, 1) 0%,
-    #169fc3 100%
-  );
+  background-image: linear-gradient(90deg,
+      rgba(40, 125, 250, 1) 0%,
+      rgba(14, 85, 177, 1) 0%,
+      #169fc3 100%);
 }
 
 .defaultColor {
   background: rgb(40, 125, 250);
-  background: linear-gradient(
-    90deg,
-    #287dfa 0%,
-    rgba(14, 85, 177, 1) 0%,
-    #169fc3 100%
-  );
+  background: linear-gradient(90deg,
+      #287dfa 0%,
+      rgba(14, 85, 177, 1) 0%,
+      #169fc3 100%);
 }
 
 .hotelBg {
@@ -55,6 +57,7 @@
   border: 1px solid #c8481600;
   transition: 0.5s all;
 }
+
 /* Optional custom styles for the DatePicker */
 .react-datepicker {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -70,25 +73,136 @@
   background-color: #007bff;
   color: #fff;
 }
-/* custom-datepicker.css */
+
 .custom-datepicker {
-  /* Add your custom styles for the DatePicker component here */
-  /* For example: */
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.5rem;
   font-size: 16px;
   color: #333;
 }
+
 .example-custom-input {
-  background: url("../../assets/image/hotel/calender-black.png.svg") no-repeat
-    right;
+  background: url("../../assets/image/hotel/calender-black.png.svg") no-repeat right;
   background-size: 20px;
   width: 240px;
   height: 24px;
 }
+
 .react-datepicker__input-container input {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.css-wmy1p7-ReactDropdownSelect:focus,
+.css-wmy1p7-ReactDropdownSelect:focus-within {
+  outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(226, 68, 5, 0) !important;
+}
+
+.css-1w9qn7h-DropDown {
+  position: absolute;
+  top: 37px !important;
+  left: -9px !important;
+  border: 1px solid #e6e8ec !important;
+  width: 190px !important;
+  border-radius: 0px 10px #e6e8ec !important;
+  border-radius: 0 0px 10px 10px !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0) !important;
+  z-index: 10 !important;
+}
+
+.css-z2hyoe-ItemComponent.react-dropdown-select-item-selected {
+  background: #e6e8ec !important;
+  color: #000 !important;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+.border-gradientBtn {
+  width: 100%;
+  color: black;
+  background: radial-gradient(circle at 100% 100%,
+      #ffffff 0,
+      #ffffff 2px,
+      transparent 2px) 0% 0%/4px 4px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px) 100% 0%/4px 4px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px) 0% 100%/4px 4px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100% 100%/4px 4px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px) calc(100% - 8px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 8px) calc(100% - 4px) no-repeat,
+    linear-gradient(90deg, #0e57b1 0%, #169cc2 100%);
+  border-radius: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.border-gradientBtn2 {
+  width: 100%;
+  color: #1665c8;
+  background: radial-gradient(circle at 100% 100%,
+      #ffffff 0,
+      #ffffff 4px,
+      transparent 4px) 0% 0%/5px 5px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 4px, transparent 4px) 100% 0%/5px 5px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 4px, transparent 4px) 0% 100%/5px 5px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 4px, transparent 4px) 100% 100%/5px 5px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px) calc(100% - 10px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px) calc(100% - 2px) no-repeat,
+    linear-gradient(90deg, #0e57b1 0%, #169cc2 100%);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.border-gradientBox {
+  width: 100%;
+  background: radial-gradient(circle at 100% 100%,
+      #ffffff 0,
+      #ffffff 9px,
+      transparent 9px) 0% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 9px, transparent 9px) 100% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 9px, transparent 9px) 0% 100%/10px 10px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 9px, transparent 9px) 100% 100%/10px 10px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px) calc(100% - 20px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 20px) calc(100% - 2px) no-repeat,
+    linear-gradient(90deg, #0e59b2 0%, #169cc2 100%);
+  border-radius: 10px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.border-gradientCategory {
+  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 6px, transparent 6px) 0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 6px, transparent 6px) 100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 6px, transparent 6px) 0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 6px, transparent 6px) 100% 100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
+    linear-gradient(90deg, #0e58b2 0%, #169cc2 100%);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.border-gradientFilterBox {
+  width: 100%;
+  background: radial-gradient(circle at 100% 100%,
+      #ffffff 0,
+      #ffffff 9px,
+      transparent 9px) 0% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 9px, transparent 9px) 100% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 9px, transparent 9px) 0% 100%/10px 10px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 9px, transparent 9px) 100% 100%/10px 10px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px) calc(100% - 20px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 20px) calc(100% - 2px) no-repeat,
+    linear-gradient(90deg, #0e59b2 0%, #169cc2 100%);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.gradientText {
+  background: -webkit-linear-gradient(0deg, #0e59b2 0%, #169cc2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
