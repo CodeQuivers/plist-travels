@@ -4,7 +4,7 @@ const Pagination = () => {
   return (
     <>
       {/* pagination */}
-      <div className="flex gap-3 justify-center pb-20 pt-20">
+      <div className="flex gap-3 justify-center">
         <button className="border-r pr-2" type="button">
           <FaChevronLeft size={15} />
         </button>

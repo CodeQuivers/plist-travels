@@ -332,7 +332,9 @@ const Flight = () => {
             {/* single card end */}
           </div>
           {/* Pagination */}
-          <Pagination />
+          <div className="pb-20 pt-20">
+            <Pagination />
+          </div>
 
           {/*  */}
           <div>

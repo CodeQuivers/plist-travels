@@ -2,6 +2,9 @@ import Select from "react-dropdown-select";
 import sortByIcon from "../../assets/image/hotel/sortByIcon.svg";
 import FlightForm from "../../components/flight/FlightForm";
 import Divider from "../../components/tours/Divider";
+import ChainaSouthern from "../../assets/image/flight/images/ChainaSouthern.png";
+import moveRight from "../../assets/image/flight/icons/move-right.svg";
+import Pagination from "../../components/flight/Pagination";
 
 const FlightRoundTrip = () => {
   const options = [
@@ -39,17 +42,17 @@ const FlightRoundTrip = () => {
       <Divider />
       <div className="w-[1170px] mx-auto">
         <div className="flex gap-10">
-          <div className="w-[255px] old-logo-color-border">
+          <div className="w-[255px] h-[545px] old-logo-color-border">
             <div className="h-[66px] p-5 border-b-2 border-gray-300">
               <p>Filters</p>
             </div>
           </div>
-          <div className=" w-[875px] old-logo-color-border">
-            <div className="border-b py-4">
+          <div className=" w-[875px] ">
+            <div className="border-b border-t border-x border-x-indigo-700 border-t-indigo-700 py-4">
               <div className="flex px-4 justify-between items-center">
                 <div>
                   <h4 className="searchResultsFont">
-                    Search Results{" "}
+                    Search Results
                     <span className="text-[#66768E] text-sm"> (126)</span>
                   </h4>
                 </div>
@@ -72,7 +75,206 @@ const FlightRoundTrip = () => {
                 </div>
               </div>
             </div>
+            {/* Round tip 1 */}
+            <div className="mb-8 pl-5 py-5 old-logo-color-border">
+              {/* item one */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <span className="text-sm">Price</span>
+                  <p className="text-base">USD 17,985</p>
+                </div>
+              </div>
+              <hr className="w-[480px] mx-auto my-5" />
+              {/* item two */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <button className="text-white py-4 px-3 rounded old-logo-color">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* Round tip 2 */}
+            <div className="mb-8 pl-5 py-5 old-logo-color-border">
+              {/* item one */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <span className="text-sm">Price</span>
+                  <p className="text-base">USD 17,985</p>
+                </div>
+              </div>
+              <hr className="w-[480px] mx-auto my-5" />
+              {/* item two */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <button className="text-white py-4 px-3 rounded old-logo-color">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* Round tip 3 */}
+            <div className=" mb-8 pl-5 py-5 old-logo-color-border">
+              {/* item one */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <span className="text-sm">Price</span>
+                  <p className="text-base">USD 17,985</p>
+                </div>
+              </div>
+              <hr className="w-[480px] mx-auto my-5" />
+              {/* item two */}
+              <div className="pl-5 py-5 flex justify-between">
+                <div className="flex gap-[84px]">
+                  <div>
+                    <img src={ChainaSouthern} alt="ChainaSouthern" />
+                    <p>China Southern</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                  <div>
+                    <span className="text-xs">21 hours 45 minutes</span>
+                    <img src={moveRight} alt="" />
+                    <span className="text-xs">1 Stop via Guangzhou</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs">Depart</span>
+                    <span className="text-sm">00:50</span>
+                    <span className="text-xs">Thu, 3 Aug 2023</span>
+                    <span className="text-sm">Dhaka</span>
+                  </div>
+                </div>
+                <div className="pr-5">
+                  <button className="text-white py-4 px-3 rounded old-logo-color">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        {/* pagination */}
+        <div className="pt-10">
+          <Pagination />
         </div>
       </div>
     </>
