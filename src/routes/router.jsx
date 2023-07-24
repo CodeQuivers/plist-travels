@@ -6,6 +6,7 @@ import Home from "../pages/home/Home";
 import Transfer from "../pages/transfer/Transfer";
 import Hotel from "../pages/hotel/Hotel";
 import HotelSearchResults from "../pages/hotel/HotelSearchResults";
+import FlightRoundTrip from "../pages/flight/FlightRoundTrip";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: "/flight",
         element: <Flight />,
+      },
+      {
+        path: "/flight/roundtrip",
+        element: <FlightRoundTrip />,
       },
       {
         path: "/tours",
