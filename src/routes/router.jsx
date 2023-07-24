@@ -7,6 +7,7 @@ import Transfer from "../pages/transfer/Transfer";
 import Hotel from "../pages/hotel/Hotel";
 import HotelSearchResults from "../pages/hotel/HotelSearchResults";
 import FlightRoundTrip from "../pages/flight/FlightRoundTrip";
+import TransferSearchResults from "../pages/transfer/TransferSearchResults";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/transfer",
         element: <Transfer />,
+      },
+      {
+        path: "/transfer/search",
+        element: <TransferSearchResults />,
       },
       {
         path: "/hotel",
