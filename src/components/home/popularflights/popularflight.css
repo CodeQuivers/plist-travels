@@ -20,10 +20,6 @@
   letter-spacing: -0.24px;
 }
 
-.border {
-  border: 1px solid #000;
-}
-
 .flight-name {
   color: var(--andit-co-nero, #fff);
   font-family: "DM Sans", sans-serif;

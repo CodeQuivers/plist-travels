@@ -1,4 +1,4 @@
-import "./populartours.css";
+import "./popularflight.css";
 import tour1 from "../../../assets/image/home/tour1.png";
 import tour2 from "../../../assets/image/home/tour2.png";
 import tour3 from "../../../assets/image/home/tour3.png";
@@ -13,24 +13,33 @@ const PopularFlight = () => {
 
       {/* Card Section */}
       <div className="flex flex-col lg:flex-row items-center gap-[24px] mt-[40px] ">
+        {/* Card 1 */}
         <div className="rounded-[16px] border relative">
           <img src={tour1} alt="" />
           <h1 className="flight-name absolute bottom-[32px] right-[91.98px] text-center">
             Abuja
           </h1>
         </div>
+
+        {/* Card 2 */}
+
         <div className=" rounded-[16px] border relative">
           <img src={tour2} alt="" />
           <h1 className="flight-name  absolute bottom-[32px] right-[91.98px] text-center">
             Abuja
           </h1>
         </div>
+
+        {/* Card 3 */}
         <div className=" rounded-[16px] border relative">
           <img src={tour3} alt="" />
           <h1 className="flight-name  absolute bottom-[32px] right-[91.98px] text-center">
             Abuja
           </h1>
         </div>
+
+        {/* Card 4 */}
+
         <div className=" rounded-[16px] border relative">
           <img src={tour1} alt="" />
           <h1 className="explore-flight-name absolute bottom-[84px] left-[29px]">

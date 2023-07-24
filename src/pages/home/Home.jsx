@@ -4,6 +4,7 @@ import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld"
 import HeroSection from "../../components/home/hero/HeroSection";
 import PopularFlight from "../../components/home/popularflights/PopularFlight";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
+import PopularTours from "../../components/home/populartours/PopularTours";
 import TrendingAndDestination from "../../components/home/trendinganddestination/TrendingAndDestination";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <TrendingAndDestination />
       <PopularHotel />
       <PopularFlight />
+      <PopularTours />
     </div>
   );
 };

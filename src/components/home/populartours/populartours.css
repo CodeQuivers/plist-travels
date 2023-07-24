@@ -1,0 +1,104 @@
+.popular-card {
+  font-family: "Poppins", sans-serif;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+
+  /* Shadow */
+  box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  padding: 1px 1px 20px 1px;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.popular-name {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.popular-km {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 12.536px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.893px; /* 166.667% */
+}
+.popular-card1 {
+  background: #fff;
+  /* Shadow */
+  box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  padding: 1px 1px 20px 1px;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.popular-name1 {
+  color: var(--neutrals-1, #141416);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.popular-km1 {
+  color: var(--neutrals-3, #353945);
+  font-family: "Poppins", sans-serif;
+  font-size: 12.536px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.893px; /* 166.667% */
+}
+
+.popular-btn {
+  border-radius: 10px;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  display: flex;
+  width: 240px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: var(--neutrals-8, #fcfcfd);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+}
+
+.popular-tours {
+  color: var(--neutrals-2, #23262f);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+}
+
+.popular-tours-p {
+  color: var(--neutrals-4, #777e90);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
