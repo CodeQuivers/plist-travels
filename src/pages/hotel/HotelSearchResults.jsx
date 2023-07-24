@@ -1,12 +1,13 @@
+import HotelSearch from "../../components/hotel/hotelSearch/HotelSearch";
 import HotelSearchFilters from "./HotelSearchFilters";
 import SearchResults from "./SearchResults";
 
 const HotelSearchResults = () => {
   return (
-    <div className="max-w-[1170px] mx-auto">
-      {/* <HotelSearch /> */}
+    <div className="max-w-[1170px] py-1 px-2 mx-auto">
+      <HotelSearch />
       {/* search result section */}
-      <section className="mt-20 py-20 border-t grid md:grid-cols-9 gap-5">
+      <section className="mt-20 py-20 border-t grid grid-cols-9 gap-5">
         <div className="col-span-2">
           <HotelSearchFilters />
         </div>
