@@ -1,0 +1,63 @@
+.popular-flight-h1 {
+  color: var(--neutrals-2, #23262f);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+}
+
+.popular-flight-p {
+  color: var(--neutrals-4, #777e90);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+
+.flight-name {
+  color: var(--andit-co-nero, #fff);
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 125% */
+  letter-spacing: -0.32px;
+}
+
+.explore-flight-name {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 150% */
+}
+
+.flight-btn {
+  border-radius: 10px;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  display: flex;
+  width: 200px;
+  height: 52.552px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: var(--neutrals-8, #fcfcfd);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+}

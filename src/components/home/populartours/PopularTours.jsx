@@ -1,14 +1,14 @@
-import pic1 from "../../../assets/image/home/d.png";
-import pic2 from "../../../assets/image/home/e.png";
-import pic3 from "../../../assets/image/home/f.png";
-import "./popularhotel.css";
+import "./populartours.css";
+import pic1 from "../../../assets/image/home/tour5.png";
+import pic2 from "../../../assets/image/home/tour6.png";
+import pic3 from "../../../assets/image/home/tour7.png";
 
-const PopularHotel = () => {
+const PopularTours = () => {
   return (
     <div className="my-[100px]">
       <div>
-        <h1 className="explore-nigeria-h1">Explore By Popular Hotel</h1>
-        <p className="explore-nigeria-p">Keep calm & travel on</p>
+        <h1 className="popular-tours">Popular Tours</h1>
+        <p className="popular-tours-p">Keep calm & travel on</p>
       </div>
 
       {/* Card Section */}
@@ -21,8 +21,8 @@ const PopularHotel = () => {
           <div className="popular-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="flex flex-col items-start">
-                <h3 className="popular-name">USA</h3>
-                <p className="popular-km ">16,879 properties</p>
+                <h3 className="popular-name">The grand resort</h3>
+                <p className="popular-km ">Karineside</p>
               </div>
             </div>
           </div>
@@ -35,8 +35,8 @@ const PopularHotel = () => {
           <div className="popular-card rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="flex flex-col items-start">
-                <h3 className="popular-name">BANGLADESH</h3>
-                <p className="popular-km ">6,879 properties</p>
+                <h3 className="popular-name">The grand resort</h3>
+                <p className="popular-km ">Karineside</p>
               </div>
             </div>
           </div>
@@ -49,8 +49,8 @@ const PopularHotel = () => {
           <div className="popular-card1 rounded-b-xl flex flex-col items-start h-[75px] w-[267px]">
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="flex flex-col items-start">
-                <h3 className="popular-name1">CANADA</h3>
-                <p className="popular-km1 ">6,879 properties</p>
+                <h3 className="popular-name1">The grand resort</h3>
+                <p className="popular-km1 ">Karineside</p>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const PopularHotel = () => {
             <div className="flex items-start justify-start my-[22px] gap-[9px] w-[158px] ">
               <div className="flex flex-col items-start">
                 <h3 className="popular-name">Cape Town</h3>
-                <p className="popular-km ">6,879 properties</p>
+                <p className="popular-km ">Karineside</p>
               </div>
             </div>
           </div>
@@ -74,4 +74,4 @@ const PopularHotel = () => {
   );
 };
 
-export default PopularHotel;
+export default PopularTours;
