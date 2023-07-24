@@ -5,7 +5,7 @@ import TourSearchResultList from './TourSearchResultList'
 const TourSearchResult = () => {
   return (
     <div
-    className='max-w-[1170px] mx-auto flex gap-8'
+    className='md:w-[1170px] mx-auto flex gap-8'
     >
       <FilterSearch/>
       <TourSearchResultList/>

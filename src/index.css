@@ -22,3 +22,21 @@ body {
     rgba(22, 159, 195, 1) 100%
   );
 }
+.grad-text-olc{
+  background: linear-gradient(
+    92deg,
+    rgba(14, 85, 177, 1) 0%,
+    rgba(22, 159, 195, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gard-border-olc{
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left,rgba(14, 85, 177, 1),rgba(22, 159, 195, 1));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+

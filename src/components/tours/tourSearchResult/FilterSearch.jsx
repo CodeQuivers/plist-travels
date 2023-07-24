@@ -6,9 +6,9 @@ import FilterRadioButton from "./FilterRadioButton";
 
 const FilterSearch = () => {
   return (
-    <div className="max-w-255 w-1/5 blue-border-with-radius flex flex-col justify-center items-center">
-      <div className="w-full">
-        <h1 className="text-base text-semibold text-[#334150] pl-5 pt-5 text-start">
+    <div className="md:w-[255px] w-1/5 blue-border-with-radius flex flex-col justify-center items-center">
+      <div className="w-full justify-between px-5 pt-5 items-center">
+        <h1 className="text-base font-medium text-[#334150] text-start">
           Filters
         </h1>
       </div>

@@ -9,40 +9,53 @@
   box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
-.whyUsCard:hover h1{
+.whyUsCard:hover h1 {
   color: #141416;
 }
 
-.whyUsCard:hover p{
-  color: #777E90;
+.whyUsCard:hover p {
+  color: #777e90;
 }
 
-.whyUsCard:hover a{
-  color: #1665C8;
+.whyUsCard:hover a {
+  color: #1665c8;
   cursor: pointer;
 }
 
-.whyUsCard:hover{
-  border: 1.18px solid #1665C8;
+.whyUsCard:hover {
+  border: 1.18px solid #1665c8;
   background: transparent;
-  transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
-.tour-bg{
-background: linear-gradient(92deg, #0E55B1 0%, #169FC3 100%);
-box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
+.tour-bg {
+  background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
+  box-shadow: -5px 10px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
-.react-datepicker-wrapper .react-datepicker__input-container input{
+.react-datepicker-wrapper .react-datepicker__input-container input {
   border: none;
   padding: 0;
 }
-.blue-border-with-radius{
+.blue-border-with-radius {
   border-radius: 16px;
   border: 1px solid rgb(14, 85, 177);
 }
-.gray-border{
+.gray-border {
   border-radius: 5px;
-  border: 1px solid #E6E8EC;
+  border: 1px solid #e6e8ec;
+}
+
+/* Tours Search Result List Item css */
+.search-result-item-p {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: -webkit-box;
+  max-width: 325px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
