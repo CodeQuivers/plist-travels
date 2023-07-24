@@ -3,6 +3,7 @@ import sortByIcon from "../../assets/image/hotel/sortByIcon.svg";
 import resultImg from "../../assets/image/hotel/resultImg.png";
 import { AiFillStar } from "react-icons/ai";
 import { TbDiscountCheckFilled } from "react-icons/tb";
+import { FaRegHeart } from "react-icons/fa6";
 const SearchResults = () => {
   const results = [
     {
@@ -292,12 +293,20 @@ const SearchResults = () => {
             key={Math.random()}
           >
             <div className="col-span-6 flex gap-4 w-full">
-              <div>
+              <div className="relative">
                 <img
                   className="w-[225px] h-[138px]"
                   src={result.image}
                   alt=""
                 />
+                <div>
+                  <p className="text-xs  absolute bottom-2 left-2 px-1.5 bg-white border-gradientCategory py-1.5 ">
+                    Room Only
+                  </p>
+                  <p className="absolute top-2 right-2 bg-white p-1 px-1.5 rounded-lg">
+                    <FaRegHeart />
+                  </p>
+                </div>
               </div>
               <div>
                 <div className="space-y-1">
