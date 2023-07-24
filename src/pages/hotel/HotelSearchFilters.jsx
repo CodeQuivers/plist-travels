@@ -3,6 +3,7 @@ import FilterByRatings from "../../components/hotel/filters/FilterByRatings";
 import FilterByPriceRating from "../../components/hotel/filters/FilterByPriceRating";
 import FilterByBoard from "../../components/hotel/filters/FilterByBoard";
 import FilterByProduct from "../../components/hotel/filters/FilterByProduct";
+import FilterByFacilities from "../../components/hotel/filters/FilterByFacilities";
 
 const HotelSearchFilters = () => {
   return (
@@ -40,6 +41,19 @@ const HotelSearchFilters = () => {
         {/* filter by product */}
         <div className="mt-5 border-b pb-5">
           <FilterByProduct />
+        </div>
+        {/* filter by facilities */}
+        <div className="mt-5 border-b pb-5">
+          <FilterByFacilities />
+        </div>
+        {/* apply Filters */}
+        <div className="mt-5 ">
+          <button
+            className="text-sm  w-full text-white py-2 rounded-md bg-gradient-to-r from-[#0E57B2] to-[#1599C1]"
+            type="button"
+          >
+            Apply Filters
+          </button>
         </div>
       </div>
     </div>
