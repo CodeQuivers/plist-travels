@@ -1,3 +1,4 @@
+import TransferPagination from "../../components/transfer/TransferPagination/TransferPagination";
 import TransferSearchForm from "../../components/transfer/TransferSearchForm/TransferSearchForm";
 import TransferResult from "./TransferResult";
 import TransferSearchFilters from "./TransferSearchFilters";
@@ -15,6 +16,7 @@ const TransferSearchResults = () => {
                     <TransferResult />
                 </div>
             </section>
+            <TransferPagination />
         </div>
     );
 };

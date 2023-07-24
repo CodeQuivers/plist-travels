@@ -7,226 +7,107 @@ import { TbDiscountCheckFilled } from "react-icons/tb";
 const TransferResult = () => {
     const results = [
         {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+            title: "Mercedes-Benz C63 20",
             image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
             },
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
+            },
+            price: 254
         },
         {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+            title: "Mercedes-Benz C63 20",
             image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
             },
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
+            },
+            price: 254
         },
         {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+            title: "Mercedes-Benz C63 20",
             image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
             },
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
+            },
+            price: 254
+        }, {
+            title: "Mercedes-Benz C63 20",
+            image: resultImg,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
+            },
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
+            },
+            price: 254
         },
         {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+            title: "Mercedes-Benz C63 20",
             image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
             },
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
+            },
+            price: 254
         },
         {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
+            title: "Mercedes-Benz C63 20",
             image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            basic: {
+                sitNumber: '04',
+                luggageQuantity: '02',
+                doorQuantity: '04',
+                driveNumber: "5X5",
+                fuelType: "Petrol"
             },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
+            features: {
+                horsepower: 500,
+                engine: 3000,
+                experience: 2019
             },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
-        {
-            category: "HOTEL",
-            title: "Oyo 12123 Hotel Sweet Dreams",
-            description: `1 National Highway 24 Lal Kuan Near Radha Krishna, GHAZIABAD`,
-            image: resultImg,
-            features: ["WIFI", "Gym", "Hotel Safe", "Day Care", "Medical Service"],
-            status: "Not Available",
-            price: 254,
-            reviews: {
-                total: 23,
-                rating: 5,
-            },
-        },
+            price: 254
+        }
+
     ];
     const options = [
         {
@@ -302,14 +183,14 @@ const TransferResult = () => {
                             </div>
                             <div>
                                 <div className="space-y-1">
-                                    <h4 className="font-semibold text-xs">{result?.category}</h4>
-                                    <h4 className="font-semibold text-sm gradientText">
+                                    {/* <h4 className="font-semibold text-xs">{result?.category}</h4> */}
+                                    <h4 className="font-semibold text-base gradientText">
                                         {result?.title}
                                     </h4>
                                 </div>
                                 <div className="space-y-1 mt-2.5">
-                                    <p className="text-xs">{result?.description}</p>
-                                    <div className="flex flex-wrap gap-1.5">
+                                    {/* <p className="text-xs">{result?.description}</p> */}
+                                    {/* <div className="flex flex-wrap gap-1.5">
                                         {result?.features?.map((feature) => (
                                             <p
                                                 className="text-xs bg-gradient-to-r from-[#0F5BB3] to-[#159AC2] text-white hover:bg-gradient-to-r hover:from-[#0F5BB3] hover:to-[#148aad] duration-300 ease-in-out transition-all px-2 py-0.5 rounded"
@@ -318,25 +199,45 @@ const TransferResult = () => {
                                                 {feature}
                                             </p>
                                         ))}
+                                    </div> */}
+                                    <div className="flex justify-between gap-7 mb-3">
+                                        <div>
+                                            <p className="text-xs text-[#66768E]">Sit</p>
+                                            <p className="text-[#334150]">{result?.basic?.sitNumber}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-[#66768E]">Luggage</p>
+                                            <p className="text-[#334150]">{result?.basic?.luggageQuantity}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-[#66768E]">Doors</p>
+                                            <p className="text-[#334150]">{result?.basic?.doorQuantity}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-[#66768E]">Drive</p>
+                                            <p className="text-[#334150]">{result?.basic?.driveNumber}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-[#66768E]">Fuel</p>
+                                            <p className="text-[#334150]">{result?.basic?.fuelType}</p>
+                                        </div>
+
                                     </div>
-                                    <div className="flex justify-between">
+                                    <div className="flex justify-between gap-7 ">
                                         <div>
-                                            <p className="text-sm text-[#66768E]">Status: </p>
-                                            <h4>{result?.status}</h4>
+                                            <p className="text-xs text-[#66768E]">Horsepower</p>
+                                            <p className="text-[#334150]">{result?.features?.horsepower}</p>
                                         </div>
                                         <div>
-                                            <p className="text-sm text-[#66768E]">Price</p>
-                                            <h4>${result?.price}</h4>
+                                            <p className="text-xs text-[#66768E]">Engine</p>
+                                            <p className="text-[#334150]">{result?.features?.engine}</p>
                                         </div>
                                         <div>
-                                            <p className="text-sm text-[#66768E]">Destination</p>
-                                            <button
-                                                type="button"
-                                                className=" border-gradientBtn2  px-3 font-medium "
-                                            >
-                                                Show Map
-                                            </button>
+                                            <p className="text-xs text-[#66768E]">Experience</p>
+                                            <p className="text-[#334150]">{result?.features?.experience}</p>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -344,7 +245,7 @@ const TransferResult = () => {
                         <div className="pl-4 w-full col-span-2">
                             <div className="space-y-3">
                                 <p className="flex justify-center items-center">
-                                    <span className="text-sm pr-1">Price</span> <span className="pr-1">$250</span> <span className="text-[10px]"><sub>Par/Day</sub></span>
+                                    <span className="text-sm pr-2 text-[#66768E]">Price</span> <span className="font-semibold pr-1 text-[#334150]">${result?.price}</span> <span className="text-[10px]"><sub>Par/Day</sub></span>
                                 </p>
                                 <button className="bg-gradient-to-r from-[#0F5BB3] to-[#159AC2] text-white hover:bg-gradient-to-r hover:from-[#0F5BB3] hover:to-[#148aad] duration-300 ease-in-out transition-all py-2 text-sm font-medium w-full rounded-md">
                                     Book Now
