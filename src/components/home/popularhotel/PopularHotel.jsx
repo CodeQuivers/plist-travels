@@ -11,20 +11,8 @@ const PopularHotel = () => {
         <p className="explore-nigeria-p">Keep calm & travel on</p>
       </div>
 
-      {/* featued Button */}
-      <div className="flex gap-[6px] my-[45px] items-center">
-        <button className="explore-nigeria-btn1 border-2 border-blue-500">
-          Featured
-        </button>
-        <button className="explore-nigeria-btn2">Featured</button>
-        <button className="explore-nigeria-btn2">Property Type</button>
-        <button className="explore-nigeria-btn2">Tours</button>
-        <button className="explore-nigeria-btn2">Flights</button>
-        <button className="explore-nigeria-btn2">Vacation Package Deals</button>
-      </div>
-
       {/* Card Section */}
-      <div className="h-[381px] w-[265px] flex flex-col lg:flex-row items-center gap-[33px] ">
+      <div className="h-[381px] w-[265px] flex flex-col lg:flex-row items-center gap-[33px] mt-[40px] ">
         {/* card 1 */}
         <div className="flex flex-col border">
           <div>

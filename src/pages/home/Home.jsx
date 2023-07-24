@@ -2,6 +2,7 @@ import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
 import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
 import HeroSection from "../../components/home/hero/HeroSection";
+import PopularFlight from "../../components/home/popularflights/PopularFlight";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
 import TrendingAndDestination from "../../components/home/trendinganddestination/TrendingAndDestination";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <ExploreAfrica />
       <TrendingAndDestination />
       <PopularHotel />
+      <PopularFlight />
     </div>
   );
 };
