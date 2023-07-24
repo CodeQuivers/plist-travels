@@ -1,3 +1,4 @@
+import CustomerReview from "../../components/home/customerreview/CustomerReview";
 import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
 import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
@@ -18,6 +19,7 @@ const Home = () => {
       <PopularHotel />
       <PopularFlight />
       <PopularTours />
+      <CustomerReview />
     </div>
   );
 };
