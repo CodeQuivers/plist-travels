@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import TourDetailBookNow from "./TourDetailBookNow";
 import AvailableRooms from "./AvailableRooms";
 import TourDetailAbout from "./TourDetailAbout";
+import TourIncludedFeature from "./TourIncludedFeature";
+import TourExludedFeature from "./TourExludedFeature";
+import TourDetailCategories from "./TourDetailCategories";
 
 const TourDetailInformation = () => {
   return (
@@ -22,9 +25,14 @@ const TourDetailInformation = () => {
           <AvailableRooms />
 
           {/* about the tour */}
-          <TourDetailAbout/>
+          <TourDetailAbout />
 
-          
+          {/* Features */}
+          <TourIncludedFeature/>
+          <TourExludedFeature/>
+
+          {/* Categories */}
+          <TourDetailCategories/>
         </div>
 
         {/* Room Booking */}
