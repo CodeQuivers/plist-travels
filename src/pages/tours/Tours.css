@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:ital@1&display=swap');
+
+.pop-font{
+  font-family: Poppins;
+}
 .search-now-button-bg {
   background: linear-gradient(92deg, #0e55b1 0%, #169fc3 100%);
 }
@@ -43,12 +49,15 @@
   border: 1px solid rgb(14, 85, 177);
 }
 
-.gray-divider{
-  border: 1px solid #E1E8EE;;
+.gray-divider {
+  border: 1px solid #e1e8ee;
 }
 .gray-border {
   border-radius: 5px;
   border: 1px solid #e6e8ec;
+}
+.text7F8FA4 {
+  color: #7f8fa4;
 }
 
 /* Tours Search Result List Item css */
@@ -62,4 +71,17 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Tour Details Design */
+.tour-detail-information p{
+  font-family: Poppins;
+}
+.tour-detail-header {
+  font-family: DM Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 125% */
+  letter-spacing: -0.32px;
 }
