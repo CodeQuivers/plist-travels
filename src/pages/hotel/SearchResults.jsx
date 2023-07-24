@@ -308,10 +308,10 @@ const SearchResults = () => {
                 </div>
                 <div className="space-y-1 mt-2.5">
                   <p className="text-xs">{result?.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {result?.features?.map((feature) => (
                       <p
-                        className="text-xs bg-gradient-to-r from-[#0F5BB3] to-[#159AC2] text-white hover:bg-gradient-to-r hover:from-[#0F5BB3] hover:to-[#148aad] duration-300 ease-in-out transition-all px-2.5 py-0.5 rounded"
+                        className="text-xs bg-gradient-to-r from-[#0F5BB3] to-[#159AC2] text-white hover:bg-gradient-to-r hover:from-[#0F5BB3] hover:to-[#148aad] duration-300 ease-in-out transition-all px-2 py-0.5 rounded"
                         key={Math.random()}
                       >
                         {feature}
