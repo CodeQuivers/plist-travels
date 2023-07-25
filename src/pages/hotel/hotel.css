@@ -101,16 +101,13 @@
   box-shadow: 0 0 0 3px rgba(247, 87, 24, 0) !important;
 }
 
-.css-1w9qn7h-DropDown {
-  position: absolute;
-  top: 37px !important;
+.css-1mhg4l6-DropDown {
+
+  top: 36.989586px !important;
   left: -9px !important;
-  border: 1px solid #e6e8ec !important;
-  width: 190px !important;
-  border-radius: 0px 10px #e6e8ec !important;
-  border-radius: 0 0px 10px 10px !important;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0) !important;
-  z-index: 10 !important;
+  border: 1px solid #ccc;
+  width: 210px !important;
+
 }
 
 .css-z2hyoe-ItemComponent.react-dropdown-select-item-selected {
