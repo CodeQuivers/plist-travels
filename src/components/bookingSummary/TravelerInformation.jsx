@@ -35,7 +35,7 @@ const TravelerInformation = () => {
   return (
     <div className="gard-border-olc flex flex-col gap-6 py-5">
       <div>
-        <h2 className="text-[#334150] text-2xl font-semibold px-5">
+        <h2 className="text-[#334150] text-2xl font-semibold px-5 pop-font">
           Traveler Information
         </h2>
       </div>

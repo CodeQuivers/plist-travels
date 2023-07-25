@@ -30,7 +30,7 @@
     1;
 }
 
-.grad-text-olc{
+.grad-text-olc {
   background: linear-gradient(
     92deg,
     rgba(14, 85, 177, 1) 0%,
@@ -40,14 +40,26 @@
   -webkit-text-fill-color: transparent;
 }
 
-.gard-border-olc{
+.gard-border-olc {
   border: 2px solid transparent;
   border-radius: 4px;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left,rgba(14, 85, 177, 1),rgba(22, 159, 195, 1));
+  background-image: linear-gradient(white, white),
+    radial-gradient(
+      circle at top left,
+      rgba(14, 85, 177, 1),
+      rgba(22, 159, 195, 1)
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
 .text7F8FA4 {
   color: #7f8fa4;
+}
+.text334150 {
+  color: #334150;
+}
+.gray-divider {
+  border-radius: 5px;
+  border: 1px solid #e6e8ec;
 }

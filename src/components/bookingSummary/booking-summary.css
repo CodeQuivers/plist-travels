@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+.booking-now p,
+span,
+h2,
+label,
+input {
+  font-family: Poppins;
+}
+
+.pop-font {
+  font-family: Poppins;
+}
+
+.dmsan-font {
+  font-family: DM Sans;
+}
