@@ -250,11 +250,7 @@ const SearchResults = () => {
       label: "Price: High to Low",
     },
   ];
-  const customStyles = {
-    border: "none",
-    outline: "none",
-    fontSize: "14px",
-  };
+
   return (
     <div className="w-full border-gradientBox rounded-xl ">
       <div className="border-b py-4">
@@ -267,6 +263,10 @@ const SearchResults = () => {
           </div>
           <div className="flex  border border-[#E6E8EC] px-2 divide-x-2  rounded-t-md">
             <Select
+              style={{
+                border: "none",
+                width: "210px",
+              }}
               options={options}
               values={[
                 {
@@ -274,10 +274,9 @@ const SearchResults = () => {
                   label: "Sort By Hotel",
                 },
               ]}
-              style={customStyles}
               dropdownHandle={false}
               searchable={false}
-              className="!w-[140px] py-1"
+              className="!w-[160px] py-1"
               onChange={(value) => console.log(value)}
             />
             <img className="pl-2 pr-1 py-1" src={sortByIcon} alt="" />
