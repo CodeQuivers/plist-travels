@@ -3,6 +3,7 @@ import JobPageHader from "../../components/jobs/JobPageHader";
 
 import JobCard from "../../components/jobs/JobCard";
 import PagingBar from "../../components/tours/tourSearchResult/PagingBar";
+import JobDetail from "./JobDetail";
 
 const Jobs = () => {
   return (
@@ -13,12 +14,13 @@ const Jobs = () => {
 
       {/* Jobs */}
       <div className="w-[1170px] mx-auto flex flex-col items-center gap-5">
+        {/* <JobCard/>
         <JobCard/>
         <JobCard/>
         <JobCard/>
         <JobCard/>
-        <JobCard/>
-        <PagingBar/>
+        <PagingBar/> */}
+        <JobDetail/>
       </div>
     </div>
   );
