@@ -8,7 +8,7 @@ import heart from "../../../assets/image/home/Vector.png";
 
 const ExploreNigeria = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] w-[1170px] mx-auto">
       <div>
         <h1 className="explore-nigeria-h1">Explore Nigeria </h1>
         <p className="explore-nigeria-p">Keep calm & travel on</p>

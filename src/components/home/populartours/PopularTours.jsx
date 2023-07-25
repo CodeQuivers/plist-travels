@@ -5,7 +5,7 @@ import pic3 from "../../../assets/image/home/tour7.png";
 
 const PopularTours = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] w-[1170px] mx-auto">
       <div>
         <h1 className="popular-tours">Popular Tours</h1>
         <p className="popular-tours-p">Keep calm & travel on</p>
