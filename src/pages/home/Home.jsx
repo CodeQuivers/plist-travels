@@ -1,3 +1,4 @@
+import CheapFlight from "../../components/home/cheapflight/CheapFlight";
 import CustomerReview from "../../components/home/customerreview/CustomerReview";
 import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
 import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
@@ -32,6 +33,7 @@ const Home = () => {
       <PlayStore />
       <OurPartner />
       <Subscribe />
+      <CheapFlight />
     </div>
   );
 };
