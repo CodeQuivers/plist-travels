@@ -4,6 +4,7 @@ import JobPageHader from "../../components/jobs/JobPageHader";
 import JobCard from "../../components/jobs/JobCard";
 import PagingBar from "../../components/tours/tourSearchResult/PagingBar";
 import JobDetail from "./JobDetail";
+import JobApply from "./JobApply";
 
 const Jobs = () => {
   return (
@@ -20,7 +21,8 @@ const Jobs = () => {
         <JobCard/>
         <JobCard/>
         <PagingBar/> */}
-        <JobDetail/>
+        {/* <JobDetail/> */}
+        <JobApply/>
       </div>
     </div>
   );
