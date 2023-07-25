@@ -9,6 +9,7 @@ import PopularFlight from "../../components/home/popularflights/PopularFlight";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
 import PopularTours from "../../components/home/populartours/PopularTours";
 import StayInLoop from "../../components/home/stayinloop/StayInLoop";
+import Subscribe from "../../components/home/subscribe/Subscribe";
 import TrendingAndDestination from "../../components/home/trendinganddestination/TrendingAndDestination";
 // import SubHero from "../../components/subhero/SubHero";
 
@@ -30,6 +31,7 @@ const Home = () => {
       <StayInLoop />
       <PlayStore />
       <OurPartner />
+      <Subscribe />
     </div>
   );
 };
