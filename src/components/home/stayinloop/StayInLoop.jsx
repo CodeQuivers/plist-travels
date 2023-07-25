@@ -4,7 +4,7 @@ import loop1 from "../../../assets/image/home/Mask (1).png";
 import loop2 from "../../../assets/image/home/Mask (2).png";
 import author from "../../../assets/image/home/Author Photo.png";
 import forward from "../../../assets/image/home/forward.png";
-import tour1 from "../../../assets/image/home/tour1.png";
+
 
 const StayInLoop = () => {
   return (
