@@ -1,4 +1,3 @@
-import React from "react";
 import TourDetailBanner from "../../components/tours/tourDetail/TourDetailBanner";
 import TourDetailInformation from "../../components/tours/tourDetail/TourDetailInformation";
 

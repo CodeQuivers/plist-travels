@@ -1,6 +1,5 @@
 import HotelSearch from "../../components/hotel/hotelSearch/HotelSearch";
-import TransferSearchFilters from "../transfer/TransferSearchFilters";
-// import HotelSearchFilters from "./HotelSearchFilters";
+import HotelSearchFilters from "./HotelSearchFilters";
 import SearchResults from "./SearchResults";
 
 const HotelSearchResults = () => {
@@ -10,7 +9,7 @@ const HotelSearchResults = () => {
       {/* search result section */}
       <section className="mt-20 py-20 border-t grid grid-cols-9 gap-5">
         <div className="col-span-2">
-          <TransferSearchFilters />
+          <HotelSearchFilters />
         </div>
         <div className="col-span-7">
           <SearchResults />
