@@ -5,7 +5,7 @@ import tour3 from "../../../assets/image/home/tour3.png";
 
 const PopularFlight = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] w-[1170px] mx-auto">
       <div>
         <h1 className="popular-flight-h1">Popular Flight</h1>
         <p className="popular-flight-p">Keep calm & travel on</p>

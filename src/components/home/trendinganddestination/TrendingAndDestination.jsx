@@ -7,7 +7,7 @@ import "./trendinganddestination.css";
 
 const TrendingAndDestination = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] w-[1170px] mx-auto">
       <div>
         <h1 className="explore-nigeria-h1">Trending Destination </h1>
         <p className="explore-nigeria-p">Keep calm & travel on</p>
