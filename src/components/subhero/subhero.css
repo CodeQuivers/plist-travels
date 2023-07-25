@@ -1,0 +1,59 @@
+/* .subhero {
+  opacity: 0.5;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 100%, #169fc3 0%)
+  );
+  height: 470px;
+} */
+
+.bg-hero {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../../assets/image/home/div.video-bg.png),
+    lightgray 0px 0px / 100% 177.527% no-repeat;
+  height: 470px;
+}
+
+.hero2-h1 {
+  color: var(--dev-plistbooking-travel-nero, #fff);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+}
+
+.hero2-btn {
+  display: inline-flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  color: var(--neutrals-8, #fcfcfd);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.hero2 {
+  fill: var(--dev-plistbooking-travel-nero, #fff);
+  display: flex;
+  height: 100px;
+  padding-top: 30.589px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+}

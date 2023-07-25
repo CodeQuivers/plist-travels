@@ -7,7 +7,7 @@ import africa4 from "../../../assets/image/home/africa-4.png";
 
 const ExploreAfrica = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] w-[1170px] mx-auto">
       <div>
         <h1 className="explore-nigeria-h1">Explore Africa</h1>
         <p className="explore-nigeria-p">Keep calm & travel on</p>

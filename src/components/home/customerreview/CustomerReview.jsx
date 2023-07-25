@@ -5,7 +5,7 @@ import star from "../../../assets/image/home/Icon Small.png";
 
 const CustomerReview = () => {
   return (
-    <div>
+    <div className="w-[1170px] mx-auto">
       <div className="flex flex-col">
         <h1 className="customer-review-h1">Hear From Our Customers</h1>
         <p className="customer-review-p">Keep calm & travel on</p>
