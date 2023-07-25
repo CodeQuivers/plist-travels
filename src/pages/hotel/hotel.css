@@ -70,8 +70,8 @@
 }
 
 .react-datepicker__day--selected {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #007bff !important;
+  color: #fff !important;
 }
 
 .custom-datepicker {
@@ -98,7 +98,7 @@
 .css-wmy1p7-ReactDropdownSelect:focus,
 .css-wmy1p7-ReactDropdownSelect:focus-within {
   outline: 0 !important;
-  box-shadow: 0 0 0 3px rgba(226, 68, 5, 0) !important;
+  box-shadow: 0 0 0 3px rgba(247, 87, 24, 0) !important;
 }
 
 .css-1w9qn7h-DropDown {

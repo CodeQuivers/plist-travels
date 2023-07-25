@@ -10,7 +10,7 @@ import FlightRoundTrip from "../pages/flight/FlightRoundTrip";
 import TourDetail from "../pages/tours/TourDetail";
 import TransferSearchResults from "../pages/transfer/TransferSearchResults";
 import TourBooking from "../pages/tours/TourBooking";
-
+import HotelDetails from "../pages/hotel/HotelDetails";
 
 export const router = createBrowserRouter([
   {
@@ -56,6 +56,10 @@ export const router = createBrowserRouter([
       {
         path: "/hotel/search",
         element: <HotelSearchResults />,
+      },
+      {
+        path: "/hotel/details",
+        element: <HotelDetails />,
       },
     ],
   },
