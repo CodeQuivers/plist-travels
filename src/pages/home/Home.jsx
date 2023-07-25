@@ -3,6 +3,7 @@ import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
 import ExploreNigeria from "../../components/home/explorenigeria/exploreNigeria";
 import ExploreTheWorld from "../../components/home/exploreworld/ExploreTheWorld";
 import HeroSection from "../../components/home/hero/HeroSection";
+import PlayStore from "../../components/home/playstore/PlayStore";
 import PopularFlight from "../../components/home/popularflights/PopularFlight";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
 import PopularTours from "../../components/home/populartours/PopularTours";
@@ -26,6 +27,7 @@ const Home = () => {
       <hr className="bg-[#CBE6F6] border-[1px] mt-[84px]" />
       {/* <SubHero /> */}
       <StayInLoop />
+      <PlayStore />
     </div>
   );
 };
