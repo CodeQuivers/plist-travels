@@ -1,0 +1,35 @@
+.cheapflight {
+  height: 563px;
+  padding: 98px 130px;
+  gap: 10px;
+  background: #f0f5fa;
+}
+
+.cheapflight-h1 {
+  color: var(--dev-plistbooking-travel-blue-zodiac, #0d233e);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+}
+
+.cheapflight-region {
+  color: var(--dev-plistbooking-travel-blue-zodiac, #0d233e);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 177.778% */
+}
+
+.cheapflight-name {
+  color: var(--dev-plistbooking-travel-blue-zodiac, #0d233e);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}

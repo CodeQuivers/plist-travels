@@ -1,0 +1,52 @@
+.subscribe {
+  height: 460px;
+  border-radius: 150px 16px 16px 16px;
+  background: #f0f5fa;
+}
+
+.subscribe-h1 {
+  color: #405e85;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56.5px; /* 141.25% */
+  letter-spacing: -0.4px;
+}
+
+.subscribe-input {
+  border-radius: 4px 0px 0px 4px;
+  background: var(--andit-co-nero, #fff);
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  padding: 17.52px 250px 18.48px 22px;
+  align-items: center;
+}
+
+.subscribe-btn {
+  border-radius: 0px 5px 5px 0px;
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  display: inline-flex;
+  padding: 14px 35.5px 14px 34px;
+  align-items: flex-start;
+  color: var(--andit-co-nero, #fff);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+
+.subscribe-arrow {
+  width: 35.294px;
+  height: 35.246px;
+  transform: rotate(0deg);
+  flex-shrink: 0;
+  fill: #fff;
+}

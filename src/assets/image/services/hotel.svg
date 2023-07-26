@@ -1,0 +1,57 @@
+<svg width="70" height="69" viewBox="0 0 70 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="hotel">
+<path id="Vector" d="M52.25 5.75H17.75C16.225 5.75 14.7625 6.3558 13.6841 7.43414C12.6058 8.51247 12 9.97501 12 11.5V57.5C12 59.025 12.6058 60.4875 13.6841 61.5659C14.7625 62.6442 16.225 63.25 17.75 63.25H52.25C53.775 63.25 55.2375 62.6442 56.3159 61.5659C57.3942 60.4875 58 59.025 58 57.5V11.5C58 9.97501 57.3942 8.51247 56.3159 7.43414C55.2375 6.3558 53.775 5.75 52.25 5.75Z" fill="white" stroke="url(#paint0_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Vector_2">
+<path d="M26.375 46L27.3755 45.31C31.5874 42.3976 38.4155 42.3976 42.6245 45.31L43.625 46" fill="white"/>
+<path d="M26.375 46L27.3755 45.31C31.5874 42.3976 38.4155 42.3976 42.6245 45.31L43.625 46" stroke="url(#paint1_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Vector_3">
+<path d="M23.5 20.125H23.5288H23.5Z" fill="white"/>
+<path d="M23.5 20.125H23.5288" stroke="url(#paint2_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_4" d="M46.5 20.125H46.5288" stroke="url(#paint3_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M35 20.125H35.0288" stroke="url(#paint4_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M35 31.625H35.0288" stroke="url(#paint5_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M46.5 31.625H46.5288" stroke="url(#paint6_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M23.5 31.625H23.5288" stroke="url(#paint7_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_9" d="M29.25 63.25V44.5625M40.75 44.5625V63.25" stroke="url(#paint8_linear_518_51671)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_518_51671" x1="11.0676" y1="33.9363" x2="59.5614" y2="34.1077" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_518_51671" x1="26.0253" y1="44.5347" x2="44.198" y2="45.0165" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_518_51671" x1="23.4994" y1="20.6152" x2="23.5297" y2="20.6152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint3_linear_518_51671" x1="46.4994" y1="20.6152" x2="46.5297" y2="20.6152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint4_linear_518_51671" x1="34.9994" y1="20.6152" x2="35.0297" y2="20.6152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint5_linear_518_51671" x1="34.9994" y1="32.1152" x2="35.0297" y2="32.1152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint6_linear_518_51671" x1="46.4994" y1="32.1152" x2="46.5297" y2="32.1152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint7_linear_518_51671" x1="23.4994" y1="32.1152" x2="23.5297" y2="32.1152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+<linearGradient id="paint8_linear_518_51671" x1="29.0169" y1="53.723" x2="41.1404" y2="53.756" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0E55B1"/>
+<stop offset="1" stop-color="#169FC3"/>
+</linearGradient>
+</defs>
+</svg>
