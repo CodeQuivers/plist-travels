@@ -17,10 +17,7 @@ import Jobs from "../pages/jobs/Jobs";
 import OneWayTrip from "../pages/flight/OneWayTrip";
 import FlightCashout from "../pages/flight/FlightCashout";
 
-
 import HotelBookingSummary from "../pages/hotel/HotelBookingSummary";
-
-
 
 export const router = createBrowserRouter([
   {
@@ -78,10 +75,7 @@ export const router = createBrowserRouter([
       {
         path: "/hotel/booking",
 
-       
-
         element: <HotelBookingSummary />,
-
       },
       {
         path: "/services",
@@ -100,3 +94,9 @@ export const router = createBrowserRouter([
 ]);
 
 export default router;
+// import AddProperty from "../pages/property/AddProperty";
+
+//  {
+//       path: "/add-property",
+//       element: <AddProperty />,
+//     },
