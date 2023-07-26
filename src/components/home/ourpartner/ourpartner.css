@@ -1,0 +1,22 @@
+.partner-h1 {
+  width: 624px;
+  color: var(--old-neutrals-01, #141416);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+}
+
+.partner-p {
+  color: var(--neutrals-4, #777e90);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}

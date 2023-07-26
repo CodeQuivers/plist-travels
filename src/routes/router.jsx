@@ -10,10 +10,12 @@ import FlightRoundTrip from "../pages/flight/FlightRoundTrip";
 import TourDetail from "../pages/tours/TourDetail";
 import TransferSearchResults from "../pages/transfer/TransferSearchResults";
 import TourBooking from "../pages/tours/TourBooking";
+
+import Services from "../pages/services/Services";
+
 import HotelDetails from "../pages/hotel/HotelDetails";
 import Jobs from "../pages/jobs/Jobs";
-import FlightCashout from "../pages/flight/FlightCashout";
-import OneWayTrip from "../pages/flight/OneWayTrip";
+
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +69,14 @@ export const router = createBrowserRouter([
       {
         path: "/hotel/search",
         element: <HotelSearchResults />,
+      },
+      {
+        path: "/hotel/booking",
+        element: <HotelBooking />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
       },
       {
         path: "/hotel/details",
