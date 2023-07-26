@@ -18,8 +18,6 @@ import Jobs from "../pages/jobs/Jobs";
 
 import HotelBookingSummary from "../pages/hotel/HotelBookingSummary";
 
-
-
 export const router = createBrowserRouter([
   {
     path: "/",
