@@ -8,7 +8,7 @@ const HotelBookingConfirmation = () => {
       style={{
         fontFamily: "Poppins",
       }}
-      className=" border-gradientBox flex flex-col items-center !px-0 !pt-0 !pb-8"
+      className="border-gradientBox flex flex-col items-center !px-0 !pt-0 !pb-8"
     >
       <div>
         <img src={bookingCoverPhoto} alt="" />
