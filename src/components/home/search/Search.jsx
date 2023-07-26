@@ -20,9 +20,8 @@ const HotelSearch = () => {
 
   const [startsDate, setStartDate] = useState(new Date());
   const [pickUpTime, setPickUpTime] = useState(new Date());
-  console.log("pickUpTime", pickUpTime);
+
   const [returnTime, setReturnTime] = useState(new Date());
-  console.log("returnTime", returnTime);
 
   const options = [
     {
@@ -38,6 +37,7 @@ const HotelSearch = () => {
       label: "2 Room(s) - 4 Guest(s)",
     },
   ];
+
   return (
     <div className="max-md:px-5 w-[1170px] mx-auto">
       <div className="w-full lg:flex max-md:space-y-5 justify-around  border-[#1066B5] shadow-2xl shadow-[#1065b517] mt-14 border  rounded-2xl flex flex-col">
@@ -134,11 +134,12 @@ const HotelSearch = () => {
             role="tablist"
             className={
               tab === 5
-                ? "search-category border border-[#1066B5] w-[209px]"
-                : "search-category1 w-[209px]"
+                ? "search-category border border-[#1066B5] w-[209px] flex items-center gap-[6px]"
+                : "search-category1 w-[209px] flex items-center gap-[6px]"
             }
           >
-            Travel Packages
+            <img src={hotel} alt="" />
+            <span>Travel Packages</span>
           </button>
         </div>
         <hr className="border-blue-500 " />
@@ -508,6 +509,94 @@ const HotelSearch = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Vacation Serach */}
+
+        <div
+          className={
+            tab === 5
+              ? "flex flex-col items-start justify-center m-8 swing-in-top-fwd"
+              : "hidden"
+          }
+          id="link5"
+        >
+          <div className="flex items-center gap-[37px]">
+            <div className="w-[250px] ">
+              <h5 className="font-semibold">Going to</h5>
+              <input
+                style={{
+                  border: "1px solid red",
+                  borderRadius: "5px",
+                  color: "blue",
+                  fontSize: "16px",
+                }}
+                className="mt-2 pl-10  border !border-[#808996a9] h-12 rounded"
+                placeholder=" Delhi and NCR India"
+              />
+            </div>
+            <div className="w-[250px]">
+              <h5 className="font-semibold"> Check In - Check Out</h5>
+              <div className="mt-2 search-border">
+                <DatePicker
+                  selectsRange={true}
+                  startDate={startDate}
+                  endDate={endDate}
+                  onChange={(update) => {
+                    setDateRange(update);
+                  }}
+                  isClearable={true}
+                  placeholderText="2023/06/27 - 2023/06/29"
+                  className="custom-datepicker"
+                  todayButton="TODAY"
+                  monthsShown={2}
+                />
+              </div>
+            </div>
+            <div className="w-[250px]">
+              <h5 className="font-medium">Room Type</h5>
+              <div>
+                <Select
+                  style={{
+                    border: "1px solid red",
+                    borderRadius: "5px",
+                    color: "black",
+                    fontSize: "16px",
+                    paddingLeft: "10px",
+                  }}
+                  className="mt-2 pl-10 text-black   border !border-[#808996a9]  h-12 rounded"
+                  options={options}
+                  placeholder="Single"
+                />
+              </div>
+            </div>
+            <div className="w-[250px]">
+              <h5 className="font-medium">Traveller</h5>
+              <div>
+                <Select
+                  style={{
+                    border: "1px solid red",
+                    borderRadius: "5px",
+                    color: "black",
+                    fontSize: "16px",
+                    paddingLeft: "10px",
+                  }}
+                  className="mt-2 pl-10 text-black   border !border-[#808996a9]  h-12 rounded"
+                  options={options}
+                  placeholder="Single"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-[250px]">
+            <button
+              className="defaultColor w-[250px] border py-2.5 mt-7 text-white text-lg font-medium rounded-lg"
+              type="submit"
+            >
+              Search Now
+            </button>
           </div>
         </div>
       </div>
