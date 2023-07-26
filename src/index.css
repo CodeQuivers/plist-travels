@@ -13,6 +13,7 @@
   box-sizing: border-box;
 }
 
+/* mostafiz start */
 .old-logo-color {
   background: rgb(14, 85, 177);
   background: linear-gradient(92deg,
@@ -27,7 +28,7 @@
       rgba(14, 85, 177, 1) 0%,
       rgba(22, 159, 195, 1) 100%) 1;
 }
-
+/* mostafiz end */
 .grad-text-olc {
   background: linear-gradient(92deg,
       rgba(14, 85, 177, 1) 0%,
