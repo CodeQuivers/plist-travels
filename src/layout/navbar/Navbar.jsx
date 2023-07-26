@@ -4,10 +4,27 @@ import "./navbar.css";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import avater from "../../assets/image/navbar/avatar.png";
 import subMenu from "../../assets/image/navbar/align-justify.png";
+import close from "../../assets/image/home/x.png";
+import { useState } from "react";
+import SubNav from "./SubNav";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const subNavs = [
+    { id: 1, title: "About Us", to: "/aboutus" },
+    { id: 2, title: "Travel", to: "/travel" },
+    { id: 3, title: "Service", to: "/service" },
+    { id: 4, title: "Job", to: "/job" },
+    { id: 5, title: "Blog", to: "/blog" },
+    { id: 6, title: "Support", to: "/support" },
+    { id: 7, title: "business/corporate trip", to: "/corporate-trip" },
+    { id: 8, title: "Return Policy", to: "/returnpolicy" },
+    { id: 9, title: "List Your Property", to: "/property" },
+  ];
+
   return (
-    <div className="bg-[#EBF3FB] h-[92px] sticky top-0 z-50">
+    <nav className="bg-[#EBF3FB] h-[92px] sticky top-0 z-50 ">
       <div className="mx-auto py-[35px] flex items-center justify-center ">
         <div>
           <img src={logo} alt="" />
@@ -50,10 +67,38 @@ const Navbar = () => {
         </div>
         <div className="ml-[25px] flex items-center">
           <button className="btn-3">Become an Agent</button>
-          <img src={subMenu} alt="" className="w-[36px] h-[36px] ml-[27px]" />
+          {open && (
+            <img
+              src={subMenu}
+              alt=""
+              className="w-[36px] h-[36px] ml-[27px] "
+              onClick={() => setOpen(!open)}
+            />
+          )}
+
+          {!open && (
+            <img
+              src={subMenu}
+              alt=""
+              className="w-[36px] h-[36px] ml-[27px] "
+              onClick={() => setOpen(!open)}
+            />
+          )}
         </div>
       </div>
-    </div>
+
+      {/* <div>
+        <ul
+          className={` absolute bg-[#fff] duration-500 ease-in-out flex flex-col items-start  gap-[20px]  ${
+            open ? "right-0" : "-right-2/3"
+          }`}
+        >
+          {subNavs.map((nav) => (
+            <SubNav nav={nav} key={nav.id}></SubNav>
+          ))}
+        </ul>
+      </div> */}
+    </nav>
   );
 };
 

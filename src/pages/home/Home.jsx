@@ -9,6 +9,7 @@ import PlayStore from "../../components/home/playstore/PlayStore";
 import PopularFlight from "../../components/home/popularflights/PopularFlight";
 import PopularHotel from "../../components/home/popularhotel/PopularHotel";
 import PopularTours from "../../components/home/populartours/PopularTours";
+import HotelSearch from "../../components/home/search/Search";
 import StayInLoop from "../../components/home/stayinloop/StayInLoop";
 import Subscribe from "../../components/home/subscribe/Subscribe";
 import TrendingAndDestination from "../../components/home/trendinganddestination/TrendingAndDestination";
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <div className="  mx-auto">
       <HeroSection />
+      <HotelSearch />
       <ExploreTheWorld />
       <ExploreNigeria />
       <ExploreAfrica />
