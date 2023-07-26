@@ -12,6 +12,8 @@ import TransferSearchResults from "../pages/transfer/TransferSearchResults";
 import TourBooking from "../pages/tours/TourBooking";
 import HotelDetails from "../pages/hotel/HotelDetails";
 import Jobs from "../pages/jobs/Jobs";
+import FlightCashout from "../pages/flight/FlightCashout";
+import OneWayTrip from "../pages/flight/OneWayTrip";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ export const router = createBrowserRouter([
       {
         path: "/flight/roundtrip",
         element: <FlightRoundTrip />,
+      },
+      {
+        path: "/flight/oneway",
+        element: <OneWayTrip />,
+      },
+      {
+        path: "/flight/cashout",
+        element: <FlightCashout />,
       },
       {
         path: "/tours",
