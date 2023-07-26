@@ -6,7 +6,7 @@ import TourIncludedFeature from "./TourIncludedFeature";
 import TourExludedFeature from "./TourExludedFeature";
 import TourDetailCategories from "./TourDetailCategories";
 
-const TourDetailInformation = () => {
+const TourDetailInformation = ({setIsOpen}) => {
   return (
     <div className="max-w-[1170px] mx-auto tour-detail-information">
       <div className="flex justify-between gap-7">
@@ -22,7 +22,7 @@ const TourDetailInformation = () => {
           </div>
 
           {/* Available Rooms */}
-          <AvailableRooms />
+          <AvailableRooms setIsOpen={setIsOpen}/>
 
           {/* about the tour */}
           <TourDetailAbout />

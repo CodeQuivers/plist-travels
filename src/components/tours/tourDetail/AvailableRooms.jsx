@@ -4,7 +4,7 @@ import availRoomImg1 from "../../../assets/image/tours/tourDetails/availableRoom
 import availRoomImg2 from "../../../assets/image/tours/tourDetails/availableRoom-2.png";
 
 
-const AvailableRooms = () => {
+const AvailableRooms = ({setIsOpen}) => {
   return (
     <div className="gard-border-olc flex flex-col gap-4 py-5">
             <div>
@@ -15,7 +15,7 @@ const AvailableRooms = () => {
             <div className="w-full gray-divider"></div>
             <div className="flex flex-col gap-5 px-5">
               <div className="flex jutify-between gap-9">
-                <div>
+                <div onClick={()=>setIsOpen(true)} className='hover:cursor-pointer'>
                   <img src={availRoomImg1} className="max-w-[60px]" alt="" />
                 </div>
 
