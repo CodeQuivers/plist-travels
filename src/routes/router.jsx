@@ -15,6 +15,7 @@ import Services from "../pages/services/Services";
 
 import HotelDetails from "../pages/hotel/HotelDetails";
 import Jobs from "../pages/jobs/Jobs";
+import HotelBooking from "../pages/hotel/HotelBooking";
 
 export const router = createBrowserRouter([
   {
@@ -62,10 +63,14 @@ export const router = createBrowserRouter([
         element: <HotelSearchResults />,
       },
       {
+        path: "/hotel/booking",
+        element: <HotelBooking />,
+      },
+      {
         path: "/services",
         element: <Services />,
       },
-  {
+      {
         path: "/hotel/details",
         element: <HotelDetails />,
       },
