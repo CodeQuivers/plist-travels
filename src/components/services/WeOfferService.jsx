@@ -7,7 +7,7 @@ const WeOfferService = () => {
     return (
         <div>
             <div>
-                <h1 className="text-3xl text-center font-semibold ">Services Also We Offer</h1>
+                <h1 className="text-3xl text-center font-semibold gradientText">Services Also We Offer</h1>
             </div>
 
             {/* Card Section */}
