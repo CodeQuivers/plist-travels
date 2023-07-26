@@ -8,7 +8,7 @@ import JobApplyForm from "../../components/jobs/JobApplyForm";
 const JobApply = () => {
   
   return (
-    <div className="w-full gard-border-olc-16">
+    <div className="w-full grad-border-olc-16">
       {/* Head part of the Job deatil */}
       <div className="w-full flex justify-between pop-font p-5">
         <div className="flex gap-6">
