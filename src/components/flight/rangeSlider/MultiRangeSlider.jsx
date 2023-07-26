@@ -74,7 +74,9 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
         <div ref={range} className="slider__range" />
         <div className="slider__left-value ml-1">
           <input
-          className="border-2 rounded-md text-center"
+            maxLength={4}
+            className="border-2 rounded-md text-center"
+            type="text"
             value={minVal}
             min={min}
             max={max}
@@ -85,9 +87,11 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
           />
         </div>
         <div className="slider__right-value relative">
-        <hr className="w-2 border-slate-950 border absolute -left-6 top-4"/>
+          <hr className="w-2 border-slate-950 border absolute -left-6 top-4" />
           <input
-          className="border-2 rounded-md text-center"
+            type="text"
+            maxLength={4}
+            className="border-2 rounded-md text-center"
             value={maxVal}
             min={min - 1}
             max={max}

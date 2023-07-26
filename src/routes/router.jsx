@@ -15,7 +15,7 @@ import Services from "../pages/services/Services";
 
 import HotelDetails from "../pages/hotel/HotelDetails";
 import Jobs from "../pages/jobs/Jobs";
-import HotelBooking from "../pages/hotel/HotelBooking";
+
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +33,14 @@ export const router = createBrowserRouter([
       {
         path: "/flight/roundtrip",
         element: <FlightRoundTrip />,
+      },
+      {
+        path: "/flight/oneway",
+        element: <OneWayTrip />,
+      },
+      {
+        path: "/flight/cashout",
+        element: <FlightCashout />,
       },
       {
         path: "/tours",
