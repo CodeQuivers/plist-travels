@@ -94,11 +94,21 @@ export const router = createBrowserRouter([
         path: "/jobs",
         element: <Jobs />,
       },
+      
     ],
   },
 ]);
 
 export default router;
+
+
+
+
+// {
+//   path: "/add-property",
+//   element: <AddProperty />,
+// },
+
 
 // import AddProperty from "../pages/property/AddProperty";
 
