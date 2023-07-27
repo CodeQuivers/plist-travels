@@ -63,11 +63,11 @@ const Navbar = () => {
                 </select>
               </div>
             </div>
-            <div>
+            <div className="flex justify-center items-center">
               <img
                 src={avater}
                 alt="avatar of the user"
-                className="w-10 h-10 rounded-full ]"
+                className="w-10 h-10 rounded-full"
               />
             </div>
             <div className="w-48 flex items-center">
