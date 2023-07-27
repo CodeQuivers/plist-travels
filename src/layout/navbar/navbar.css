@@ -37,3 +37,25 @@
   font-weight: 700;
   line-height: 16px; /* 100% */
 }
+
+.subNav-link {
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+
+.subnavbar-close {
+  fill: var(--old-logo-color, linear-gradient(92deg, #0e55b1 0%, #169fc3 100%));
+  filter: drop-shadow(-5px 10px 20px rgba(0, 0, 0, 0.04));
+  width: 32px;
+  height: 32px;
+}

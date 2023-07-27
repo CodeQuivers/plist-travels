@@ -18,6 +18,7 @@ import OneWayTrip from "../pages/flight/OneWayTrip";
 import FlightCashout from "../pages/flight/FlightCashout";
 
 import HotelBookingSummary from "../pages/hotel/HotelBookingSummary";
+import Blogs from "../pages/blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
         element: <TransferSearchResults />,
       },
       {
+        path: '/blogs',
+        element: <Blogs />
+      },
+      {
         path: "/hotel",
         element: <Hotel />,
       },
@@ -97,6 +102,15 @@ export const router = createBrowserRouter([
 export default router;
 
 
+
+
+// {
+//   path: "/add-property",
+//   element: <AddProperty />,
+// },
+
+
+// import AddProperty from "../pages/property/AddProperty";
 
 // {
 //   path: "/add-property",
