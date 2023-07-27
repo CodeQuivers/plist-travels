@@ -12,7 +12,7 @@ const SearchResultListItem = () => {
           <button className="absolute top-3 right-3 bg-white p-1 rounded-lg">
             <FaRegHeart size={20} />
           </button>
-          <span className="absolute bottom-3 left-3 py-1 px-2 rounded text-sm text-[#23262F] font-normal bg-white gard-border-olc">
+          <span className="absolute bottom-3 left-3 py-1 px-2 rounded text-sm text-[#23262F] font-normal bg-white grad-border-olc">
             ART & CULTURE
           </span>
         </div>
@@ -44,7 +44,7 @@ const SearchResultListItem = () => {
             </button>
           </div>
           <div>
-            <button className="w-[200px] py-2 gard-border-olc text-sky-600 px-16 bg-white text-sm font-bold">
+            <button className="w-[200px] py-2 grad-border-olc text-sky-600 px-16 bg-white text-sm font-bold">
               Details
             </button>
           </div>

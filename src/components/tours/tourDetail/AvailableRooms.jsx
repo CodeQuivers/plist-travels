@@ -6,7 +6,7 @@ import availRoomImg2 from "../../../assets/image/tours/tourDetails/availableRoom
 
 const AvailableRooms = ({setIsOpen}) => {
   return (
-    <div className="gard-border-olc flex flex-col gap-4 py-5">
+    <div className="grad-border-olc flex flex-col gap-4 py-5">
             <div>
               <h2 className="text-[#334150] font-semibold px-5">
                 Available Rooms

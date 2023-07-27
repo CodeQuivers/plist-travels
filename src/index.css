@@ -37,7 +37,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.gard-border-olc {
+.grad-border-olc {
   border: 2px solid transparent;
   border-radius: 4px;
   background-image: linear-gradient(white, white),
@@ -48,7 +48,7 @@
   background-clip: padding-box, border-box;
 }
 
-.gard-border-olc-16 {
+.grad-border-olc-16 {
   border: 2px solid transparent;
   border-radius: 16px;
   background-image: linear-gradient(white, white),
