@@ -5,10 +5,14 @@
   
 }
 
-.agent-child-bg{
+/* .agent-child-bg{
     opacity: 0.5;
   background: var(
     --old-logo-color,
     linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
   );
+} */
+
+.rana{
+  opacity: 1;
 }

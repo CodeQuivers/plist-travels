@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./AgentCover.css";
-// import parabolaShapeImg from "../../../assets/image/home/parabolaShape.svg";
-import parabolaShapeImg from "../../../assets/image/home/half2.png";
+import parabolaShapeImg from "../../../assets/image/home/parabolaShape.svg";
+// import parabolaShapeImg from "../../../assets/image/home/half2.png";
 
 const AgentCover = () => {
   return (
@@ -18,8 +18,9 @@ const AgentCover = () => {
             <button>Become An Agent</button>
           </div>
         </div>
-        <div className="w-full h-[100px]">
-          <img className="w-full h-full fill-gim" src={parabolaShapeImg} alt="" />
+        <div className=" h-[100px] rana mb-0">
+          <img className="w-[2221px] overflow-hidden" src={parabolaShapeImg} alt="" />
+          <div className="h-[20px] bg-white"></div>
         </div>
       </div>
     </div>
