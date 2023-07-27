@@ -1,3 +1,4 @@
+import AgentCover from "../../components/home/agentCover/AgentCover";
 import CheapFlight from "../../components/home/cheapflight/CheapFlight";
 import CustomerReview from "../../components/home/customerreview/CustomerReview";
 import ExploreAfrica from "../../components/home/exploreafrica/ExploreAfrica";
@@ -30,6 +31,7 @@ const Home = () => {
       <hr className="bg-[#CBE6F6] border-[1px] mb-[84px]" />
       <CustomerReview />
       <hr className="bg-[#CBE6F6] border-[1px] mt-[84px]" />
+      <AgentCover/>
       {/* <SubHero /> */}
       <StayInLoop />
       <PlayStore />

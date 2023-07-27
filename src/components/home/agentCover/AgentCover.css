@@ -1,0 +1,5 @@
+.agent-bg {
+  background: linear-gradient(92deg, #0e55b188 0%, #16a0c37e 100%),
+    url(../../../assets/image/home/agentCoverPhoto.png);
+  background-size: cover;
+}
