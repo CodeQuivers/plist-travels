@@ -50,3 +50,37 @@
   flex-shrink: 0;
   fill: #fff;
 }
+
+/*  */
+
+.rana {
+  background: url(../../../assets/image/home/elipse/Ellipse32.svg),
+    url(../../../assets/image/home/elipse/Ellipse33.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+/* Image Container */
+.container12 {
+  position: relative;
+}
+
+.subscribe-img {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  top: auto;
+  right: auto;
+}
+
+.elp-upper-right {
+  position: absolute;
+  right: 0;
+  bottom: 182px;
+  left: auto;
+}
+
+/* .elp-upper-right-img1{
+  width: 327 px;
+  height: 327 px;
+} */
