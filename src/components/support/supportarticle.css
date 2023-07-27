@@ -1,0 +1,10 @@
+.support-article-h1 {
+  color: var(--old-neutrals-01, #141416);
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+}
