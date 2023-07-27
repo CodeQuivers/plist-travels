@@ -5,7 +5,7 @@ import AgentForm from "./AgentForm";
 const BecomeAnAgent = () => {
   return (
     <div className="flex items-center justify-center gap-[153px] w-[1170px] mx-auto my-[70px]">
-      <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-[30px] w-[470px]">
         <div>
           <h1 className="list-h1">Create new listing</h1>
         </div>
