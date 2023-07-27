@@ -99,9 +99,10 @@ export const router = createBrowserRouter([
 ]);
 
 export default router;
+
 // import AddProperty from "../pages/property/AddProperty";
 
-//  {
-//       path: "/add-property",
-//       element: <AddProperty />,
-//     },
+// {
+//   path: "/add-property",
+//   element: <AddProperty />,
+// },
