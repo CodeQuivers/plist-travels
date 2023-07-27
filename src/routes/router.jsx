@@ -20,7 +20,6 @@ import Support from "../pages/support/Support";
 import Blogs from "../pages/blogs/Blogs";
 import AddProperty from "../pages/property/AddProperty";
 
-
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -99,9 +98,9 @@ export const router = createBrowserRouter([
         path: "/support",
         element: <Support />,
       },
+      {
         path: "/add-property",
         element: <AddProperty />,
-
       },
     ],
   },
