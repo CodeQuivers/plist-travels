@@ -17,7 +17,7 @@ const ExploreTheWorld = () => {
         </div>
 
         <div className="h-[291px] flex flex-col lg:flex-row gap-[25px] mt-[40px] ">
-          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px] w-[274px] ">
             <img src={travel} alt="" />
             <h1 className="card-h1">Travel with Ease</h1>
             <p className="card-p">
@@ -27,7 +27,7 @@ const ExploreTheWorld = () => {
             <h2 className="card-h2">Explore</h2>
           </div>
 
-          <div className="card-alternative  border-blue-500 border-2 p-[24px] flex flex-col items-center gap-[12px] ">
+          <div className="card-alternative  border-blue-500 border-2 p-[24px] flex flex-col items-center gap-[12px] w-[274px] ">
             <img src={support} alt="" />
             <h1 className="card-a-h1">Trusted Support</h1>
             <p className="card-a-p">
@@ -37,7 +37,7 @@ const ExploreTheWorld = () => {
             <h2 className="card-a-h2">Contact us</h2>
           </div>
 
-          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px] w-[274px] ">
             <img src={vast} alt="" />
             <h1 className="card-h1">Vast Selection</h1>
             <p className="card-p">
@@ -47,7 +47,7 @@ const ExploreTheWorld = () => {
             <h2 className="card-h2">Book Now</h2>
           </div>
 
-          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px]">
+          <div className="blue-card p-[24px] flex flex-col items-center gap-[12px] w-[274px] ">
             <img src={partner} alt="" />
             <h1 className="card-h1">Partner With Us </h1>
             <p className="card-p">
