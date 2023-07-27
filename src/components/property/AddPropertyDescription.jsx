@@ -132,12 +132,6 @@ const AddPropertyDescription = () => {
               </p>
             </div>
             {/* child 7 */}
-            <button
-              style={{ fontSize: "18px" }}
-              className="w-[287px] h-[56px] old-logo-color text-white rounded-lg"
-            >
-              Continue
-            </button>
           </div>
         </form>
       </div>
