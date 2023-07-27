@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import checkBoxIcon from "../../assets/image/property/checkBoxIcon.svg";
 import circleIcon from "../../assets/image/property/circleIcon.svg";
 import circleIconWhite from "../../assets/image/property/circleIconWhite.svg";
@@ -7,9 +6,22 @@ import blueLine from "../../assets/image/property/blueLine.svg";
 import whiteLine from "../../assets/image/property/whiteLine.svg";
 import AddPropertyLocation from "../../components/property/AddPropertyLocation";
 import AddPropertyPriceForm from "../../components/property/AddPropertyPriceForm";
+import AddPropertyDescription from "../../components/property/AddPropertyDescription";
+import AddPropertyDetails from "../../components/property/AddPropertyDetails";
 
 const AddProperty = () => {
-  const [activeList, setActiveList] = useState(2);
+  const [activeList, setActiveList] = useState(1);
+
+  const handleDecreaseActiveList = () => {
+    if (!activeList <= 1) {
+      setActiveList(activeList - 1);
+    }
+  };
+  const handleIncreaseActiveList = () => {
+    if (activeList >= 1 && activeList < 7) {
+      setActiveList(activeList + 1);
+    }
+  };
   return (
     <>
       <div className="flex justify-center mt-20 border-b pb-6">
@@ -22,7 +34,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={activeList === 1 ? circleIcon : checkBoxIcon}
                 alt=""
               />
@@ -34,7 +46,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 2
                     ? circleIcon
@@ -52,7 +64,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 3
                     ? circleIcon
@@ -70,7 +82,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 4
                     ? circleIcon
@@ -88,7 +100,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 5
                     ? circleIcon
@@ -106,7 +118,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 6
                     ? circleIcon
@@ -123,7 +135,7 @@ const AddProperty = () => {
           <div className="space-y-2">
             <div className="flex ">
               <img
-                className="w-[32px]"
+                className="w-[32px]  duration-300 ease-in-out transition-all"
                 src={
                   activeList === 7
                     ? circleIcon
@@ -138,10 +150,48 @@ const AddProperty = () => {
           </div>
         </div>
 
+        {/* components */}
         <div>
+          {activeList === 1 && <AddPropertyDescription />}
           {activeList === 2 && <AddPropertyPriceForm />}
+          {activeList === 4 && <AddPropertyDetails />}
           {activeList === 5 && <AddPropertyLocation />}
         </div>
+
+        {/* buttons */}
+        {activeList === 1 && (
+          <div className="mt-10">
+            <button
+              onClick={() => setActiveList(2)}
+              className=" text-[18px] w-[287px] h-[56px] old-logo-color text-white rounded-lg"
+            >
+              Continue
+            </button>
+          </div>
+        )}
+        {activeList >= 2 && activeList <= 7 && (
+          <div className="mt-10 flex items-center justify-between">
+            <button
+              onClick={() => handleDecreaseActiveList()}
+              className=" text-[18px] w-[287px] h-[56px] old-logo-color text-white rounded-lg"
+            >
+              Back
+            </button>
+            {activeList < 7 && (
+              <button
+                onClick={() => handleIncreaseActiveList()}
+                className=" text-[18px] w-[287px] h-[56px] old-logo-color text-white rounded-lg"
+              >
+                Continue
+              </button>
+            )}
+            {activeList === 7 && (
+              <button className=" text-[18px] w-[287px] h-[56px] old-logo-color text-white rounded-lg">
+                Save
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

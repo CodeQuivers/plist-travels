@@ -106,14 +106,14 @@ const AddPropertyLocation = () => {
 
         {/* submit Button */}
 
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <button
             className="border py-[15px] px-32 bg-gradient-to-r from-[#0E59B2] to-[#159AC2] text-white text-[15px] font-medium rounded-md "
             type="submit"
           >
             Save
           </button>
-        </div>
+        </div> */}
       </form>
     </div>
   );
