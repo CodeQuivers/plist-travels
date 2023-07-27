@@ -20,6 +20,7 @@ import Support from "../pages/support/Support";
 import Blogs from "../pages/blogs/Blogs";
 import AddProperty from "../pages/property/AddProperty";
 import Agent from "../pages/agent/Agent";
+import BlogDetail from "../components/blogs/BlogDetail";
 
 export const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/blog-detail",
+        element: <BlogDetail />,
       },
       {
         path: "/hotel",
