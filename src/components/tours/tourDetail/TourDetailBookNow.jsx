@@ -25,7 +25,7 @@ const TourDetailBookNow = () => {
     },
   ];
   return (
-    <div className="gard-border-olc flex flex-col gap-7 px-8 py-8 ">
+    <div className="grad-border-olc flex flex-col gap-7 px-8 py-8 ">
       <div className="flex flex-col gap-5">
         {/* Destination field */}
         <div className="w-full flex flex-col gap-2">

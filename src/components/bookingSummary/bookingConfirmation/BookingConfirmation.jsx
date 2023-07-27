@@ -29,7 +29,7 @@ const BookingConfirmation = ({
    *
    * ***/
   return (
-    <div className="gard-border-olc flex flex-col gap-10 items-center pb-8">
+    <div className="grad-border-olc flex flex-col gap-10 items-center pb-8">
       <BookedItemCoverPhoto imgSource={itemCoverPhoto} />
       <div className="w-full flex flex-col gap-5 justify-center items-center">
         {/* Tour place */}

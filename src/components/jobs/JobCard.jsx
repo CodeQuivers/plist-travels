@@ -4,7 +4,7 @@ import dotIcon from "../../assets/image/jobs/dotIcon.svg";
 
 const JobCard = () => {
   return (
-    <div className="w-full gard-border-olc-16 p-7 flex justify-between">
+    <div className="w-full grad-border-olc-16 p-7 flex justify-between">
       {/* company icon */}
       <div className="w-[58px] h-[58px] bg-[#F5F5FA] flex justify-center items-center rounded-full">
         <img src={jobIcon} className="w-[22px] h-[22px]" alt="" />

@@ -25,7 +25,7 @@ const ImageModal = ({ setIsOpen }) => {
       <div className="absolute w-[77%] max-w-[1050px] overflow-y-auto top-24 mx-auto z-[500] ">
         <div className=" p-5  bg-white rounded py-6 px-7 ">
           <div className="flex flex-col gap-12">
-            <div className="gard-border-olc">
+            <div className="grad-border-olc">
               <img className="w-[1050px] h-[494px]"src={roomImages[heroImgId]} alt="" />
             </div>
             <div className="flex justify-between">{dynamicContent}</div>
