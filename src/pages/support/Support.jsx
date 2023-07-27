@@ -37,6 +37,7 @@ const Support = () => {
         <h1 className="support-h1">Support</h1>
       </div>
       <hr className="bg-[#CBE6F6] border-[1px] mt-[20px]" />
+      
       <div className="flex flex-col gap-[6px] items-center mt-[70px]">
         <h2 className="support-p">How can we help?</h2>
         <div className="support-input">

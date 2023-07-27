@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 
 import crossIcon from "../../assets/image/navbar/crossIcon.svg";
 import { Link } from "react-router-dom";
@@ -27,28 +27,36 @@ const SubMenu = ({ setIsSubMenuOpen }) => {
             </Link>
           </div>
           <div>
-            <Link className="text-2xl font-semibold grad-text-olc pop-font"
-            to={`/services`}
-            onClick={()=>setIsSubMenuOpen(false)}
+            <Link
+              className="text-2xl font-semibold grad-text-olc pop-font"
+              to={`/services`}
+              onClick={() => setIsSubMenuOpen(false)}
             >
               Services
             </Link>
           </div>
           <div>
-            <Link className="text-2xl font-semibold grad-text-olc pop-font"
-            to={`/jobs`}
-            onClick={()=>setIsSubMenuOpen(false)}
+            <Link
+              className="text-2xl font-semibold grad-text-olc pop-font"
+              to={`/jobs`}
+              onClick={() => setIsSubMenuOpen(false)}
             >
               Jobs
             </Link>
           </div>
           <div>
-            <Link className="text-2xl font-semibold grad-text-olc pop-font">
+            <Link
+              to={`/blogs`}
+              className="text-2xl font-semibold grad-text-olc pop-font"
+            >
               Blog
             </Link>
           </div>
           <div>
-            <Link className="text-2xl font-semibold grad-text-olc pop-font">
+            <Link
+              to={`/support`}
+              className="text-2xl font-semibold grad-text-olc pop-font"
+            >
               Support
             </Link>
           </div>
@@ -63,7 +71,10 @@ const SubMenu = ({ setIsSubMenuOpen }) => {
             </Link>
           </div>
           <div>
-            <Link className="text-2xl font-semibold grad-text-olc pop-font">
+            <Link
+              to={`/add-property`}
+              className="text-2xl font-semibold grad-text-olc pop-font"
+            >
               List Your Property
             </Link>
           </div>

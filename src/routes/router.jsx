@@ -19,6 +19,7 @@ import HotelBookingSummary from "../pages/hotel/HotelBookingSummary";
 import Support from "../pages/support/Support";
 import Blogs from "../pages/blogs/Blogs";
 import AddProperty from "../pages/property/AddProperty";
+import Agent from "../pages/agent/Agent";
 
 export const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ export const router = createBrowserRouter([
       {
         path: "/add-property",
         element: <AddProperty />,
+      },
+      {
+        path: "/agent",
+        element: <Agent />,
       },
     ],
   },
