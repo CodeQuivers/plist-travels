@@ -13,12 +13,13 @@ import TourBooking from "../pages/tours/TourBooking";
 import Services from "../pages/services/Services";
 import HotelDetails from "../pages/hotel/HotelDetails";
 import Jobs from "../pages/jobs/Jobs";
-
 import OneWayTrip from "../pages/flight/OneWayTrip";
 import FlightCashout from "../pages/flight/FlightCashout";
-
 import HotelBookingSummary from "../pages/hotel/HotelBookingSummary";
 import Support from "../pages/support/Support";
+import Blogs from "../pages/blogs/Blogs";
+import AddProperty from "../pages/property/AddProperty";
+
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
         element: <TransferSearchResults />,
       },
       {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
         path: "/hotel",
         element: <Hotel />,
       },
@@ -94,14 +99,12 @@ export const router = createBrowserRouter([
         path: "/support",
         element: <Support />,
       },
+        path: "/add-property",
+        element: <AddProperty />,
+
+      },
     ],
   },
 ]);
 
 export default router;
-// import AddProperty from "../pages/property/AddProperty";
-
-//  {
-//       path: "/add-property",
-//       element: <AddProperty />,
-//     },
