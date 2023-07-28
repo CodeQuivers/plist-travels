@@ -1,7 +1,7 @@
 import React from "react";
 
 import worldTourImg from "../../../assets/image/home/worldTour.png";
-import "./RegistrationModal.css";
+
 
 const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
   return (
