@@ -8,6 +8,8 @@ import AddPropertyLocation from "../../components/property/AddPropertyLocation";
 import AddPropertyPriceForm from "../../components/property/AddPropertyPriceForm";
 import AddPropertyDescription from "../../components/property/AddPropertyDescription";
 import AddPropertyDetails from "../../components/property/AddPropertyDetails";
+import AddPropertyImage from "../../components/property/AddPropertyImage";
+import AddPropertyAmenities from "../../components/property/AddPropertyAmenities";
 
 const AddProperty = () => {
   const [activeList, setActiveList] = useState(1);
@@ -154,8 +156,10 @@ const AddProperty = () => {
         <div>
           {activeList === 1 && <AddPropertyDescription />}
           {activeList === 2 && <AddPropertyPriceForm />}
+          {activeList === 3 && <AddPropertyImage />}
           {activeList === 4 && <AddPropertyDetails />}
           {activeList === 5 && <AddPropertyLocation />}
+          {activeList === 6 && <AddPropertyAmenities />}
         </div>
 
         {/* buttons */}
