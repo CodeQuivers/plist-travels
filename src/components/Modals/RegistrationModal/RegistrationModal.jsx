@@ -92,6 +92,12 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
                         gap: "8px",
                       }}
                       options={options}
+                      defaultValue={{
+                        value: 2,
+                        label: (
+                          <img className="w-[16px] h-[11px]" src={usaIcon} />
+                        ),
+                      }}
                     />
                   </div>
                   <input
