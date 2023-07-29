@@ -8,10 +8,11 @@ import close from "../../assets/image/home/x.png";
 import { useState } from "react";
 import SubNav from "./SubNav";
 import SubMenu from "./SubMenu";
+import RegistrationModal from "../../components/Modals/RegistrationModal/RegistrationModal";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
 
   const subNavs = [
     { id: 1, title: "About Us", to: "/aboutus" },
@@ -71,21 +72,27 @@ const Navbar = () => {
               />
             </div>
             <div className="w-48 flex items-center">
-              <button className="old-logo-color px-6 py-4 rounded-xl font-bold text-white">
+              <button
+                onClick={() => setIsRegistrationModalOpen(true)}
+                className="old-logo-color px-6 py-4 rounded-xl font-bold text-white"
+              >
                 Become an Agent
               </button>
             </div>
             <div className="w-9 flex items-center">
-              <button onClick={()=>setIsSubMenuOpen(true)}>
+              <button onClick={() => setIsSubMenuOpen(true)}>
                 <img className="w-9 h-9" src={subMenu} alt="" />
               </button>
             </div>
           </div>
         </div>
       </nav>
-      {
-        isSubMenuOpen && <SubMenu setIsSubMenuOpen={setIsSubMenuOpen} />
-      }
+      {isSubMenuOpen && <SubMenu setIsSubMenuOpen={setIsSubMenuOpen} />}
+      {isRegistrationModalOpen && (
+        <RegistrationModal
+          setIsRegistrationModalOpen={setIsRegistrationModalOpen}
+        />
+      )}
     </>
   );
 };

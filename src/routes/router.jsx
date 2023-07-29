@@ -22,6 +22,9 @@ import AddProperty from "../pages/property/AddProperty";
 import Agent from "../pages/agent/Agent";
 import BlogDetail from "../components/blogs/BlogDetail";
 import BusinessLandingPage from "../pages/businessLanding/BusinessLandingPage";
+import Privacy from "../pages/privacy/Privacy";
+import Contact from "../pages/contact/Contact";
+
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +70,10 @@ export const router = createBrowserRouter([
       {
         path: "/transfer/search",
         element: <TransferSearchResults />,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy />,
       },
       {
         path: "/blogs",
@@ -116,6 +123,9 @@ export const router = createBrowserRouter([
       {
         path: "/business",
         element: <BusinessLandingPage />,
+
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
