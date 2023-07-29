@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import worldTourImg from "../../../assets/image/home/worldTour.png";
+import RadioButton from "../../shared/buttons/RadioButton";
 
 
 const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
+  const [isAgree, setIsAgree] = useState(false);
   return (
     <>
       <div
@@ -99,9 +101,15 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
                   type="password"
                 />
               </div>
+              <div className="flex col-span-2 gap-2 items-center ">
+                <RadioButton value={isAgree} setIsAgree={setIsAgree}/>
+                <label className="text7F8FA4 text-sm " htmlFor="">
+                I agree to the <span className="text-[#249AF3]">Terms</span>, <span className="text-[#249AF3]">Privacy</span> <span className="text-[#249AF3]">Policy</span> and <span className="text-[#249AF3]">Fees</span>
+                </label>
+              </div>
               
             </div>
-            <div>
+            <div className="mt-2.5">
               <button className="py-2 px-32 rounded old-logo-color text-sm text-white font-bold dmsan-font">
                 Sign Up
               </button>
