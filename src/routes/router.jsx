@@ -25,7 +25,6 @@ import BusinessLandingPage from "../pages/businessLanding/BusinessLandingPage";
 import Privacy from "../pages/privacy/Privacy";
 import Contact from "../pages/contact/Contact";
 
-
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -123,7 +122,8 @@ export const router = createBrowserRouter([
       {
         path: "/business",
         element: <BusinessLandingPage />,
-
+      },
+      {
         path: "/contact",
         element: <Contact />,
       },
