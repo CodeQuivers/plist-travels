@@ -2,10 +2,27 @@ import React, { useState } from "react";
 
 import worldTourImg from "../../../assets/image/home/worldTour.png";
 import RadioButton from "../../shared/buttons/RadioButton";
-
+import usaIcon from "../../../assets/image/globalIcons/country/USA.svg";
+import "./RegistrationModal.css";
+import Select from "react-dropdown-select";
 
 const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
   const [isAgree, setIsAgree] = useState(false);
+
+  const options = [
+    {
+      value: 88,
+      label: <img className="w-[16px] h-[11px]" src={usaIcon} />,
+    },
+    {
+      value: 88,
+      label: <img className="w-[16px] h-[11px]" src={usaIcon} />,
+    },
+    {
+      value: 88,
+      label: <img className="w-[16px] h-[11px]" src={usaIcon} />,
+    },
+  ];
   return (
     <>
       <div
@@ -43,7 +60,7 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
               </div>
               <div className="flex flex-col gap-2.5 ">
                 <label className="text7F8FA4" htmlFor="">
-                Last Name
+                  Last Name
                 </label>
                 <input
                   className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
@@ -53,7 +70,7 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
               </div>
               <div className="flex flex-col gap-2.5 ">
                 <label className="text7F8FA4" htmlFor="">
-                Email
+                  Email
                 </label>
                 <input
                   className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
@@ -63,17 +80,30 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
               </div>
               <div className="flex flex-col gap-2.5 ">
                 <label className="text7F8FA4" htmlFor="">
-                Phone Number
+                  Phone Number
                 </label>
-                <input
-                  className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
-                  placeholder="Mashod Rana"
-                  type="text"
-                />
+                <div className="flex gap-2 gray-border">
+                  <div className=" border-e w-[64px] px-2">
+                    <Select
+                      style={{
+                        border: "none",
+                        padding: "0",
+                        margin: "0",
+                        gap: "8px",
+                      }}
+                      options={options}
+                    />
+                  </div>
+                  <input
+                    className="text-base placeholder-[#334150] w-[150px]"
+                    placeholder="9638-945755"
+                    type="tel"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-2.5 col-span-2">
                 <label className="text7F8FA4" htmlFor="">
-                Address
+                  Address
                 </label>
                 <textarea
                   className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
@@ -83,7 +113,7 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
               </div>
               <div className="flex flex-col gap-2.5 ">
                 <label className="text7F8FA4" htmlFor="">
-                Password
+                  Password
                 </label>
                 <input
                   className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
@@ -93,7 +123,7 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
               </div>
               <div className="flex flex-col gap-2.5 ">
                 <label className="text7F8FA4" htmlFor="">
-                Confirm Password
+                  Confirm Password
                 </label>
                 <input
                   className="text-base placeholder-[#334150] py-1.5 px-3.5 gray-border"
@@ -102,12 +132,14 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
                 />
               </div>
               <div className="flex col-span-2 gap-2 items-center ">
-                <RadioButton value={isAgree} setIsAgree={setIsAgree}/>
+                <RadioButton value={isAgree} setIsAgree={setIsAgree} />
                 <label className="text7F8FA4 text-sm " htmlFor="">
-                I agree to the <span className="text-[#249AF3]">Terms</span>, <span className="text-[#249AF3]">Privacy</span> <span className="text-[#249AF3]">Policy</span> and <span className="text-[#249AF3]">Fees</span>
+                  I agree to the <span className="text-[#249AF3]">Terms</span>,{" "}
+                  <span className="text-[#249AF3]">Privacy</span>{" "}
+                  <span className="text-[#249AF3]">Policy</span> and{" "}
+                  <span className="text-[#249AF3]">Fees</span>
                 </label>
               </div>
-              
             </div>
             <div className="mt-2.5">
               <button className="py-2 px-32 rounded old-logo-color text-sm text-white font-bold dmsan-font">

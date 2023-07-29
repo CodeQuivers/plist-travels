@@ -1,0 +1,16 @@
+
+.css-jznujr-ContentComponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-jznujr-ContentComponent input{
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+.css-jznujr-ContentComponent span{
+    width: 16px;
+    height: 11px;
+}
+
