@@ -1,0 +1,10 @@
+.hero-image {
+  background: linear-gradient(
+      180deg,
+      rgba(14, 73, 149, 0.8) 50.52%,
+      rgba(22, 159, 195, 0.3) 100%
+    ),
+    url(../../assets/image/businessLanding/Header.png), lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

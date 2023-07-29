@@ -21,6 +21,16 @@
     rgba(22, 159, 195, 1) 100%
   );
 }
+.old-logo-color-text {
+  background: var(
+    --old-logo-color,
+    linear-gradient(92deg, #0e55b1 0%, #169fc3 100%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .border-gradient-blue {
   border-image: linear-gradient(
       92deg,

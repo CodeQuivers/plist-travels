@@ -21,6 +21,7 @@ import Blogs from "../pages/blogs/Blogs";
 import AddProperty from "../pages/property/AddProperty";
 import Agent from "../pages/agent/Agent";
 import BlogDetail from "../components/blogs/BlogDetail";
+import BusinessLandingPage from "../pages/businessLanding/BusinessLandingPage";
 
 export const router = createBrowserRouter([
   {
@@ -111,6 +112,10 @@ export const router = createBrowserRouter([
       {
         path: "/agent",
         element: <Agent />,
+      },
+      {
+        path: "/business",
+        element: <BusinessLandingPage />,
       },
     ],
   },
