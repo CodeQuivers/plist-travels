@@ -1,0 +1,27 @@
+.why-us-card-icon1{
+    background: url(../../../assets/image/tours/why_us/Travel.svg);
+}
+.why-us-card-icon2{
+    background: url(../../../assets/image/tours/why_us/Support.svg);
+}
+.why-us-card-icon3{
+    background: url(../../../assets/image/tours/why_us/Vast.svg);
+}
+.why-us-card-icon4{
+    background: url(../../../assets/image/tours/why_us/Partner.svg);
+}
+
+
+.why-us-card:hover .why-us-card-icon1{
+    background: url(../../../assets/image/tours/why_us/TravelBlueIcon.svg);
+}
+
+.why-us-card:hover .why-us-card-icon2{
+    background: url(../../../assets/image/tours/why_us/SupportBlueIcon.svg);
+}
+.why-us-card:hover .why-us-card-icon3{
+    background: url(../../../assets/image/tours/why_us/VastBlueIcon.svg);
+}
+.why-us-card:hover .why-us-card-icon4{
+    background: url(../../../assets/image/tours/why_us/PartnerBlueIcon.svg);
+}

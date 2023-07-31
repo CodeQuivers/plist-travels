@@ -1,13 +1,14 @@
-import { WHY_US as whyAs } from "../../utils/Data/ToursData.js";
-import CardWhyUs from "./CardWhyUs";
+import { WHY_US as whyAs } from "../../../utils/Data/ToursData.js";
+import CardWhyUs from "./CardWhyUs.jsx";
+import "./WhyUs.css"
 
 const WhyUs = () => {
   let content = null;
   if (whyAs) {
-    content = whyAs.map((obj, idx) => <CardWhyUs key={idx} cardInfo={obj} />);
+    content = whyAs.map((obj, idx) => <CardWhyUs key={idx} idx={idx+1} cardInfo={obj} />);
   }
   return (
-    <div className="xl:container mx-auto px-12">
+    <div className="w-[1170px] mx-auto px-12">
       <div
         className="
             lg:mx-0
