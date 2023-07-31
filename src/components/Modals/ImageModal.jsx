@@ -20,13 +20,13 @@ const ImageModal = ({ setIsOpen }) => {
     <>
       <div
         onClick={() => setIsOpen(false)}
-        className="fixed inset-0 bg-gray-600 bg-opacity-50  h-full w-full z-[60]"
+        className="fixed inset-0 bg-gray-600 bg-opacity-50  h-full w-full z-[51]"
       ></div>
-      <div className="absolute w-[77%] max-w-[1050px] overflow-y-auto top-24 mx-auto z-[500] ">
+       <div className="fixed z-[52] -translate-y-1/4 top-1/4">
         <div className=" p-5  bg-white rounded py-6 px-7 ">
           <div className="flex flex-col gap-12">
             <div className="grad-border-olc">
-              <img className="w-[1050px] h-[494px]"src={roomImages[heroImgId]} alt="" />
+              <img className="w-[1050px] h-[400px]"src={roomImages[heroImgId]} alt="" />
             </div>
             <div className="flex justify-between">{dynamicContent}</div>
           </div>

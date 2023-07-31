@@ -1,10 +1,11 @@
 import React from 'react'
 import Banner from '../flight/Banner';
+import HotelBanner from '../hotel/hotelBanner/HotelBanner';
 
 const PlaceForStories = () => {
   return (
-    <div className="xl:container mx-auto px-12 mt-5 sm:mt-8 lg:mt-[72px]">
-        <Banner/>
+    <div className="w-[1170px] mx-auto mt-5">
+        <HotelBanner/>
     </div>
   )
 }
