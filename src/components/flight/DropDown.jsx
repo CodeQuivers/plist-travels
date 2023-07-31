@@ -4,18 +4,18 @@ const DropDown = () => {
   const options = [
     {
       value: 1,
-      label: "Leanne Graham",
+      label: "1 Adult",
     },
     {
       value: 2,
-      label: "Ervin Howell",
+      label: "2 Adult",
     },
   ];
   return (
     <div>
       <Select
-        style={{ width: "243px" }}
-        className="mt-2 pl-10  border-2 border-gray-300 h-12 rounded"
+        style={{ width: "243px", paddingLeft: "13px", borderColor: "#80899633"}}
+        className="mt-2 pl-10 border-2 h-12 rounded"
         options={options}
         placeholder="Delhi and NCR, India"
       />
