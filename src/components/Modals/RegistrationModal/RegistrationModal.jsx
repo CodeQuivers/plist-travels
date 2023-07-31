@@ -29,7 +29,7 @@ const RegistrationModal = ({ setIsRegistrationModalOpen }) => {
         className="fixed inset-0 h-screen w-screen bg-black/50 z-[51]"
         onClick={() => setIsRegistrationModalOpen(false)}
       ></div>
-      <div className="fixed  rounded-lg bg-white  z-[51] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2">
+      <div className="registration-modal fixed  rounded-lg bg-white  z-[51] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2">
         <div className="flex w-[1184px]">
           <div>
             <img className="w-full h-full" src={worldTourImg} alt="" />
