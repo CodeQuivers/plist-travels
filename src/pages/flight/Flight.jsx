@@ -19,23 +19,26 @@ import HotelFaq from "../../components/hotel/HotelFaq";
 const Flight = () => {
   return (
     <>
-      <div className="w-[1170px] mx-auto">
-        {/* flight form strat */}
+      {/* flight form strat */}
+      <div className="w-[1170px] mx-auto pop-font text-[#0D233E]">
         <FlightForm />
-        {/* flight form end */}
-        <Divider />
-        {/* card 1 strat*/}
+      </div>
+
+      {/* flight form end */}
+      <Divider />
+      {/* card 1 strat*/}
+      <div className="w-[1170px] mx-auto">
         <Card1 />
         {/* card 1 end*/}
 
         {/* banner */}
         <HotelBanner />
-        {/*  */}
 
+        {/*  Explore The World*/}
         <div className="mt-20 max-md:px-5 ">
           {/* section title */}
           <div className="my-10">
-            <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+            <h1 className="dmsan-font text-[32px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
               Explore The World For Nigeria
             </h1>
           </div>
@@ -142,8 +145,8 @@ const Flight = () => {
         <div className="mt-20 max-md:px-5">
           {/* section title */}
           <div className="my-10">
-            <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
-              Says Near Logos
+            <h1 className="dmsan-font text-[32px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+              Hop On, Hop Off
             </h1>
           </div>
 
@@ -336,16 +339,15 @@ const Flight = () => {
             <Pagination />
           </div>
 
-          {/*  */}
+          {/* Your Wishlist Starts Here*/}
           <div>
             {/* section title */}
             <div className="my-10">
-              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
+              <h1 className="dmsan-font text-[32px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0F5AB2] to-[#1491C0]">
                 Your Wishlist Starts Here
               </h1>
             </div>
             {/* section cards */}
-
             {/* card strats */}
             <div className="grid grid-cols-2 gap-8 justify-around">
               <div className="w-[570px] h-[336px]">
@@ -383,6 +385,7 @@ const Flight = () => {
                 </div>
               </div>
             </div>
+            {/* card end */}
           </div>
         </div>
         <SearchAccordion />
