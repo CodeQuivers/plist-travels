@@ -1,20 +1,71 @@
+import { useCallback, useEffect, useState } from "react";
 import Select from "react-dropdown-select";
+import Dropzone, { useDropzone } from "react-dropzone";
+import { LuUploadCloud } from "react-icons/lu";
+
+const thumbsContainer = {
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  marginTop: 16,
+};
 
 const AddPropertyImage = () => {
-  const options = [
-    {
-      value: 1,
-      label: "Youtube",
+  const [files, setFiles] = useState([]);
+  const maxImageSizeInBytes = 10 * 1024 * 1024; // 10MB
+
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: "image/*",
+    onDrop: (acceptedFiles) => {
+      const validFiles = acceptedFiles.filter(
+        (file) => file.size <= maxImageSizeInBytes
+      );
+
+      setFiles(
+        validFiles.map((file) =>
+          Object.assign(file, {
+            preview: URL.createObjectURL(file),
+          })
+        )
+      );
     },
-    {
-      value: 2,
-      label: "Facebook",
-    },
-    {
-      value: 3,
-      label: "Twitter",
-    },
-  ];
+  });
+
+  // const AddPropertyImage = () => {
+  //   const [files, setFiles] = useState([]);
+  //   const { getRootProps, getInputProps } = useDropzone({
+  //     accept: {
+  //       "image/*": [],
+  //     },
+  //     onDrop: (acceptedFiles) => {
+  //       setFiles(
+  //         acceptedFiles.map((file) =>
+  //           Object.assign(file, {
+  //             preview: URL.createObjectURL(file),
+  //           })
+  //         )
+  //       );
+  //     },
+  //   });
+
+  const thumbs = files?.map((file) => (
+    <div key={file.name}>
+      <div>
+        <img
+          src={file.preview}
+          className="w-[800px] h-[400px]"
+          // Revoke data uri after image is loaded
+          onLoad={() => {
+            URL.revokeObjectURL(file.preview);
+          }}
+        />
+      </div>
+    </div>
+  ));
+  useEffect(() => {
+    // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
+    return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
+  }, []);
   return (
     <>
       <div className="mt-20">
@@ -29,53 +80,49 @@ const AddPropertyImage = () => {
             >
               Cover photo
             </label>
-            <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
+            <div
+              {...getRootProps({ className: "dropzone" })}
+              className="bg-[#f9fafb] mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 p-7"
+            >
               <div className="space-y-1 text-center">
-                <svg
-                  className="mx-auto h-12 w-12 text-gray-400"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 48 48"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="flex text-sm text-gray-600">
-                  <label
-                    htmlFor="file-upload"
-                    className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
-                  >
-                    <span>Upload a file</span>
-                    <input
-                      id="file-upload"
-                      name="file-upload"
-                      type="file"
-                      className="sr-only"
-                    />
-                  </label>
-                  <p className="pl-1">or drag and drop</p>
+                <div className="flex justify-center ">
+                  {!files?.length && (
+                    <span>
+                      <LuUploadCloud
+                        size={40}
+                        color="#475467"
+                        enableBackground={true}
+                        className=" p-2 rounded-full bg-[#f2f4f7]"
+                      />
+                    </span>
+                  )}
                 </div>
-                <p className="text-xs text-gray-500">
-                  PNG, JPG, GIF up to 10MB
+
+                <div>
+                  <input {...getInputProps()} />
+                  {!files?.length && (
+                    <p>
+                      <span className="text-[#D0D5DD]">Click to Upload</span>{" "}
+                      <span className="text-[#667085]">or drag and drop</span>
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <div className="flex justify-center">{thumbs}</div>
+                </div>
+                <p className="text-sm text-gray-500">
+                  SVG, PNG, JPG or GIF (max. 800x400px)
                 </p>
               </div>
             </div>
           </div>
           <div className="">
-            <div className="py-4 px-6 h-[136px] border bg-[#F9FAFB] border-[#E4E7EC] rounded-lg">
-              <input type="file" name="" id="" />
-            </div>
             <div className="mt-5">
               <p>*Double Click on the image to select featured.</p>
               <p>**Change images order with Drag & Drop.</p>
             </div>
           </div>
-          {/* video from */}
+          {/* video from
           <div className="flex gap-[30px]">
             <div>
               <label htmlFor="">Video from</label>

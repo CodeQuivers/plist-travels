@@ -12,7 +12,7 @@ import AddPropertyImage from "../../components/property/AddPropertyImage";
 import AddPropertyAmenities from "../../components/property/AddPropertyAmenities";
 
 const AddProperty = () => {
-  const [activeList, setActiveList] = useState(1);
+  const [activeList, setActiveList] = useState(3);
 
   const handleDecreaseActiveList = () => {
     if (!activeList <= 1) {
