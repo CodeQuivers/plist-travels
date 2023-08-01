@@ -80,7 +80,10 @@ const AddPropertyImage = () => {
             >
               Cover photo
             </label>
-            <div className="bg-[#f9fafb] mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 p-7">
+            <div
+              {...getRootProps({ className: "dropzone" })}
+              className="bg-[#f9fafb] mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 p-7"
+            >
               <div className="space-y-1 text-center">
                 <div className="flex justify-center ">
                   {!files?.length && (
@@ -95,7 +98,7 @@ const AddPropertyImage = () => {
                   )}
                 </div>
 
-                <div {...getRootProps({ className: "dropzone" })}>
+                <div>
                   <input {...getInputProps()} />
                   {!files?.length && (
                     <p>
