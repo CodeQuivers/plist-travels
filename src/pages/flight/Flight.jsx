@@ -16,7 +16,23 @@ import Card1 from "../../components/flight/Card1";
 import HotelBanner from "../../components/hotel/hotelBanner/HotelBanner";
 import SearchAccordion from "../../components/hotel/searchAccordion/SearchAccordion";
 import HotelFaq from "../../components/hotel/HotelFaq";
+import { useGetLocationsFlightsQuery } from "../../redux/features/flight/flightApi";
+import { useEffect } from "react";
+
+
 const Flight = () => {
+  // const {data, isLoading, isError} = useGetLocationsFlightsQuery();
+  // let content = null;
+  // if (isLoading) content = "Loading";
+  // if (!isLoading && isError)
+  //   content = "error"
+
+ 
+  // if (!isLoading && !isError && data) {
+  //  content = "Yes got the data"
+  // }
+
+
   return (
     <>
       {/* flight form strat */}
@@ -25,6 +41,9 @@ const Flight = () => {
       </div>
 
       {/* flight form end */}
+      <p>
+        {/* {content} */}
+      </p>
       <Divider />
       {/* card 1 strat*/}
       <div className="w-[1170px] mx-auto">
