@@ -3,11 +3,25 @@ import FlightFrom from "../../assets/image/flight/icons/FlightFrom.png";
 // import depature from "../../assets/image/flight/icons/depature.png";
 import flightTo from "../../assets/image/flight/icons/flightTo.png";
 import Datepicker from "react-tailwindcss-datepicker";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useGetLocationsQuery } from "../../redux/features/flight/flightApi";
+import { skipToken } from "@reduxjs/toolkit/query";
+import { optimizedDebouncedFn, debounce } from "../../utils/useDebounce";
 // import returnCalender from "../../assets/image/flight/icons/returnCalender.png";
 // import ReactDatePicker from "react-datepicker";
 // import DatePicker from "react-datepicker";
+
+
 const FlightForm = () => {
+  const [flyingFrom, setFlyingFrom] = useState("Delhi and NCR, India");
+  const [flyingTo, setFlyingTo] = useState("Delhi and NCR, India");
+  const [locations, setLocations] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(null);
+
+  const { data, isLoading, isError } = useGetLocationsQuery(
+    searchTerm || skipToken
+  );
+
   const [value, setValue] = useState({
     startDate: null,
     endDate: null,
@@ -26,6 +40,11 @@ const FlightForm = () => {
     setReturnValue(newValue);
   };
 
+  const getLocations = (term) => {
+    setSearchTerm(term);
+  };
+  const optimizedFn = useCallback(debounce(getLocations), []);
+  console.log(data);
   return (
     <>
       <div className="h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
@@ -55,6 +74,8 @@ const FlightForm = () => {
               <input
                 type="text"
                 className="mt-2 pl-10 w-[243px] border border-[#80899633] h-12 rounded"
+                // value={flyingFrom}
+                onChange={(e) => optimizedFn(e.target.value)}
                 placeholder="Delhi and NCR, India"
               />
             </div>

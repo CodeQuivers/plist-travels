@@ -16,7 +16,6 @@ import Card1 from "../../components/flight/Card1";
 import HotelBanner from "../../components/hotel/hotelBanner/HotelBanner";
 import SearchAccordion from "../../components/hotel/searchAccordion/SearchAccordion";
 import HotelFaq from "../../components/hotel/HotelFaq";
-import { useGetLocationsFlightsQuery } from "../../redux/features/flight/flightApi";
 import { useEffect } from "react";
 
 
