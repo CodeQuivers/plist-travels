@@ -5,6 +5,8 @@ import DropDown from "./DropDown";
 import FlightFrom from "../../assets/image/flight/icons/FlightFrom.png";
 // import depature from "../../assets/image/flight/icons/depature.png";
 import flightTo from "../../assets/image/flight/icons/flightTo.png";
+import "./FlightForm.css";
+
 import Datepicker from "react-tailwindcss-datepicker";
 import { useCallback, useState } from "react";
 import { useGetLocationsQuery } from "../../redux/features/flight/flightApi";
@@ -58,11 +60,11 @@ const FlightForm = () => {
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
   ];
-  console.log(data)
-  console.log("serch term", searchTerm)
+  console.log(data);
+  console.log("serch term", searchTerm);
   return (
     <>
-      <div className="h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
+      <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
         <div className="inline-flex items-start gap-7 text-sm">
           <div className="flex items-center gap-2">
             <input type="radio" name="" id="" />
@@ -81,13 +83,13 @@ const FlightForm = () => {
         {/*  */}
         <div className="mt-5 flex gap-8">
           <div className="w-[245px] pt-[2px]">
-            <p>Flying From</p>
-            <div className="relative">
-              {/* <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={FlightFrom} alt="flightFromIcon" className="w-5" />
-              </span> */}
+            <p className="font-semibold text-base text-[#0D233E]">
+              Flying From
+            </p>
+            <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+              <img src={FlightFrom} alt="flightFromIcon" className="w-3.5 h-3.5" />
               <Select
-                className="border-0 "
+                className="text-sm w-full"
                 classNamePrefix="select"
                 defaultValue={options[0]}
                 // isDisabled={isDisabled}
@@ -96,8 +98,8 @@ const FlightForm = () => {
                 isSearchable={true}
                 name="color"
                 options={countryOptions}
-                onChange={(val)=>console.log(val)}
-                onInputChange = {(e)=>setDestination(e)}
+                onChange={(val) => console.log(val)}
+                onInputChange={(e) => setDestination(e)}
               />
               {/* <input
                 type="text"
