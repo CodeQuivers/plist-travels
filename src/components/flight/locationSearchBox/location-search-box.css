@@ -1,0 +1,21 @@
+.location-search-box .select__control{
+    border: 0;
+}
+
+.location-search-box .select__indicator, .select__indicator-separator {
+    display:none;
+} 
+.location-search-box .css-13cymwt-control{
+    min-height: auto;
+}
+.location-search-box .css-13cymwt-control{
+    min-height: fit-content;
+}
+.location-search-box .select__value-container{
+    padding: 0;
+    margin: 0;
+}
+.location-search-box .select__input-container{
+    padding: 0;
+    margin: 0;
+}
