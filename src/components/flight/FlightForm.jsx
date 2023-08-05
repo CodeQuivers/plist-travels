@@ -12,6 +12,7 @@ import { useCallback, useState } from "react";
 import { useGetLocationsQuery } from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/query";
 import Select from "react-select";
+import LocationSearchBox from "./locationSearchBox/LocationSearchBox";
 // import returnCalender from "../../assets/image/flight/icons/returnCalender.png";
 // import ReactDatePicker from "react-datepicker";
 // import DatePicker from "react-datepicker";
@@ -20,13 +21,9 @@ const FlightForm = () => {
   const [flyingFrom, setFlyingFrom] = useState("Delhi and NCR, India");
   const [flyingTo, setFlyingTo] = useState("Delhi and NCR, India");
   const [locations, setLocations] = useState(null);
+  const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
-  const [searchTerm] = useDebounce(destination, 500);
   const { register, handleSubmit } = useForm();
-
-  const { data, isLoading, isError } = useGetLocationsQuery(
-    searchTerm || skipToken
-  );
 
   const [value, setValue] = useState({
     startDate: null,
@@ -45,23 +42,7 @@ const FlightForm = () => {
     console.log("newValue:", newValue);
     setReturnValue(newValue);
   };
-  console.log(data);
-  let countryOptions = [];
-  if (data) {
-    countryOptions = data.map((item) => {
-      return {
-        value: item.city_code,
-        label: `${item.city_name}, ${item.countryName}`,
-      };
-    });
-  }
-  const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
-  ];
-  console.log(data);
-  console.log("serch term", searchTerm);
+
   return (
     <>
       <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
@@ -80,47 +61,30 @@ const FlightForm = () => {
           </div>
         </div>
 
-        {/*  */}
+        {/* flying from .... */}
         <div className="mt-5 flex gap-8">
           <div className="w-[245px] pt-[2px]">
             <p className="font-semibold text-base text-[#0D233E]">
               Flying From
             </p>
             <div className="flex gap-2 items-center gray-border py-2.5 px-3">
-              <img src={FlightFrom} alt="flightFromIcon" className="w-3.5 h-3.5" />
-              <Select
-                className="text-sm w-full"
-                classNamePrefix="select"
-                defaultValue={options[0]}
-                // isDisabled={isDisabled}
-                isLoading={isLoading}
-                isClearable={true}
-                isSearchable={true}
-                name="color"
-                options={countryOptions}
-                onChange={(val) => console.log(val)}
-                onInputChange={(e) => setDestination(e)}
+              <img
+                src={FlightFrom}
+                alt="flightFromIcon"
+                className="w-3.5 h-3.5"
               />
-              {/* <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border border-[#80899633] h-12 rounded"
-                // value={flyingFrom}
-                onChange={(e) => setDestination(e.target.value)}
-                placeholder="Delhi and NCR, India"
-              /> */}
+              <LocationSearchBox setOnChange={setDestination} />
             </div>
           </div>
           <div className="w-[245px] pt-[2px]">
             <p>Flying To</p>
-            <div className="relative">
-              <span className="absolute top-0 left-3 h-full flex items-center justify-center">
-                <img src={flightTo} alt="flightFromIcon" className="w-5" />
-              </span>
-              <input
-                type="text"
-                className="mt-2 pl-10 w-[243px] border border-[#80899633] h-12 rounded"
-                placeholder="Delhi and NCR, India"
+            <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+              <img
+                src={flightTo}
+                alt="flightFromIcon"
+                className="w-3.5 h-3.5"
               />
+              <LocationSearchBox setOnChange={setOrigin} />
             </div>
           </div>
           <div className="flex flex-col gap-2.5">
