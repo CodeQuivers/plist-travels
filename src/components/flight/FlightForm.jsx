@@ -68,20 +68,19 @@ const FlightForm = () => {
       cabinClass,
       flightType,
     };
-    console.log(queryData)
+    console.log(queryData);
     setSearchQueryParams(queryData);
-
   };
 
   return (
     <>
       <form onSubmit={handleOnSubmit}>
-        <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
+        <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 grad-border-olc-8 pt-[90px]">
           <FlightType setFlightType={setFlightType} />
 
           {/* flying from .... */}
-          <div className="mt-5 flex gap-8">
-            <div className="w-[245px] pt-[2px]">
+          <div className="mt-5 flex flex-wrap gap-8">
+            <div className="w-[245px] flex flex-col gap-3">
               <p className="font-semibold text-base text-[#0D233E]">
                 Flying From
               </p>
@@ -94,8 +93,8 @@ const FlightForm = () => {
                 <LocationSearchBox setOnChange={setFlightFrom} />
               </div>
             </div>
-            <div className="w-[245px] pt-[2px]">
-              <p>Flying To</p>
+            <div className="w-[245px] flex flex-col gap-3">
+              <p className="font-semibold text-base text-[#0D233E]">Flying To</p>
               <div className="flex gap-2 items-center gray-border py-2.5 px-3">
                 <img
                   src={flightToImg}
@@ -105,13 +104,13 @@ const FlightForm = () => {
                 <LocationSearchBox setOnChange={setFlightTo} />
               </div>
             </div>
-            <div className="flex flex-col gap-2.5">
-              <p className="fs-base fw-medium">Departing</p>
-              <div>
+            <div className="flex flex-col gap-3">
+              <p className="font-semibold text-base text-[#0D233E]">Departing</p>
+              <div className="w-[245px] flex gap-2 items-center gray-border py-2.5 px-3">
                 <Datepicker
                   popoverDirection="down"
-                  containerClassName=""
-                  inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
+                  containerClassName="h-5"
+                  inputClassName="p-0 text-sm text-[#0D233E]"
                   asSingle={true}
                   useRange={false}
                   value={departureDate}
@@ -119,13 +118,13 @@ const FlightForm = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2.5">
-              <p className="fs-base fw-medium">Return</p>
-              <div>
+            <div className="flex flex-col gap-3">
+              <p className="font-semibold text-base text-[#0D233E]">Return</p>
+              <div className="w-[245px] flex gap-2 items-center gray-border py-2.5 px-3">
                 <Datepicker
                   popoverDirection="down"
-                  containerClassName=""
-                  inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
+                  containerClassName="h-5"
+                  inputClassName="p-0 text-sm text-[#0D233E]"
                   asSingle={true}
                   useRange={false}
                   value={returnDate}
@@ -133,34 +132,29 @@ const FlightForm = () => {
                 />
               </div>
             </div>
-          </div>
 
-          {/*  */}
-          <div>
-            <div className="mt-5 flex gap-2">
-              <div className="w-[265px] pt-[2px] pr-7">
-                <p>Traveler</p>
-                <DropDown
-                  options={travelerOptions}
-                  placeholder="1 Adult"
-                  setOnChange={setTraveler}
-                />
-              </div>
-              <div className="w-[265px] pt-[2px] pr-7">
-                <p>Coach</p>
-                <DropDown
-                  options={cabinOptions}
-                  placeholder="Economy"
-                  setOnChange={setCabinClass}
-                />
-              </div>
-              <div className="flex items-end">
-                <input
-                  className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
-                  type="submit"
-                  value="Search Now"
-                />
-              </div>
+            <div className="w-[245px] flex flex-col gap-3">
+              <p className="font-semibold text-base text-[#0D233E]">Traveler</p>
+              <DropDown
+                options={travelerOptions}
+                placeholder="1 Adult"
+                setOnChange={setTraveler}
+              />
+            </div>
+            <div className="w-[245px] flex flex-col gap-3">
+              <p className="font-semibold text-base text-[#0D233E]">Coach</p>
+              <DropDown
+                options={cabinOptions}
+                placeholder="Economy"
+                setOnChange={setCabinClass}
+              />
+            </div>
+            <div className="flex items-end">
+              <input
+                className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
+                type="submit"
+                value="Search Now"
+              />
             </div>
           </div>
         </div>

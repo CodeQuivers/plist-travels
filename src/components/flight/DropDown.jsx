@@ -1,14 +1,13 @@
 import Select from "react-dropdown-select";
 
-const DropDown = ({options, placeholder, setOnChange}) => {
+const DropDown = ({ options, placeholder, setOnChange }) => {
   return (
-    <div>
+    <div className="w-[245px] flex gap-2 items-center gray-border py-2.5 px-3">
       <Select
-        style={{ width: "243px", paddingLeft: "13px", borderColor: "#80899633"}}
-        className="mt-2 pl-10 border-2 h-12 rounded"
+        style={{ padding: 0, margin: 0, border:0 }}
         options={options}
         placeholder={placeholder}
-        onChange={(val)=>setOnChange(val[0].value)}
+        onChange={(val) => setOnChange(val[0].value)}
       />
     </div>
   );

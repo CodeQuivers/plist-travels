@@ -74,6 +74,19 @@
   background-clip: padding-box, border-box;
 }
 
+.grad-border-olc-8 {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(
+      circle at top left,
+      rgba(14, 85, 177, 1),
+      rgba(22, 159, 195, 1)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 .grad-border-olc-16 {
   border: 2px solid transparent;
   border-radius: 16px;
