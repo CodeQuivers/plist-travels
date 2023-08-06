@@ -29,7 +29,35 @@ const flightApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    getSearchId: builder.query({
+      query: (data) => {
+        const queryParams = {
+          action: "findSearchKey",
+          flighttype: data.flightType,
+          origin: data.flightFrom.label,
+          destination: data.flightTo.label,
+          IATA_from: data.flightFrom.value,
+          IATA_to: data.flightTo.value,
+          adults: data.adults,
+          childs: data.childs,
+          infants: data.infants,
+          cabin_class: data.cabinClass,
+          departure_date: data.departureDate,
+          return_date: data.returnDate,
+          isDomestic: "No",
+        };
+        return {
+          url: "/flight-search-results2",
+          params: queryParams,
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetLocationsQuery, useGetLocationsFlightsQuery } = flightApi;
+export const {
+  useGetLocationsQuery,
+  useGetLocationsFlightsQuery,
+  useGetSearchIdQuery,
+} = flightApi;
