@@ -1,7 +1,7 @@
 import { useDebounce } from "use-debounce";
 import { useForm } from "react-hook-form";
 
-import DropDown from "./DropDown";
+import DropDown from "./dropdown/DropDown";
 import flightFromImg from "../../assets/image/flight/icons/FlightFrom.png";
 // import depature from "../../assets/image/flight/icons/depature.png";
 import flightToImg from "../../assets/image/flight/icons/flightTo.png";
@@ -84,7 +84,7 @@ const FlightForm = () => {
               <p className="font-semibold text-base text-[#0D233E]">
                 Flying From
               </p>
-              <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+              <div className="flex h-12 gap-2 items-center gray-border py-2.5 px-3">
                 <img
                   src={flightFromImg}
                   alt="flightFromIcon"
@@ -94,8 +94,10 @@ const FlightForm = () => {
               </div>
             </div>
             <div className="w-[245px] flex flex-col gap-3">
-              <p className="font-semibold text-base text-[#0D233E]">Flying To</p>
-              <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+              <p className="font-semibold text-base text-[#0D233E]">
+                Flying To
+              </p>
+              <div className="flex h-12 gap-2 items-center gray-border py-2.5 px-3">
                 <img
                   src={flightToImg}
                   alt="flightFromIcon"
@@ -105,8 +107,10 @@ const FlightForm = () => {
               </div>
             </div>
             <div className="flex flex-col gap-3">
-              <p className="font-semibold text-base text-[#0D233E]">Departing</p>
-              <div className="w-[245px] flex gap-2 items-center gray-border py-2.5 px-3">
+              <p className="font-semibold text-base text-[#0D233E]">
+                Departing
+              </p>
+              <div className="w-[245px] h-12 flex gap-2 items-center gray-border py-2.5 px-3">
                 <Datepicker
                   popoverDirection="down"
                   containerClassName="h-5"
@@ -118,20 +122,22 @@ const FlightForm = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-3">
-              <p className="font-semibold text-base text-[#0D233E]">Return</p>
-              <div className="w-[245px] flex gap-2 items-center gray-border py-2.5 px-3">
-                <Datepicker
-                  popoverDirection="down"
-                  containerClassName="h-5"
-                  inputClassName="p-0 text-sm text-[#0D233E]"
-                  asSingle={true}
-                  useRange={false}
-                  value={returnDate}
-                  onChange={(obj) => setReturnDate(obj)}
-                />
+            {flightType === "round" ? (
+              <div className="flex flex-col gap-3">
+                <p className="font-semibold text-base text-[#0D233E]">Return</p>
+                <div className="w-[245px] h-12 flex gap-2 items-center gray-border py-2.5 px-3">
+                  <Datepicker
+                    popoverDirection="down"
+                    containerClassName="h-5"
+                    inputClassName="p-0 text-sm text-[#0D233E]"
+                    asSingle={true}
+                    useRange={false}
+                    value={returnDate}
+                    onChange={(obj) => setReturnDate(obj)}
+                  />
+                </div>
               </div>
-            </div>
+            ) : null}
 
             <div className="w-[245px] flex flex-col gap-3">
               <p className="font-semibold text-base text-[#0D233E]">Traveler</p>
@@ -151,7 +157,7 @@ const FlightForm = () => {
             </div>
             <div className="flex items-end">
               <input
-                className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
+                className="w-[250px] py-3 old-logo-color text-white rounded font-medium text-base"
                 type="submit"
                 value="Search Now"
               />

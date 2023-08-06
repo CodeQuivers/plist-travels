@@ -1,3 +1,6 @@
+.location-search-box{
+    height: 20px;
+}
 .location-search-box .select__control{
     border: 0;
 }

@@ -1,0 +1,20 @@
+.flight-dropdown div {
+  width: 100%;
+}
+
+.flight-dropdown .react-dropdown-select {
+  min-height: auto;
+  height: 20px;
+}
+.flight-dropdown .react-dropdown-select span,
+input {
+  width: fit-content;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.flight-dropdown .react-dropdown-select-dropdown-handle {
+  width: 16px;
+  height: 16px;
+}
