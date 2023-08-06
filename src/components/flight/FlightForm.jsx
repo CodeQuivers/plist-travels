@@ -2,142 +2,169 @@ import { useDebounce } from "use-debounce";
 import { useForm } from "react-hook-form";
 
 import DropDown from "./DropDown";
-import FlightFrom from "../../assets/image/flight/icons/FlightFrom.png";
+import flightFromImg from "../../assets/image/flight/icons/FlightFrom.png";
 // import depature from "../../assets/image/flight/icons/depature.png";
-import flightTo from "../../assets/image/flight/icons/flightTo.png";
+import flightToImg from "../../assets/image/flight/icons/flightTo.png";
 import "./FlightForm.css";
 
 import Datepicker from "react-tailwindcss-datepicker";
 import { useCallback, useState } from "react";
-import { useGetLocationsQuery } from "../../redux/features/flight/flightApi";
-import { skipToken } from "@reduxjs/toolkit/query";
+import {
+  useGetLocationsQuery,
+  useGetSearchIdQuery,
+} from "../../redux/features/flight/flightApi";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
 import Select from "react-select";
 import LocationSearchBox from "./locationSearchBox/LocationSearchBox";
+import FlightType from "./FlightType";
 // import returnCalender from "../../assets/image/flight/icons/returnCalender.png";
 // import ReactDatePicker from "react-datepicker";
 // import DatePicker from "react-datepicker";
 
 const FlightForm = () => {
-  const [flyingFrom, setFlyingFrom] = useState("Delhi and NCR, India");
-  const [flyingTo, setFlyingTo] = useState("Delhi and NCR, India");
-  const [locations, setLocations] = useState(null);
-  const [origin, setOrigin] = useState(null);
-  const [destination, setDestination] = useState(null);
-  const { register, handleSubmit } = useForm();
+  const travelerOptions = [
+    { value: "1", label: "1 Adult" },
+    { value: "1%1", label: "1 Adult 1 Child" },
+    { value: "2%1", label: "2 Adult 1 Child" },
+    { value: "2%1%1", label: "2 Adult 1 Child 1 Infant" },
+    { value: "2%2%1", label: "2 Adult 2 Child" },
+  ];
 
-  const [value, setValue] = useState({
-    startDate: null,
-    endDate: null,
-  });
-  const [returnValue, setReturnValue] = useState({
-    startDate: null,
-    endDate: null,
-  });
+  const cabinOptions = [
+    { value: "economy", label: "Economy" },
+    { value: "premium-economy", label: "Premium Economy" },
+    { value: "business", label: "Business" },
+    { value: "first-class", label: "First Class" },
+  ];
 
-  const handleValueChange = (newValue) => {
-    console.log("newValue:", newValue);
-    setValue(newValue);
-  };
-  const returnHandleValueChange = (newValue) => {
-    console.log("newValue:", newValue);
-    setReturnValue(newValue);
+  const [flightFrom, setFlightFrom] = useState(null);
+  const [flightTo, setFlightTo] = useState(null);
+  const [departureDate, setDepartureDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+  const [traveler, setTraveler] = useState(null);
+  const [cabinClass, setCabinClass] = useState("");
+  const [flightType, setFlightType] = useState("");
+  const [serachQueryParams, setSearchQueryParams] = useState(null);
+
+  const { data, isLoading, isError } = useGetSearchIdQuery(
+    serachQueryParams || skipToken
+  );
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    const words = traveler?.split("%");
+    console.log(words);
+    const adults = parseInt(words[0]);
+    const childs = words?.length >= 2 ? parseInt(words[1]) : 0;
+    const infants = words?.length === 3 ? parseInt(words[2]) : 0;
+    const queryData = {
+      flightFrom,
+      flightTo,
+      departureDate: departureDate?.startDate,
+      returnDate: returnDate?.startDate,
+      adults,
+      childs,
+      infants,
+      cabinClass,
+      flightType,
+    };
+    console.log(queryData)
+    setSearchQueryParams(queryData);
+
   };
 
   return (
     <>
-      <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
-        <div className="inline-flex items-start gap-7 text-sm">
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>One way</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>Round-Trip</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" name="" id="" />
-            <p>Direct Flight</p>
-          </div>
-        </div>
+      <form onSubmit={handleOnSubmit}>
+        <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 border-indigo-800 pt-[90px]">
+          <FlightType setFlightType={setFlightType} />
 
-        {/* flying from .... */}
-        <div className="mt-5 flex gap-8">
-          <div className="w-[245px] pt-[2px]">
-            <p className="font-semibold text-base text-[#0D233E]">
-              Flying From
-            </p>
-            <div className="flex gap-2 items-center gray-border py-2.5 px-3">
-              <img
-                src={FlightFrom}
-                alt="flightFromIcon"
-                className="w-3.5 h-3.5"
-              />
-              <LocationSearchBox setOnChange={setDestination} />
+          {/* flying from .... */}
+          <div className="mt-5 flex gap-8">
+            <div className="w-[245px] pt-[2px]">
+              <p className="font-semibold text-base text-[#0D233E]">
+                Flying From
+              </p>
+              <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+                <img
+                  src={flightFromImg}
+                  alt="flightFromIcon"
+                  className="w-3.5 h-3.5"
+                />
+                <LocationSearchBox setOnChange={setFlightFrom} />
+              </div>
+            </div>
+            <div className="w-[245px] pt-[2px]">
+              <p>Flying To</p>
+              <div className="flex gap-2 items-center gray-border py-2.5 px-3">
+                <img
+                  src={flightToImg}
+                  alt="flightFromIcon"
+                  className="w-3.5 h-3.5"
+                />
+                <LocationSearchBox setOnChange={setFlightTo} />
+              </div>
+            </div>
+            <div className="flex flex-col gap-2.5">
+              <p className="fs-base fw-medium">Departing</p>
+              <div>
+                <Datepicker
+                  popoverDirection="down"
+                  containerClassName=""
+                  inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
+                  asSingle={true}
+                  useRange={false}
+                  value={departureDate}
+                  onChange={(obj) => setDepartureDate(obj)}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-2.5">
+              <p className="fs-base fw-medium">Return</p>
+              <div>
+                <Datepicker
+                  popoverDirection="down"
+                  containerClassName=""
+                  inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
+                  asSingle={true}
+                  useRange={false}
+                  value={returnDate}
+                  onChange={(obj) => setReturnDate(obj)}
+                />
+              </div>
             </div>
           </div>
-          <div className="w-[245px] pt-[2px]">
-            <p>Flying To</p>
-            <div className="flex gap-2 items-center gray-border py-2.5 px-3">
-              <img
-                src={flightTo}
-                alt="flightFromIcon"
-                className="w-3.5 h-3.5"
-              />
-              <LocationSearchBox setOnChange={setOrigin} />
-            </div>
-          </div>
-          <div className="flex flex-col gap-2.5">
-            <p className="fs-base fw-medium">Departing</p>
-            <div>
-              <Datepicker
-                popoverDirection="down"
-                containerClassName=""
-                inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
-                asSingle={true}
-                useRange={false}
-                value={value}
-                onChange={handleValueChange}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-2.5">
-            <p className="fs-base fw-medium">Return</p>
-            <div>
-              <Datepicker
-                popoverDirection="down"
-                containerClassName=""
-                inputClassName="border border-[#80899633] w-[245px] h-12 pl-4 rounded"
-                asSingle={true}
-                useRange={false}
-                value={returnValue}
-                onChange={returnHandleValueChange}
-              />
-            </div>
-          </div>
-        </div>
 
-        {/*  */}
-        <div>
-          <div className="mt-5 flex gap-2">
-            <div className="w-[265px] pt-[2px] pr-7">
-              <p>Traveler</p>
-              <DropDown />
-            </div>
-            <div className="w-[265px] pt-[2px] pr-7">
-              <p>Coach</p>
-              <DropDown />
-            </div>
-            <div className="flex items-end">
-              <input
-                className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
-                type="submit"
-                value="Search Now"
-              />
+          {/*  */}
+          <div>
+            <div className="mt-5 flex gap-2">
+              <div className="w-[265px] pt-[2px] pr-7">
+                <p>Traveler</p>
+                <DropDown
+                  options={travelerOptions}
+                  placeholder="1 Adult"
+                  setOnChange={setTraveler}
+                />
+              </div>
+              <div className="w-[265px] pt-[2px] pr-7">
+                <p>Coach</p>
+                <DropDown
+                  options={cabinOptions}
+                  placeholder="Economy"
+                  setOnChange={setCabinClass}
+                />
+              </div>
+              <div className="flex items-end">
+                <input
+                  className="w-[250px] h-[47px] old-logo-color text-white rounded-lg"
+                  type="submit"
+                  value="Search Now"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </>
   );
 };
