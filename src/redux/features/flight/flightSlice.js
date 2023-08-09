@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isSearchResultAvailable: true,
+  isSearchResultAvailable: "",
+  searchId: null,
 };
 
 const flightSlice = createSlice({
   name: "flight",
   initialState,
   reducers: {
-    updateIsSearchResultAvailable: (state, action) => {
-      state.isSearchResultAvailable = action.payload;
+    updateIsSearchResultAvailableAction: (state, action) => {
+      state.isSearchResultAvailable = action.payload.isSearchResultAvailable;
+      state.searchId = action.payload.searchId;
     },
   },
 });
 
-export const { updateIsSearchResultAvailable } = flightSlice.actions;
+export const { updateIsSearchResultAvailableAction } = flightSlice.actions;
 export default flightSlice.reducer;

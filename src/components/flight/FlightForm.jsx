@@ -1,5 +1,6 @@
 import { useDebounce } from "use-debounce";
 import { useForm } from "react-hook-form";
+import moment from "moment";
 
 import DropDown from "./dropdown/DropDown";
 import flightFromImg from "../../assets/image/flight/icons/FlightFrom.png";
@@ -9,13 +10,15 @@ import "./FlightForm.css";
 
 import Datepicker from "react-tailwindcss-datepicker";
 import { useCallback, useState } from "react";
-import {
-  useGetFlightSearchIdQuery,
-} from "../../redux/features/flight/flightApi";
+import { useGetFlightSearchIdQuery } from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import Select from "react-select";
 import LocationSearchBox from "./locationSearchBox/LocationSearchBox";
 import FlightType from "./FlightType";
+import { updateIsSearchResultAvailableAction } from "../../redux/features/flight/flightSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
 // import returnCalender from "../../assets/image/flight/icons/returnCalender.png";
 // import ReactDatePicker from "react-datepicker";
 // import DatePicker from "react-datepicker";
@@ -56,11 +59,13 @@ const FlightForm = () => {
     const adults = parseInt(words[0]);
     const childs = words?.length >= 2 ? parseInt(words[1]) : 0;
     const infants = words?.length === 3 ? parseInt(words[2]) : 0;
+    const dDate = moment(departureDate?.startDate).format("D/MM/YYYY");
+    const rDate = moment(returnDate?.startDate).format("D/MM/YYYY");
     const queryData = {
       flightFrom,
       flightTo,
-      departureDate: departureDate?.startDate,
-      returnDate: returnDate?.startDate,
+      departureDate: dDate,
+      returnDate: rDate,
       adults,
       childs,
       infants,
@@ -70,6 +75,21 @@ const FlightForm = () => {
     console.log(queryData);
     setSearchQueryParams(queryData);
   };
+  console.log("------------------");
+  console.log(isError);
+  console.log(data);
+  if (!isError && data?.isFind) {
+    console.log("hellooooooo");
+    if (data.isFind !== "Yes") {
+      toast.error("Failed to find for the query!!!", {});
+    } else {
+      console.log("updating ......");
+      // useDispatch(updateIsSearchResultAvailableAction({
+      //   isSearchResultAvailable: true,
+      //   searchId: data.search_id,
+      // }))
+    }
+  }
 
   return (
     <>
@@ -155,17 +175,55 @@ const FlightForm = () => {
               />
             </div>
             <div className="flex items-end">
-              <input
-                className="w-[250px] py-3 old-logo-color text-white rounded font-medium text-base"
+              {/* {isLoading || (
+                <button className="w-[250px] flex justify-center items-center gap-2 py-3 old-logo-color text-white rounded font-medium text-base">
+                  <div class="animate-spin rounded-full w-3.5 h-3.5 border-t-2 border-b-2 border-white"></div>
+                  Searching...
+                </button>
+              )}
+              {isLoading && (
+                <input
+                  className="w-[250px] py-3 old-logo-color text-white rounded font-medium text-base"
+                  type="submit"
+                  value="Search Now"
+                />
+              )} */}
+              <button
                 type="submit"
-                value="Search Now"
-              />
+                disabled={isLoading}
+                className="w-[250px] flex justify-center items-center gap-2 py-3 old-logo-color text-white rounded font-medium text-base"
+              >
+                {isLoading ? <SearchLoader /> : "Search Now"}
+              </button>
             </div>
           </div>
         </div>
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
     </>
   );
 };
 
 export default FlightForm;
+
+const SearchLoader = () => {
+  return (
+    <>
+      <div class="animate-spin rounded-full w-3.5 h-3.5 border-t-2 border-b-2 border-white"></div>
+      Searching...
+    </>
+  );
+};

@@ -1,4 +1,7 @@
 import { apiSlice } from "../apiSlice";
+import flightSlice, {
+  updateIsSearchResultAvailableAction,
+} from "./flightSlice";
 
 const flightApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -50,6 +53,19 @@ const flightApi = apiSlice.injectEndpoints({
           url: "/get_flight_search_id",
           params: queryParams,
         };
+      },
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          dispatch(
+            updateIsSearchResultAvailableAction({
+              isSearchResultAvailable: data.isFind,
+              searchId: data.search_id,
+            })
+          );
+        } catch (err) {
+          console.log(err);
+        }
       },
     }),
   }),
