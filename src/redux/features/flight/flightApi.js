@@ -16,10 +16,10 @@ const flightApi = apiSlice.injectEndpoints({
       },
     }),
 
-    getLocationsFlights: builder.query({
+    getFlighstLocations: builder.query({
       query: (term) => {
         return {
-          url: "/getLocationsFlights",
+          url: "/get_flights_locations",
           params: {
             locale: "en",
             max: 7,
@@ -30,10 +30,9 @@ const flightApi = apiSlice.injectEndpoints({
       },
     }),
 
-    getSearchId: builder.query({
+    getFlightSearchId: builder.query({
       query: (data) => {
         const queryParams = {
-          action: "findSearchKey",
           flighttype: data.flightType,
           origin: data.flightFrom.label,
           destination: data.flightTo.label,
@@ -48,7 +47,7 @@ const flightApi = apiSlice.injectEndpoints({
           isDomestic: "No",
         };
         return {
-          url: "/flight-search-results2",
+          url: "/get_flight_search_id",
           params: queryParams,
         };
       },
@@ -58,6 +57,6 @@ const flightApi = apiSlice.injectEndpoints({
 
 export const {
   useGetLocationsQuery,
-  useGetLocationsFlightsQuery,
-  useGetSearchIdQuery,
+  useGetFlighstLocationsQuery,
+  useGetFlightSearchIdQuery,
 } = flightApi;

@@ -3,7 +3,7 @@ import Select from "react-select";
 
 import "./location-search-box.css";
 import { useDebounce } from "use-debounce";
-import { useGetLocationsQuery } from "../../../redux/features/flight/flightApi";
+import { useGetFlighstLocationsQuery } from "../../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 
 const LocationSearchBox = ({setOnChange}) => {
@@ -11,7 +11,7 @@ const LocationSearchBox = ({setOnChange}) => {
     const [searchTerm] = useDebounce(location, 500);
 
     
-  const { data, isLoading, isError } = useGetLocationsQuery(
+  const { data, isLoading, isError } = useGetFlighstLocationsQuery(
     searchTerm || skipToken
   );
   let countryOptions = [];
@@ -19,7 +19,7 @@ const LocationSearchBox = ({setOnChange}) => {
     countryOptions = data.map((item) => {
       return {
         value: item.city_code,
-        label: `${item.city_name}, ${item.countryName}`,
+        label: `${item.city_name}, ${item.country_name}`,
       };
     });
   }

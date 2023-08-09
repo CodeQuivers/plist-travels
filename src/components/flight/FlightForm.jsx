@@ -10,8 +10,7 @@ import "./FlightForm.css";
 import Datepicker from "react-tailwindcss-datepicker";
 import { useCallback, useState } from "react";
 import {
-  useGetLocationsQuery,
-  useGetSearchIdQuery,
+  useGetFlightSearchIdQuery,
 } from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import Select from "react-select";
@@ -46,7 +45,7 @@ const FlightForm = () => {
   const [flightType, setFlightType] = useState("");
   const [serachQueryParams, setSearchQueryParams] = useState(null);
 
-  const { data, isLoading, isError } = useGetSearchIdQuery(
+  const { data, isLoading, isError } = useGetFlightSearchIdQuery(
     serachQueryParams || skipToken
   );
 
