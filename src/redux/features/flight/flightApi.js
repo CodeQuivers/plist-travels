@@ -1,4 +1,5 @@
 import { apiSlice } from "../apiSlice";
+import { setPaginationInfoAction } from "../pagination/paginationSlice";
 import flightSlice, {
   updateIsSearchResultAvailableAction,
 } from "./flightSlice";
@@ -70,15 +71,32 @@ const flightApi = apiSlice.injectEndpoints({
     }),
 
     getFlightList: builder.query({
-      query:({searchId, sortVal})=>{
-        return{
-          url:'/get_flight_list',
-          params:{
-            search_id:searchId,
-            sortVal
-          }
+      query: ({ searchId, sortVal }) => {
+        return {
+          url: "/get_flight_list",
+          params: {
+            search_id: searchId,
+            sortVal,
+          },
+        };
+      },
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          const itemPerPage = data.results[0].isReturn === "Yes" ? 3 : 5;
+          const numOfPage = parseInt(
+            Math.ceil(data.results.length / itemPerPage)
+          );
+          dispatch(
+            setPaginationInfoAction({
+              numOfPage: numOfPage,
+              itemPerPage: itemPerPage,
+            })
+          );
+        } catch (err) {
+          console.log(err);
         }
-      }
+      },
     }),
   }),
 });

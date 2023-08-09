@@ -6,7 +6,7 @@ import moveRight from "../../assets/image/flight/icons/move-right.svg";
 import Pagination from "../../components/flight/Pagination";
 import MultiRangeSlider from "../../components/flight/rangeSlider/MultiRangeSlider";
 import FilterRadioButton from "../../components/tours/tourSearchResult/FilterRadioButton";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useGetFlightListQuery } from "../../redux/features/flight/flightApi";
 import TripCard from "./searcResult/TripCard";
 
@@ -124,7 +124,7 @@ const FlightSearchResults = ({ searchId }) => {
       </div>
       {/* pagination */}
       <div className="pt-10">
-        <Pagination />
+        <Pagination/>
       </div>
     </>
   );
