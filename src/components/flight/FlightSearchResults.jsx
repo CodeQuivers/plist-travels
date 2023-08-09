@@ -6,8 +6,15 @@ import moveRight from "../../assets/image/flight/icons/move-right.svg";
 import Pagination from "../../components/flight/Pagination";
 import MultiRangeSlider from "../../components/flight/rangeSlider/MultiRangeSlider";
 import FilterRadioButton from "../../components/tours/tourSearchResult/FilterRadioButton";
+import { useSelector } from "react-redux";
+import { useGetFlightListQuery } from "../../redux/features/flight/flightApi";
 
-const FlightSearchResults = () => {
+const FlightSearchResults = ({ searchId }) => {
+  const {
+    data: flights,
+    isLoading,
+    isError,
+  } = useGetFlightListQuery({ searchId, sortVal: "price_ASC" });
   const options = [
     {
       value: 1,
@@ -35,6 +42,8 @@ const FlightSearchResults = () => {
     outline: "none",
     fontSize: "14px",
   };
+  console.log("flgihts.........");
+  console.log(flights);
   return (
     <>
       <div className="flex gap-10">
@@ -101,6 +110,7 @@ const FlightSearchResults = () => {
             </div>
           </div>
           {/* Round tip 1 */}
+          
           <div className="mb-8 pl-5 py-5 old-logo-color-border">
             {/* item one */}
             <div className="pl-5 py-5 flex justify-between">

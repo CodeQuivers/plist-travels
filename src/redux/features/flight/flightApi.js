@@ -68,6 +68,18 @@ const flightApi = apiSlice.injectEndpoints({
         }
       },
     }),
+
+    getFlightList: builder.query({
+      query:({searchId, sortVal})=>{
+        return{
+          url:'/get_flight_list',
+          params:{
+            search_id:searchId,
+            sortVal
+          }
+        }
+      }
+    }),
   }),
 });
 
@@ -75,4 +87,5 @@ export const {
   useGetLocationsQuery,
   useGetFlighstLocationsQuery,
   useGetFlightSearchIdQuery,
+  useGetFlightListQuery,
 } = flightApi;
