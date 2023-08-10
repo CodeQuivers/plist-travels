@@ -16,12 +16,18 @@ const FlightSearchResults = ({ searchId }) => {
     isLoading,
     isError,
   } = useGetFlightListQuery({ searchId, sortVal: "price_ASC" });
+  const { currentPageNumber, itemPerPage } = useSelector(
+    (state) => state.pagination
+  );
 
   let content = null;
   if (!isError && flights?.result.length >= 0) {
-    content = flights.result.map((item, idx) => (
-      <TripCard key={idx} tripInfo={item} />
-    ));
+    content = flights.result
+      .slice(
+        currentPageNumber * itemPerPage,
+        (currentPageNumber + 1) * itemPerPage
+      )
+      .map((item, idx) => <TripCard key={idx} tripInfo={item} />);
   }
   const options = [
     {
@@ -124,7 +130,7 @@ const FlightSearchResults = ({ searchId }) => {
       </div>
       {/* pagination */}
       <div className="pt-10">
-        <Pagination/>
+        <Pagination />
       </div>
     </>
   );

@@ -83,10 +83,11 @@ const flightApi = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;
-          const itemPerPage = data.results[0].isReturn === "Yes" ? 3 : 5;
+          const itemPerPage = data.result[0].isReturn === "Yes" ? 3 : 5;
           const numOfPage = parseInt(
-            Math.ceil(data.results.length / itemPerPage)
+            Math.ceil(data.result.length / itemPerPage)
           );
+          console.log("I am in the flight api")
           dispatch(
             setPaginationInfoAction({
               numOfPage: numOfPage,
