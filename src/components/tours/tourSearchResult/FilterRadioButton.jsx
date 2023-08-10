@@ -16,7 +16,7 @@ const FilterRadioButton = ({text}) => {
       >
         <img src={iconImg} className="w-[16px] h-[16px]" alt="" />
       </button>
-      <label class="ml-2 text-base text-[#334150]">
+      <label class="ml-2 text-sm text-[#334150]">
         {text}
       </label>
     </div>

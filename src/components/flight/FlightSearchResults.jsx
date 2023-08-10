@@ -60,14 +60,14 @@ const FlightSearchResults = ({ searchId }) => {
   console.log(flights);
   return (
     <>
-      <div className="flex gap-10">
+      <div className="flex gap-10 text-sm">
         {/* filters */}
-        <div className="w-[255px] h-[545px] old-logo-color-border">
+        <div className="w-[255px] h-[545px] grad-border-olc-8">
           <div className="h-[66px] p-5 border-b-2 border-gray-300">
-            <p>Filters</p>
+            <p className="font-medium">Filters</p>
           </div>
           <div className="mx-5">
-            <p className="my-4">Flight By Price</p>
+            <p className="my-4 text7F8FA4">Flight By Price</p>
             <MultiRangeSlider
               min={0}
               max={1000}
@@ -78,18 +78,18 @@ const FlightSearchResults = ({ searchId }) => {
             <hr className="mt-4 mb-5" />
           </div>
           <div className="mx-5">
-            <p className="mb-2">Flight Stops</p>
+            <p className="mb-2 text7F8FA4">Flight Stops</p>
             <FilterRadioButton text={"0 Stops"} />
             <FilterRadioButton text={"1 Stops"} />
             <hr className="my-5" />
           </div>
           <div className="mx-5">
-            <p className="mb-2">Flight Stops</p>
+            <p className="mb-2 text7F8FA4">Flight By Airline</p>
             <FilterRadioButton text={"Air India Limited (575)"} />
             <FilterRadioButton text={"Air Vista (584)"} />
             <FilterRadioButton text={"ZZZ (566)"} />
             <hr className="my-5" />
-            <button className="w-[215px] h-9 old-logo-color rounded-md text-white">
+            <button className="w-[215px] h-9 old-logo-color rounded-md text-white font-bold dmsan-font">
               Apply Filters
             </button>
           </div>
