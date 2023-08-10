@@ -9,6 +9,7 @@ import FilterRadioButton from "../../components/tours/tourSearchResult/FilterRad
 import { useDispatch, useSelector } from "react-redux";
 import { useGetFlightListQuery } from "../../redux/features/flight/flightApi";
 import TripCard from "./searcResult/TripCard";
+import FlightFilter from "./flightFilter/FlightFilter";
 
 const FlightSearchResults = ({ searchId }) => {
   const {
@@ -62,39 +63,7 @@ const FlightSearchResults = ({ searchId }) => {
     <>
       <div className="flex gap-10 text-sm">
         {/* filters */}
-        <div className="w-[255px] h-[545px] grad-border-olc-8">
-          <div className="h-[66px] p-5 border-b-2 border-gray-300">
-            <p className="font-medium">Filters</p>
-          </div>
-          <div className="mx-5">
-            <p className="my-4 text7F8FA4">Flight By Price</p>
-            <MultiRangeSlider
-              min={0}
-              max={1000}
-              onChange={({ min, max }) =>
-                console.log(`min = ${min}, max = ${max}`)
-              }
-            />
-            <hr className="mt-4 mb-5" />
-          </div>
-          <div className="mx-5">
-            <p className="mb-2 text7F8FA4">Flight Stops</p>
-            <FilterRadioButton text={"0 Stops"} />
-            <FilterRadioButton text={"1 Stops"} />
-            <hr className="my-5" />
-          </div>
-          <div className="mx-5">
-            <p className="mb-2 text7F8FA4">Flight By Airline</p>
-            <FilterRadioButton text={"Air India Limited (575)"} />
-            <FilterRadioButton text={"Air Vista (584)"} />
-            <FilterRadioButton text={"ZZZ (566)"} />
-            <hr className="my-5" />
-            <button className="w-[215px] h-9 old-logo-color rounded-md text-white font-bold dmsan-font">
-              Apply Filters
-            </button>
-          </div>
-        </div>
-
+        <FlightFilter searchId={searchId}/>
         <div className=" w-[875px] ">
           <div className="border-b border-t border-x border-x-indigo-700 border-t-indigo-700 py-4">
             <div className="flex px-4 justify-between items-center">
