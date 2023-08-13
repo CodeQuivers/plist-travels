@@ -1,6 +1,7 @@
 import { apiSlice } from "../apiSlice";
 import { setPaginationInfoAction } from "../pagination/paginationSlice";
 import flightSlice, {
+  setFlightSearchResultAction,
   updateIsSearchResultAvailableAction,
 } from "./flightSlice";
 
@@ -95,6 +96,7 @@ const flightApi = apiSlice.injectEndpoints({
                 itemPerPage: itemPerPage,
               })
             );
+            dispatch(setFlightSearchResultAction(data.result));
           }
         } catch (err) {
           console.log(err);

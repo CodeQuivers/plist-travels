@@ -16,6 +16,8 @@ const FlightFilter = ({ searchId }) => {
     isError,
   } = useGetFlightFilterDataQuery(searchId || skipToken);
   const { minprice, maxprice, airlines, stopages } = filterData || {};
+  const { stopages: sotpagesToFilter, airlines: airlinesToFilter } =
+    useSelector((state) => state.flightFilter);
 
   //   Button content for airlines
   let airlineContent = null;
@@ -42,6 +44,11 @@ const FlightFilter = ({ searchId }) => {
     ));
   }
   console.log("min price max price", minprice, maxprice);
+
+  const handleOnClick = () => {
+    console.log(sotpagesToFilter);
+    console.log(airlinesToFilter);
+  };
   return (
     <div>
       <div className="w-[255px] grad-border-olc-8">
@@ -68,7 +75,10 @@ const FlightFilter = ({ searchId }) => {
           <p className="mb-2 text7F8FA4">Flight By Airline</p>
           {airlineContent}
           <hr className="my-5" />
-          <button className="w-[215px] mb-3 h-9 old-logo-color rounded-md text-white font-bold dmsan-font">
+          <button
+            onClick={handleOnClick}
+            className="w-[215px] mb-3 h-9 old-logo-color rounded-md text-white font-bold dmsan-font"
+          >
             Apply Filters
           </button>
         </div>
