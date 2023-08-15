@@ -3,12 +3,12 @@ import PaginationButton from "./pagination/PaginationButton";
 import { useSelector } from "react-redux";
 
 const Pagination = () => {
-  const { numOfPage } = useSelector((state) => state.pagination
-  );
+  const { numOfPage } = useSelector((state) => state.pagination);
+  const { searchId } = useSelector((state) => state.flight);
   let content = null;
   if (numOfPage) {
     content = [...Array(numOfPage).keys()].map((idx) => (
-      <PaginationButton key={idx} pageNumber={idx} />
+      <PaginationButton key={idx} pageNumber={idx} searchId={searchId} />
     ));
   }
 

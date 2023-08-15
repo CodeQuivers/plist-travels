@@ -73,10 +73,11 @@ const flightApi = apiSlice.injectEndpoints({
     }),
 
     getFlightList: builder.query({
-      query: ({ searchId, sortVal, stops, airlines, price }) => {
+      query: ({ searchId, sortVal, page, stops, airlines, price }) => {
         const params = {
           search_id: searchId,
           sortVal,
+          page: page ? page : 1,
         };
 
         if (stops) params.Stops = stops;
@@ -87,26 +88,23 @@ const flightApi = apiSlice.injectEndpoints({
           params: params,
         };
       },
-      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+      async onQueryStarted({ page }, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;
           if (data && data?.result?.length > 0) {
-            const itemPerPage = data.result[0].isReturn === "Yes" ? 3 : 5;
-            const numOfPage = parseInt(
-              Math.ceil(data.result.length / itemPerPage)
-            );
-            dispatch(
-              setPaginationInfoAction({
-                numOfPage: numOfPage,
-                itemPerPage: itemPerPage,
-              })
-            );
-            dispatch(
-              setFlightSearchResultAction({
-                items: data.result,
-                numOfItems: data.result[0].totalcountfilter,
-              })
-            );
+            const items = data.result;
+            const numOfItems = items[0].totalcountfilter;
+            const itemPerPage = 20;
+            const numOfPage = parseInt(Math.ceil(numOfItems / itemPerPage));
+            if (!page) {
+              dispatch(
+                setPaginationInfoAction({
+                  numOfPage: numOfPage,
+                  itemPerPage: itemPerPage,
+                })
+              );
+            }
+            dispatch(setFlightSearchResultAction({ items, numOfItems }));
           }
         } catch (err) {
           console.log(err);
