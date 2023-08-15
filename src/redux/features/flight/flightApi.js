@@ -95,14 +95,18 @@ const flightApi = apiSlice.injectEndpoints({
             const numOfPage = parseInt(
               Math.ceil(data.result.length / itemPerPage)
             );
-            console.log("I am in the flight api");
             dispatch(
               setPaginationInfoAction({
                 numOfPage: numOfPage,
                 itemPerPage: itemPerPage,
               })
             );
-            dispatch(setFlightSearchResultAction(data.result));
+            dispatch(
+              setFlightSearchResultAction({
+                items: data.result,
+                numOfItems: data.result[0].totalcountfilter,
+              })
+            );
           }
         } catch (err) {
           console.log(err);

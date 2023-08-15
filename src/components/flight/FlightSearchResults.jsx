@@ -12,7 +12,7 @@ import TripCard from "./searcResult/TripCard";
 import FlightFilter from "./flightFilter/FlightFilter";
 
 const FlightSearchResults = () => {
-  const { searchResult, searchId } = useSelector((state) => state.flight);
+  const { searchResult, searchId, totalSearchResult } = useSelector((state) => state.flight);
 
   const {
     data: flights,
@@ -70,7 +70,7 @@ const FlightSearchResults = () => {
               <div>
                 <h4 className="searchResultsFont">
                   Search Results
-                  <span className="text-[#66768E] text-sm"> (126)</span>
+                  <span className="text-[#66768E] text-sm"> ({totalSearchResult})</span>
                 </h4>
               </div>
               <div className="flex  border border-[#E6E8EC] px-2 divide-x-2  rounded-t-md">

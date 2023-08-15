@@ -4,6 +4,7 @@ const initialState = {
   isSearchResultAvailable: "",
   searchId: null,
   searchResult: [],
+  totalSearchResult: 0,
 };
 
 const flightSlice = createSlice({
@@ -15,7 +16,8 @@ const flightSlice = createSlice({
       state.searchId = action.payload.searchId;
     },
     setFlightSearchResultAction: (state, action) => {
-      state.searchResult = action.payload;
+      state.searchResult = action.payload.items;
+      state.totalSearchResult = action.payload.numOfItems;
     },
     filterSearchResultAction: (state, action) => {},
   },
