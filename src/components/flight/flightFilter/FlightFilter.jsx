@@ -9,6 +9,7 @@ import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setArilinesFilterAction,
+  setPriceFilterAction,
   setStopageFilterAction,
 } from "../../../redux/features/flight/flightFilterSlice";
 
@@ -21,9 +22,13 @@ const FlightFilter = ({ searchId }) => {
   } = useGetFlightFilterDataQuery(searchId || skipToken);
   const { data } = useGetFlightListQuery(queryParams || skipToken);
   const { minprice, maxprice, airlines, stopages } = filterData || {};
-  const { stopages: sotpagesToFilter, airlines: airlinesToFilter } =
-    useSelector((state) => state.flightFilter);
-  const [priceRange, setPriceRange] = useState("");
+  const {
+    price: priceRangeToFilter,
+    stopages: sotpagesToFilter,
+    airlines: airlinesToFilter,
+  } = useSelector((state) => state.flightFilter);
+  // const [priceRange, setPriceRange] = useState("");
+  const dispatch = useDispatch();
 
   //   Button content for airlines
   let airlineContent = null;
@@ -58,9 +63,15 @@ const FlightFilter = ({ searchId }) => {
       sortVal: "price_ASC",
       stops,
       airlines,
-      price: priceRange,
+      price: priceRangeToFilter,
     };
     setQueryParams(queryData);
+  };
+
+  const setPriceRangeOnChange = ({ min, max }) => {
+    if (min && max) {
+      dispatch(setPriceFilterAction(`${min}-${max}`));
+    }
   };
 
   return (
@@ -74,7 +85,7 @@ const FlightFilter = ({ searchId }) => {
           <MultiRangeSlider
             min={minprice}
             max={maxprice}
-            onChange={({ min, max }) => setPriceRange(`${min}-${max}`)}
+            onChange={setPriceRangeOnChange}
           />
           <hr className="mt-4 mb-5" />
         </div>

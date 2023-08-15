@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-dropdown-select";
 import sortByIcon from "../../assets/image/hotel/sortByIcon.svg";
 import ChainaSouthern from "../../assets/image/flight/images/ChainaSouthern.png";
@@ -10,17 +10,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { useGetFlightListQuery } from "../../redux/features/flight/flightApi";
 import TripCard from "./searcResult/TripCard";
 import FlightFilter from "./flightFilter/FlightFilter";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
 
 const FlightSearchResults = () => {
   const { searchResult, searchId, totalSearchResult } = useSelector(
     (state) => state.flight
   );
+  const [queryParams, setQueryParams] = useState({
+    searchId,
+    sortVal: "price_ASC",
+  });
+  const [sortBy, setSortBy] = useState("");
+  const [sortInDescendingOrder, setSortInDescendingOrder] = useState("DESC");
+  const {
+    price: priceRangeToFilter,
+    stopages: sotpagesToFilter,
+    airlines: airlinesToFilter,
+  } = useSelector((state) => state.flightFilter);
 
   const {
     data: flights,
     isLoading,
     isError,
-  } = useGetFlightListQuery({ searchId, sortVal: "price_ASC" });
+  } = useGetFlightListQuery(queryParams || skipToken);
+
   let content = null;
   if (!isError && searchResult?.length >= 0) {
     content = searchResult.map((item, idx) => (
@@ -29,30 +42,49 @@ const FlightSearchResults = () => {
   }
   const options = [
     {
-      value: 1,
-      label: "Sort By Hotel",
+      value: "price",
+      label: "Sort By Price",
     },
     {
-      value: 2,
-      label: "Price: Low to High",
+      value: "airlines",
+      label: "Sort by Airline",
     },
     {
-      value: 3,
-      label: "Price: High to Low",
-    },
-    {
-      value: 4,
-      label: "Price: Low to High",
-    },
-    {
-      value: 5,
-      label: "Price: High to Low",
+      value: "duration",
+      label: "Sort by Duration",
     },
   ];
   const customStyles = {
     border: "none",
     outline: "none",
     fontSize: "14px",
+  };
+  const setParamsForFilterAndSortby = ({ sortby, sortin }) => {
+    const isTrue = sortin ? sortin : sortInDescendingOrder;
+    const stops =
+      sotpagesToFilter.length > 0 ? sotpagesToFilter.join(",") + "," : "";
+    const airlines =
+      airlinesToFilter.length > 0 ? airlinesToFilter.join(",") + "," : "";
+    const sortVal = `${sortby ? sortby : sortBy}_${isTrue}`;
+    const queryData = {
+      searchId,
+      sortVal,
+      stops,
+      airlines,
+      price: priceRangeToFilter,
+      sessionId: Date.now(),
+    };
+    setQueryParams(queryData);
+  };
+
+  const sortSearchRsultInOrder = () => {
+    const sortInString = sortInDescendingOrder === "DESC" ? "ASC" : "DESC";
+    setSortInDescendingOrder(sortInString);
+    setParamsForFilterAndSortby({ sortin: sortInString });
+  };
+  const sortSearchResultByType = (selectedValue) => {
+    setSortBy(selectedValue[0].value);
+    setParamsForFilterAndSortby({ sortby: selectedValue[0].value });
   };
   return (
     <>
@@ -84,9 +116,17 @@ const FlightSearchResults = () => {
                   dropdownHandle={false}
                   searchable={false}
                   className="!w-[140px] py-1"
-                  onChange={(value) => console.log(value)}
+                  onChange={sortSearchResultByType}
                 />
-                <img className="pl-2 pr-1 py-1" src={sortByIcon} alt="" />
+                <div className="flex justify-center items-center">
+                  <button onClick={sortSearchRsultInOrder} className="p-2">
+                    <img
+                      className={sortInDescendingOrder ? "" : "rotate-180"}
+                      src={sortByIcon}
+                      alt="sort by high or low photo"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

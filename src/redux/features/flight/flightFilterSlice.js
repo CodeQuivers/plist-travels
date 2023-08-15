@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  price: [],
+  price: "",
   stopages: [],
   airlines: [],
 };
@@ -10,7 +10,9 @@ const flightFilterSlice = createSlice({
   name: "flightFilter",
   initialState,
   reducers: {
-    setPriceFilterAction: (state, action) => {},
+    setPriceFilterAction: (state, action) => {
+      state.price = action.payload;
+    },
     setStopageFilterAction: (state, action) => {
       state.stopages = dataMutation(
         state.stopages,

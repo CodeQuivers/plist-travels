@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isSearchResultAvailable: "",
-  searchId: null,
+  isSearchResultAvailable: "Yes",
+  searchId: "64db913d61231",
   searchResult: [],
   totalSearchResult: 0,
 };
