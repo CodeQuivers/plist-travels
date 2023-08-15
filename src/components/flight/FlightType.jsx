@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-const FlightType = ({ setFlightType }) => {
+const FlightType = ({ setFlightType, setIsDirect, isDirect }) => {
   const ONE = "one-way";
   const ROUND = "round";
-  const DIRECT = "direct-flight";
+  const DIRECT = "Yes";
   const [isSelected, setIsSelected] = useState("");
   const one = isSelected === ONE ? true : false;
   const round = isSelected === ROUND ? true : false;
-  const direct = isSelected === DIRECT ? true : false;
   const handleFlightTypeSelection = (flightType) => {
     setIsSelected(flightType);
     setFlightType(flightType);
@@ -36,11 +35,11 @@ const FlightType = ({ setFlightType }) => {
       </div>
       <div className="flex items-center gap-2">
         <input
-          type="radio"
+          type="checkbox"
           name="direct-flight"
           id="direct-flight"
-          checked={direct}
-          onChange={() => handleFlightTypeSelection(DIRECT)}
+          checked={isDirect}
+          onChange={() => setIsDirect(!isDirect)}
         />
         <p>Direct Flight</p>
       </div>

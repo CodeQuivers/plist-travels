@@ -73,7 +73,7 @@ const flightApi = apiSlice.injectEndpoints({
     }),
 
     getFlightList: builder.query({
-      query: ({ searchId, sortVal, stops, airlines, priceRange }) => {
+      query: ({ searchId, sortVal, stops, airlines, price }) => {
         const params = {
           search_id: searchId,
           sortVal,
@@ -81,7 +81,7 @@ const flightApi = apiSlice.injectEndpoints({
 
         if (stops) params.Stops = stops;
         if (airlines) params.airlines = airlines;
-        if (priceRange) params.price = priceRange;
+        if (price) params.price = price;
         return {
           url: "/get_flight_list",
           params: params,

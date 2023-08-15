@@ -11,7 +11,9 @@ import { useGetFlightListQuery } from "../../redux/features/flight/flightApi";
 import TripCard from "./searcResult/TripCard";
 import FlightFilter from "./flightFilter/FlightFilter";
 
-const FlightSearchResults = ({ searchId }) => {
+const FlightSearchResults = () => {
+  const { searchResult, searchId } = useSelector((state) => state.flight);
+
   const {
     data: flights,
     isLoading,
@@ -22,8 +24,8 @@ const FlightSearchResults = ({ searchId }) => {
   );
 
   let content = null;
-  if (!isError && flights?.result.length >= 0) {
-    content = flights.result
+  if (!isError && searchResult?.length >= 0) {
+    content = searchResult
       .slice(
         currentPageNumber * itemPerPage,
         (currentPageNumber + 1) * itemPerPage
@@ -57,13 +59,11 @@ const FlightSearchResults = ({ searchId }) => {
     outline: "none",
     fontSize: "14px",
   };
-  console.log("flgihts.........");
-  console.log(flights);
   return (
     <>
       <div className="flex gap-10 text-sm">
         {/* filters */}
-        <FlightFilter searchId={searchId}/>
+        <FlightFilter searchId={searchId} />
         <div className=" w-[875px] ">
           <div className="border-b border-t border-x border-x-indigo-700 border-t-indigo-700 py-4">
             <div className="flex px-4 justify-between items-center">

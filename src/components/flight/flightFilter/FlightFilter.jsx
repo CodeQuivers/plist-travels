@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import MultiRangeSlider from "../rangeSlider/MultiRangeSlider";
 import FilterRadioButton from "../../tours/tourSearchResult/FilterRadioButton";
-import { useGetFlightFilterDataQuery } from "../../../redux/features/flight/flightApi";
+import {
+  useGetFlightFilterDataQuery,
+  useGetFlightListQuery,
+} from "../../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,14 +13,17 @@ import {
 } from "../../../redux/features/flight/flightFilterSlice";
 
 const FlightFilter = ({ searchId }) => {
+  const [queryParams, setQueryParams] = useState({});
   const {
     data: filterData,
     isLoading,
     isError,
   } = useGetFlightFilterDataQuery(searchId || skipToken);
+  const { data } = useGetFlightListQuery(queryParams || skipToken);
   const { minprice, maxprice, airlines, stopages } = filterData || {};
   const { stopages: sotpagesToFilter, airlines: airlinesToFilter } =
     useSelector((state) => state.flightFilter);
+  const [priceRange, setPriceRange] = useState("");
 
   //   Button content for airlines
   let airlineContent = null;
@@ -43,12 +49,20 @@ const FlightFilter = ({ searchId }) => {
       />
     ));
   }
-  console.log("min price max price", minprice, maxprice);
 
   const handleOnClick = () => {
-    console.log(sotpagesToFilter);
-    console.log(airlinesToFilter);
+    const stops = sotpagesToFilter.join(",") + ",";
+    const airlines = airlinesToFilter.join(",") + ",";
+    const queryData = {
+      searchId,
+      sortVal: "price_ASC",
+      stops,
+      airlines,
+      price: priceRange,
+    };
+    setQueryParams(queryData);
   };
+
   return (
     <div>
       <div className="w-[255px] grad-border-olc-8">
@@ -58,11 +72,9 @@ const FlightFilter = ({ searchId }) => {
         <div className="mx-5">
           <p className="my-4 text7F8FA4">Flight By Price</p>
           <MultiRangeSlider
-            min={0}
-            max={1000}
-            onChange={({ min, max }) =>
-              console.log(`min = ${min}, max = ${max}`)
-            }
+            min={minprice}
+            max={maxprice}
+            onChange={({ min, max }) => setPriceRange(`${min}-${max}`)}
           />
           <hr className="mt-4 mb-5" />
         </div>

@@ -22,7 +22,7 @@ import FlightOthers from "../../components/flight/FlightOthers";
 import FlightSearchResults from "../../components/flight/FlightSearchResults";
 
 const Flight = () => {
-  const {isSearchResultAvailable, searchId} = useSelector((state) => state.flight);
+  const { searchId } = useSelector((state) => state.flight);
   return (
     <>
       {/* flight form strat */}
@@ -35,8 +35,8 @@ const Flight = () => {
       <Divider />
       {/* card 1 strat*/}
       <div className="w-[1170px] mx-auto">
-        {isSearchResultAvailable && <FlightSearchResults searchId={searchId}/>}
-        {isSearchResultAvailable || <FlightOthers/>}
+        {searchId && <FlightSearchResults />}
+        {searchId || <FlightOthers />}
       </div>
     </>
   );
