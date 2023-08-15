@@ -46,6 +46,7 @@ const FlightForm = () => {
   const [traveler, setTraveler] = useState(null);
   const [cabinClass, setCabinClass] = useState("");
   const [flightType, setFlightType] = useState("");
+  const [isDirect, setIsDirect] = useState(false);
   const [serachQueryParams, setSearchQueryParams] = useState(null);
 
   const { data, isLoading, isError } = useGetFlightSearchIdQuery(
@@ -55,7 +56,6 @@ const FlightForm = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const words = traveler?.split("%");
-    console.log(words);
     const adults = parseInt(words[0]);
     const childs = words?.length >= 2 ? parseInt(words[1]) : 0;
     const infants = words?.length === 3 ? parseInt(words[2]) : 0;
@@ -71,31 +71,23 @@ const FlightForm = () => {
       infants,
       cabinClass,
       flightType,
+      isDirect
     };
     console.log(queryData);
     setSearchQueryParams(queryData);
   };
-  console.log("------------------");
-  console.log(isError);
-  console.log(data);
+
   if (!isError && data?.isFind) {
-    console.log("hellooooooo");
     if (data.isFind !== "Yes") {
       toast.error("Failed to find for the query!!!", {});
     } else {
-      console.log("updating ......");
-      // useDispatch(updateIsSearchResultAvailableAction({
-      //   isSearchResultAvailable: true,
-      //   searchId: data.search_id,
-      // }))
     }
   }
-
   return (
     <>
       <form onSubmit={handleOnSubmit}>
         <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 grad-border-olc-8 pt-[90px]">
-          <FlightType setFlightType={setFlightType} />
+          <FlightType setFlightType={setFlightType} setIsDirect = {setIsDirect} isDirect={isDirect}  />
 
           {/* flying from .... */}
           <div className="mt-5 flex flex-wrap gap-8">
@@ -175,19 +167,6 @@ const FlightForm = () => {
               />
             </div>
             <div className="flex items-end">
-              {/* {isLoading || (
-                <button className="w-[250px] flex justify-center items-center gap-2 py-3 old-logo-color text-white rounded font-medium text-base">
-                  <div class="animate-spin rounded-full w-3.5 h-3.5 border-t-2 border-b-2 border-white"></div>
-                  Searching...
-                </button>
-              )}
-              {isLoading && (
-                <input
-                  className="w-[250px] py-3 old-logo-color text-white rounded font-medium text-base"
-                  type="submit"
-                  value="Search Now"
-                />
-              )} */}
               <button
                 type="submit"
                 disabled={isLoading}

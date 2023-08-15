@@ -50,6 +50,7 @@ const flightApi = apiSlice.injectEndpoints({
           departure_date: data.departureDate,
           return_date: data.returnDate,
           isDomestic: "No",
+          is_direct: data.isDirect ? "Yes" : "",
         };
         return {
           url: "/get_flight_search_id",
@@ -72,13 +73,18 @@ const flightApi = apiSlice.injectEndpoints({
     }),
 
     getFlightList: builder.query({
-      query: ({ searchId, sortVal }) => {
+      query: ({ searchId, sortVal, stops, airlines, priceRange }) => {
+        const params = {
+          search_id: searchId,
+          sortVal,
+        };
+
+        if (stops) params.Stops = stops;
+        if (airlines) params.airlines = airlines;
+        if (priceRange) params.price = priceRange;
         return {
           url: "/get_flight_list",
-          params: {
-            search_id: searchId,
-            sortVal,
-          },
+          params: params,
         };
       },
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
