@@ -2,6 +2,7 @@ import React from "react";
 
 import ChainaSouthern from "../../../assets/image/flight/images/ChainaSouthern.png";
 import moveRight from "../../../assets/image/flight/icons/move-right.svg";
+import { Link } from "react-router-dom";
 
 const OneWayTrip = ({
   flightId,

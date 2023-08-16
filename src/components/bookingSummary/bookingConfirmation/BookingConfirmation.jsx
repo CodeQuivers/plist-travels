@@ -39,7 +39,7 @@ const BookingConfirmation = ({
         <GrayDivider />
 
         {/* Reservation Period */}
-        <BookingPeriod {...reservationPeriod} />
+        <BookingPeriod reservationPeriod={reservationPeriod} />
 
         <GrayDivider />
 

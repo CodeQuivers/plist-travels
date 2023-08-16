@@ -121,6 +121,16 @@ const flightApi = apiSlice.injectEndpoints({
         };
       },
     }),
+    getSelectedFlightData: builder.query({
+      query: (flightId) => {
+        return {
+          url: `/get_selected_flight_data`,
+          params: {
+            id: flightId,
+          },
+        };
+      },
+    }),
   }),
 });
 
@@ -130,4 +140,5 @@ export const {
   useGetFlightSearchIdQuery,
   useGetFlightListQuery,
   useGetFlightFilterDataQuery,
+  useGetSelectedFlightDataQuery,
 } = flightApi;
