@@ -201,7 +201,7 @@ export default FlightForm;
 const SearchLoader = () => {
   return (
     <>
-      <div class="animate-spin rounded-full w-3.5 h-3.5 border-t-2 border-b-2 border-white"></div>
+      <div className="animate-spin rounded-full w-3.5 h-3.5 border-t-2 border-b-2 border-white"></div>
       Searching...
     </>
   );

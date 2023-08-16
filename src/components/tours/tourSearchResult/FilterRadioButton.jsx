@@ -19,11 +19,11 @@ const FilterRadioButton = ({ text, code, setIsSelected }) => {
   };
 
   return (
-    <div class="flex felx-wrap items-center mb-1">
+    <div className="flex felx-wrap items-center mb-1">
       <button className="w-[16px] h-[16px]" onClick={handleOnClick}>
         <img src={iconImg} className="w-[16px] h-[16px]" alt="" />
       </button>
-      <label class="ml-2 text-sm text-[#334150]">{text}</label>
+      <label className="ml-2 text-sm text-[#334150]">{text}</label>
     </div>
   );
 };
