@@ -1,6 +1,7 @@
 import React from "react";
 import ChainaSouthern from "../../../assets/image/flight/images/ChainaSouthern.png";
 import moveRight from "../../../assets/image/flight/icons/move-right.svg";
+import { Link } from "react-router-dom";
 
 const RoundTrip = ({
   price,
@@ -11,7 +12,7 @@ const RoundTrip = ({
   flyDuration,
   returnTotalDuration,
   oneWayFlightVia,
-  returnFlightVia
+  returnFlightVia,
 }) => {
   const { airline_name, departDate, departTime, cityFrom } =
     oneWayFlilght[0] || {};
@@ -81,7 +82,8 @@ const RoundTrip = ({
               <img src={moveRight} alt="" />
             </p>
             <span className="text-xs text-center">
-              {returnStopage} Stopage {returnFlightVia && `via ${returnFlightVia}`}
+              {returnStopage} Stopage{" "}
+              {returnFlightVia && `via ${returnFlightVia}`}
             </span>
           </div>
           <div className="flex flex-col gap-2">
@@ -99,9 +101,11 @@ const RoundTrip = ({
           <p className="text-base font-medium">USD {price}</p>
         </div>
         <div className="">
-          <button className="text-white font-medium py-3.5 px-2 rounded old-logo-color">
-            Book Now
-          </button>
+          <Link to="/flight/cashout">
+            <span className="text-white font-medium py-3.5 px-2 rounded old-logo-color">
+              Book Now
+            </span>
+          </Link>
         </div>
       </div>
     </div>

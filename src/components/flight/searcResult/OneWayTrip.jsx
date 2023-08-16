@@ -3,11 +3,17 @@ import React from "react";
 import ChainaSouthern from "../../../assets/image/flight/images/ChainaSouthern.png";
 import moveRight from "../../../assets/image/flight/icons/move-right.svg";
 
-const OneWayTrip = ({ price, oneWayFlilght, stopage, flyDuration, oneWayFlightVia }) => {
-  const {airline_name, departDate, departTime, cityFrom}=oneWayFlilght[0] || {};
-  const {arrivelTime, arrivelDate, cityTo}=oneWayFlilght[oneWayFlilght.length-1] || {};
-  console.log("one way fligh")
-  console.log(oneWayFlilght)
+const OneWayTrip = ({
+  price,
+  oneWayFlilght,
+  stopage,
+  flyDuration,
+  oneWayFlightVia,
+}) => {
+  const { airline_name, departDate, departTime, cityFrom } =
+    oneWayFlilght[0] || {};
+  const { arrivelTime, arrivelDate, cityTo } =
+    oneWayFlilght[oneWayFlilght.length - 1] || {};
   return (
     <div className="mb-8 p-5 grad-border-olc">
       {/* item one */}
@@ -26,12 +32,13 @@ const OneWayTrip = ({ price, oneWayFlilght, stopage, flyDuration, oneWayFlightVi
           </div>
           <div className="w-1/5 flex flex-col gap-3">
             <p>
-              <span className="text-xs text-[#66768E]">
-                {flyDuration}
-              </span>
+              <span className="text-xs text-[#66768E]">{flyDuration}</span>
               <img src={moveRight} alt="" />
             </p>
-            <span className="text-xs"> {stopage} Stopage {oneWayFlightVia && `via ${oneWayFlightVia}`}</span>
+            <span className="text-xs">
+              {" "}
+              {stopage} Stopage {oneWayFlightVia && `via ${oneWayFlightVia}`}
+            </span>
           </div>
           <div className="w-1/5 flex flex-col gap-2">
             <span className="text-xs text-[#66768E]">Arrive</span>
@@ -46,9 +53,11 @@ const OneWayTrip = ({ price, oneWayFlilght, stopage, flyDuration, oneWayFlightVi
             <p className="text-base font-medium">USD {price}</p>
           </div>
           <div className="flex justify-center">
-            <button className="text-white py-3.5 px-2 rounded old-logo-color">
-              Book Now
-            </button>
+            <Link to="/flight/cashout">
+              <span className="text-white font-medium py-3.5 px-2 rounded old-logo-color">
+                Book Now
+              </span>
+            </Link>
           </div>
         </div>
       </div>

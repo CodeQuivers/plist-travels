@@ -58,10 +58,6 @@ const TripCard = ({ tripInfo }) => {
       />
     );
   }
-  console.log("object================");
-  console.log(oneWayFlightVia);
-  console.log(returnFlightVia)
-  console.log(tripInfo.returnFlights);
 
   return <>{content}</>;
 };

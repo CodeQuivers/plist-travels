@@ -67,8 +67,6 @@ const FlightFilter = ({ searchId }) => {
       airlines,
       price: priceRangeToFilter,
     };
-    console.log("printing apply filter query params");
-    console.log(queryData);
     setQueryParams(queryData);
   };
 
