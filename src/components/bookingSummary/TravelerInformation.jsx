@@ -1,7 +1,8 @@
 import React from "react";
 import Select from "react-dropdown-select";
+import { useForm } from "react-hook-form";
 
-const TravelerInformation = () => {
+const TravelerInformation = ({ register, Controller, control }) => {
   const options = [
     {
       value: 1,
@@ -30,7 +31,7 @@ const TravelerInformation = () => {
       value: 3,
       label: "Card",
     },
-  ]
+  ];
 
   return (
     <div className="grad-border-olc flex flex-col gap-6 py-5">
@@ -40,6 +41,9 @@ const TravelerInformation = () => {
         </h2>
       </div>
       <div className="w-full gray-divider"></div>
+
+      {/* ...............Form start here................ */}
+
       <div className="flex flex-col gap-5 px-5 mb-7">
         <h4 className="text-base font-medium text-[#334150]">Adult 1</h4>
         <div className="flex justify-between">
@@ -49,22 +53,42 @@ const TravelerInformation = () => {
               Title<sup className="text-red-600">*</sup>
             </label>
             <div className="border rounded gray-border px-1 text-black">
-              <Select
-                style={{
-                  border: "none",
-                  padding: "0",
-                }}
-                options={options}
-                placeholder="Mr."
+              <Controller
+                name="title"
+                control={control}
+                rules={{ required: true }}
+                render={({
+                  field: { onChange, onBlur, value, name, ref },
+                  // fieldState: { invalid, isTouched, isDirty, error },
+                  // formState,
+                }) => (
+                  <Select
+                    style={{
+                      border: "none",
+                      padding: "0",
+                    }}
+                    options={options}
+                    placeholder="Mr."
+                    onChange={(val) => onChange(val[0].label)}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="w-2/5 flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
+            <label
+              htmlFor="first name"
+              className="text-sm font-normal text7F8FA4"
+            >
               First Name<sup className="text-red-600">*</sup>
             </label>
             <div className="border rounded gray-border p-1">
-              <input type="text" placeholder="MR." className="outline-none" />
+              <input
+                type="text"
+                placeholder="MR."
+                className="outline-none"
+                {...register("first_name", { required: true, minLength: 3 })}
+              />
             </div>
           </div>
           <div className="w-2/5 flex flex-col gap-1.5">
@@ -72,7 +96,12 @@ const TravelerInformation = () => {
               Last Name
             </label>
             <div className="border rounded gray-border p-1">
-              <input type="text" placeholder="MR." className="outline-none" />
+              <input
+                type="text"
+                placeholder="MR."
+                className="outline-none"
+                {...register("last_name")}
+              />
             </div>
           </div>
         </div>
