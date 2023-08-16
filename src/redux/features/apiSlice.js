@@ -7,7 +7,7 @@ const REACT_APP_SERVER=`https://dev.plistbooking.travel`;
 export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_SERVER,
+        baseUrl: import.meta.env.VITE_APP_API_SERVER,
     }),
     tagTypes:[],
     endpoints:(builder)=>({})
