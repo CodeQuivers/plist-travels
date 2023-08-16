@@ -13,6 +13,7 @@ const TripCard = ({ tripInfo }) => {
     return_max_stops,
     fly_duration,
     return_total_duration,
+    id,
   } = tripInfo || {};
   const oneWayFlilght = tripInfo?.onewayFlights;
   const returnFlight = tripInfo?.returnFlights;
@@ -20,7 +21,7 @@ const TripCard = ({ tripInfo }) => {
   if (max_stops > 0) {
     // oneWayFlightVia=tripInfo.onewayFlights.slice(1, -1).pluck('cityTo').join(', ')
     oneWayFlightVia = tripInfo.onewayFlights
-      .slice(0,-1)
+      .slice(0, -1)
       .map((item) => item.cityTo)
       .join(", ");
   }
@@ -35,6 +36,7 @@ const TripCard = ({ tripInfo }) => {
   if (isReturn === "Yes") {
     content = (
       <RoundTrip
+        flightId={id}
         price={price}
         oneWayFlilght={oneWayFlilght}
         returnFlight={returnFlight}
@@ -50,6 +52,7 @@ const TripCard = ({ tripInfo }) => {
   if (isReturn === "No") {
     content = (
       <OneWayTrip
+        flightId={id}
         price={price}
         oneWayFlilght={oneWayFlilght}
         stopage={max_stops}

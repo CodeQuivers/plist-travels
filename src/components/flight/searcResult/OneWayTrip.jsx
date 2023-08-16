@@ -4,6 +4,7 @@ import ChainaSouthern from "../../../assets/image/flight/images/ChainaSouthern.p
 import moveRight from "../../../assets/image/flight/icons/move-right.svg";
 
 const OneWayTrip = ({
+  flightId,
   price,
   oneWayFlilght,
   stopage,
@@ -53,7 +54,7 @@ const OneWayTrip = ({
             <p className="text-base font-medium">USD {price}</p>
           </div>
           <div className="flex justify-center">
-            <Link to="/flight/cashout">
+            <Link to={`/flight/cashout/${flightId}`}>
               <span className="text-white font-medium py-3.5 px-2 rounded old-logo-color">
                 Book Now
               </span>

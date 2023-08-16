@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         element: <FlightRoundTrip />,
       },
       {
-        path: "/flight/cashout",
+        path: "/flight/cashout/:flightId",
         element: <FlightCashout />,
       },
       {
