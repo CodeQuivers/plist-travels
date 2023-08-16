@@ -56,8 +56,10 @@ const FlightFilter = ({ searchId }) => {
   }
 
   const handleOnClick = () => {
-    const stops = sotpagesToFilter.join(",") + ",";
-    const airlines = airlinesToFilter.join(",") + ",";
+    const stops =
+      sotpagesToFilter.lenght > 0 ? sotpagesToFilter.join(",") + "," : "";
+    const airlines =
+      airlinesToFilter.length > 0 ? airlinesToFilter.join(",") + "," : "";
     const queryData = {
       searchId,
       sortVal: "price_ASC",
@@ -65,6 +67,8 @@ const FlightFilter = ({ searchId }) => {
       airlines,
       price: priceRangeToFilter,
     };
+    console.log("printing apply filter query params");
+    console.log(queryData);
     setQueryParams(queryData);
   };
 

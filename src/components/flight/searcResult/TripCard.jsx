@@ -6,22 +6,62 @@ import RoundTrip from "./RoundTrip";
 import OneWayTrip from "./OneWayTrip";
 
 const TripCard = ({ tripInfo }) => {
-  const { isReturn, price } = tripInfo || {};
-  const oneWayFlilght = tripInfo?.onewayFlights[0];
-  const returnFlight = tripInfo?.returnFlights[0];
-let content = null;
+  const {
+    isReturn,
+    price,
+    max_stops,
+    return_max_stops,
+    fly_duration,
+    return_total_duration,
+  } = tripInfo || {};
+  const oneWayFlilght = tripInfo?.onewayFlights;
+  const returnFlight = tripInfo?.returnFlights;
+  let oneWayFlightVia = "";
+  if (max_stops > 0) {
+    // oneWayFlightVia=tripInfo.onewayFlights.slice(1, -1).pluck('cityTo').join(', ')
+    oneWayFlightVia = tripInfo.onewayFlights
+      .slice(0,-1)
+      .map((item) => item.cityTo)
+      .join(", ");
+  }
+  let returnFlightVia = "";
+  if (return_max_stops > 0) {
+    returnFlightVia = tripInfo.returnFlights
+      .slice(0, -1)
+      .map((item) => item.cityTo)
+      .join(", ");
+  }
+  let content = null;
   if (isReturn === "Yes") {
     content = (
       <RoundTrip
         price={price}
         oneWayFlilght={oneWayFlilght}
         returnFlight={returnFlight}
+        stopage={max_stops}
+        returnStopage={return_max_stops}
+        flyDuration={fly_duration}
+        returnTotalDuration={return_total_duration}
+        oneWayFlightVia={oneWayFlightVia}
+        returnFlightVia={returnFlightVia}
       />
     );
   }
   if (isReturn === "No") {
-    content = <OneWayTrip price={price} oneWayFlilght={oneWayFlilght} />;
+    content = (
+      <OneWayTrip
+        price={price}
+        oneWayFlilght={oneWayFlilght}
+        stopage={max_stops}
+        flyDuration={fly_duration}
+        oneWayFlightVia={oneWayFlightVia}
+      />
+    );
   }
+  console.log("object================");
+  console.log(oneWayFlightVia);
+  console.log(returnFlightVia)
+  console.log(tripInfo.returnFlights);
 
   return <>{content}</>;
 };

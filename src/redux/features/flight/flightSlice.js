@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isSearchResultAvailable: "Yes",
-  searchId: "64db913d61231",
+  searchId: "64dc4fe84d71b",
   searchResult: [],
   totalSearchResult: 0,
 };
