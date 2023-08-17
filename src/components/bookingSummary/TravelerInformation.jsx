@@ -1,8 +1,21 @@
-import React from "react";
+import { ErrorMessage } from "@hookform/error-message";
+import React, { useEffect, useState } from "react";
 import Select from "react-dropdown-select";
 import { useForm } from "react-hook-form";
+import ErrorAlert from "../shared/alert/ErrorAlert";
+import PersonInfo from "./PersonInfo";
 
-const TravelerInformation = ({ register, Controller, control }) => {
+const TravelerInformation = ({
+  travelerInfo,
+  register,
+  Controller,
+  control,
+  errors,
+  fields,
+  append,
+}) => {
+  const { adults, children, infants } = travelerInfo || {};
+  const [isAlertClose, setIsAlertClose] = useState(true);
   const options = [
     {
       value: 1,
@@ -32,7 +45,34 @@ const TravelerInformation = ({ register, Controller, control }) => {
       label: "Card",
     },
   ];
+  const genderOptions = [
+    {
+      value: "m",
+      label: "Male",
+    },
+    {
+      value: "f",
+      label: "Female",
+    },
+    {
+      value: "o",
+      label: "Other",
+    },
+  ];
 
+  useEffect(() => {
+    for (let i = 1; i <= adults; i++) {
+      console.log("00000000000000000000000000000", adults);
+      append({
+        title: "Mr.",
+        first_name: "Mashod",
+        last_name: "rana",
+        dob: "",
+        gender: "Male",
+        id: "",
+      });
+    }
+  }, [adults]);
   return (
     <div className="grad-border-olc flex flex-col gap-6 py-5">
       <div>
@@ -43,104 +83,23 @@ const TravelerInformation = ({ register, Controller, control }) => {
       <div className="w-full gray-divider"></div>
 
       {/* ...............Form start here................ */}
-
+      {/* <PersonInfo
+            register={register}
+            Controller={Controller}
+            control={control}
+            errors={errors}
+          />; */}
       <div className="flex flex-col gap-5 px-5 mb-7">
-        <h4 className="text-base font-medium text-[#334150]">Adult 1</h4>
-        <div className="flex justify-between">
-          {/* block of information */}
-          <div className=" w-[70px] flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
-              Title<sup className="text-red-600">*</sup>
-            </label>
-            <div className="border rounded gray-border px-1 text-black">
-              <Controller
-                name="title"
-                control={control}
-                rules={{ required: true }}
-                render={({
-                  field: { onChange, onBlur, value, name, ref },
-                  // fieldState: { invalid, isTouched, isDirty, error },
-                  // formState,
-                }) => (
-                  <Select
-                    style={{
-                      border: "none",
-                      padding: "0",
-                    }}
-                    options={options}
-                    placeholder="Mr."
-                    onChange={(val) => onChange(val[0].label)}
-                  />
-                )}
-              />
-            </div>
-          </div>
-          <div className="w-2/5 flex flex-col gap-1.5">
-            <label
-              htmlFor="first name"
-              className="text-sm font-normal text7F8FA4"
-            >
-              First Name<sup className="text-red-600">*</sup>
-            </label>
-            <div className="border rounded gray-border p-1">
-              <input
-                type="text"
-                placeholder="MR."
-                className="outline-none"
-                {...register("first_name", { required: true, minLength: 3 })}
-              />
-            </div>
-          </div>
-          <div className="w-2/5 flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
-              Last Name
-            </label>
-            <div className="border rounded gray-border p-1">
-              <input
-                type="text"
-                placeholder="MR."
-                className="outline-none"
-                {...register("last_name")}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* second block for information */}
-        <div className="flex justify-between">
-          <div className=" w-[30%] flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
-              DOB<sup className="text-red-600">*</sup>
-            </label>
-            <div className="border rounded gray-border p-1 text-black">
-              <input type="date" placeholder="MR." className="outline-none" />
-            </div>
-          </div>
-          <div className="w-[30%] flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
-              Gender<sup className="text-red-600">*</sup>
-            </label>
-            <div className="border rounded gray-border p-1">
-              <input
-                type="text"
-                placeholder="MR."
-                className="outline-none w-full"
-              />
-            </div>
-          </div>
-          <div className="w-[30%] flex flex-col gap-1.5">
-            <label htmlFor="" className="text-sm font-normal text7F8FA4">
-              ID
-            </label>
-            <div className="border rounded gray-border p-1">
-              <input
-                type="text"
-                placeholder="MR."
-                className="outline-none w-full"
-              />
-            </div>
-          </div>
-        </div>
+        {fields.map((item, idx) => (
+          <PersonInfo
+            key={idx}
+            idx={idx}
+            register={register}
+            Controller={Controller}
+            control={control}
+            errors={errors}
+          />
+        ))}
 
         {/* Third block for information */}
 
@@ -150,7 +109,12 @@ const TravelerInformation = ({ register, Controller, control }) => {
               Country<sup className="text-red-600">*</sup>
             </label>
             <div className="border rounded gray-border p-1 text-black">
-              <input type="text" placeholder="MR." className="outline-none" />
+              <input
+                type="text"
+                placeholder="MR."
+                className="outline-none"
+                {...register("country", { required: "Country is required" })}
+              />
             </div>
           </div>
           <div className="w-[30%] flex flex-col gap-1.5">
@@ -159,9 +123,10 @@ const TravelerInformation = ({ register, Controller, control }) => {
             </label>
             <div className="border rounded gray-border p-1">
               <input
-                type="text"
+                type="email"
                 placeholder="MR."
                 className="outline-none w-full"
+                {...register("email", { required: "Email is required" })}
               />
             </div>
           </div>
@@ -174,11 +139,29 @@ const TravelerInformation = ({ register, Controller, control }) => {
                 type="text"
                 placeholder="MR."
                 className="outline-none w-full"
+                {...register("phone", { required: "Phone is required" })}
               />
             </div>
           </div>
         </div>
-
+        {errors.country && (
+          <ErrorAlert
+            message={errors.country.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
+        {errors.email && (
+          <ErrorAlert
+            message={errors.email.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
+        {errors.phone && (
+          <ErrorAlert
+            message={errors.phone.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
         <div className="felx flex-col ">
           <label htmlFor="" className="text-sm font-normal text7F8FA4">
             Address<sup className="text-red-600">*</sup>
@@ -188,9 +171,18 @@ const TravelerInformation = ({ register, Controller, control }) => {
               type="text"
               placeholder="Your Address"
               className="outline-none w-full"
+              {...register("address", { required: "Address is required!" })}
             />
           </div>
         </div>
+        {errors.address && (
+          <ErrorAlert
+            message={errors.address.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
+
+        {/* Zip code and Payment type */}
         <div className="flex gap-5">
           <div className="w-[30%] flex flex-col gap-1.5">
             <label htmlFor="" className="text-sm font-normal text7F8FA4">
@@ -199,8 +191,9 @@ const TravelerInformation = ({ register, Controller, control }) => {
             <div className="border rounded gray-border p-1">
               <input
                 type="text"
-                placeholder="MR."
+                placeholder="3520"
                 className="outline-none w-full"
+                {...register("zip_code", { required: "Zip code is required!" })}
               />
             </div>
           </div>
@@ -209,17 +202,42 @@ const TravelerInformation = ({ register, Controller, control }) => {
               Payment Type<sup className="text-red-600">*</sup>
             </label>
             <div className="border rounded gray-border p-1">
-              <Select
-                style={{
-                  border: "none",
-                  padding: "0",
-                }}
-                options={payOpts}
-                placeholder="Flutterwave"
+              <Controller
+                name="payment_type"
+                control={control}
+                rules={{ required: "Payment is rquired!" }}
+                render={({
+                  field: { onChange, onBlur, value, name, ref },
+                  // fieldState: { invalid, isTouched, isDirty, error },
+                  // formState,
+                }) => (
+                  <Select
+                    style={{
+                      border: "none",
+                      padding: "0",
+                    }}
+                    options={payOpts}
+                    onChange={(val) => onChange(val[0].label)}
+                    placeholder="Flutterwave"
+                  />
+                )}
               />
             </div>
           </div>
         </div>
+
+        {errors.zip_code && (
+          <ErrorAlert
+            message={errors.zip_code.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
+        {errors.payment_type && (
+          <ErrorAlert
+            message={errors.payment_type.message}
+            closeAltert={setIsAlertClose}
+          />
+        )}
       </div>
     </div>
   );

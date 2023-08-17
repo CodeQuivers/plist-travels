@@ -68,7 +68,14 @@ const FlightCashout = () => {
   console.log(data);
   return (
     <div className="mt-28">
-      <BookingSummary bookingConfirmationiInfo={bookingConfirmationiInfo} />
+      <BookingSummary
+        bookingConfirmationiInfo={bookingConfirmationiInfo}
+        travelerInfo={{
+          adults: data?.adults,
+          children: data?.children,
+          infants: data?.infants,
+        }}
+      />
     </div>
   );
 };
