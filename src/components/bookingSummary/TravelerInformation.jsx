@@ -4,6 +4,7 @@ import Select from "react-dropdown-select";
 import { useFieldArray, useForm } from "react-hook-form";
 import ErrorAlert from "../shared/alert/ErrorAlert";
 import PersonInfo from "./PersonInfo";
+import { PAYMENT_OPTIONS } from "../../utils/Data/FlightData";
 
 const TravelerInformation = ({
   travelerInfo,
@@ -16,83 +17,7 @@ const TravelerInformation = ({
 }) => {
   const { adults, children, infants } = travelerInfo || {};
   const [isAlertClose, setIsAlertClose] = useState(true);
-  const { fields: adultList, append: adultListAppend } = useFieldArray({
-    name: "person",
-    control,
-  });
-  const { fields: childList, append: childListAppend } = useFieldArray({
-    name: "child",
-    control,
-  });
 
-  const options = [
-    {
-      value: 1,
-      label: "Mr.",
-    },
-    {
-      value: 2,
-      label: "Ms.",
-    },
-    {
-      value: 3,
-      label: "Mrs.",
-    },
-  ];
-
-  const payOpts = [
-    {
-      value: 1,
-      label: "Flutterwave",
-    },
-    {
-      value: 2,
-      label: "Mobile Banking",
-    },
-    {
-      value: 3,
-      label: "Card",
-    },
-  ];
-  const genderOptions = [
-    {
-      value: "m",
-      label: "Male",
-    },
-    {
-      value: "f",
-      label: "Female",
-    },
-    {
-      value: "o",
-      label: "Other",
-    },
-  ];
-
-  useEffect(() => {
-    for (let i = 1; i <= adults; i++) {
-      console.log("00000000000000000000000000000", adults);
-      adultListAppend({
-        title: "Mr.",
-        first_name: "Mashod",
-        last_name: "rana",
-        dob: "",
-        gender: "Male",
-        id: "",
-      });
-    }
-    for (let i = 1; i <= children; i++) {
-      console.log("00000000000000000000000000000", children);
-      childListAppend({
-        title: "Mr.",
-        first_name: "Mashod",
-        last_name: "rana",
-        dob: "",
-        gender: "Male",
-        id: "",
-      });
-    }
-  }, [adults, children]);
   return (
     <div className="grad-border-olc flex flex-col gap-6 py-5">
       <div>
@@ -105,34 +30,40 @@ const TravelerInformation = ({
       {/* ...............Form start here................ */}
 
       <div className="flex flex-col gap-5 px-5 mb-7">
-        {adultList.map((item, idx) => (
-          <PersonInfo
-            key={idx}
-            idx={idx}
-            title={"Adult"}
-            register={register}
-            Controller={Controller}
-            control={control}
-            errors={errors}
-            type={'adult'}
-          />
-        ))}
-        {childList.map((item, idx) => (
-          <PersonInfo
-            key={idx}
-            idx={idx}
-            title={"Child"}
-            type={'child'}
-            register={register}
-            Controller={Controller}
-            control={control}
-            errors={errors}
-          />
-        ))}
+        {/* Adult information block with array filed from react hook form */}
+        <PersonInfo
+          persons={adults}
+          title={"Adult"}
+          register={register}
+          Controller={Controller}
+          control={control}
+          errors={errors}
+          type={"adult"}
+        />
 
+        {/* Children information block with array filed from react hook form */}
+        <PersonInfo
+          persons={children}
+          title={"Child"}
+          register={register}
+          Controller={Controller}
+          control={control}
+          errors={errors}
+          type={"children"}
+        />
+
+        {/* Infant information block with array filed from react hook form */}
+        <PersonInfo
+          persons={infants}
+          title={"Infant"}
+          register={register}
+          Controller={Controller}
+          control={control}
+          errors={errors}
+          type={"infant"}
+        />
 
         {/* Third block for information */}
-
         <div className="flex justify-between">
           <div className=" w-[30%] flex flex-col gap-1.5">
             <label htmlFor="" className="text-sm font-normal text7F8FA4">
@@ -141,7 +72,7 @@ const TravelerInformation = ({
             <div className="border rounded gray-border p-1 text-black">
               <input
                 type="text"
-                placeholder="MR."
+                placeholder="Bangladesh"
                 className="outline-none"
                 {...register("country", { required: "Country is required" })}
               />
@@ -154,7 +85,7 @@ const TravelerInformation = ({
             <div className="border rounded gray-border p-1">
               <input
                 type="email"
-                placeholder="MR."
+                placeholder="mashod0rana@gmail.com"
                 className="outline-none w-full"
                 {...register("email", { required: "Email is required" })}
               />
@@ -167,7 +98,7 @@ const TravelerInformation = ({
             <div className="border rounded gray-border p-1">
               <input
                 type="text"
-                placeholder="MR."
+                placeholder="8801775646995"
                 className="outline-none w-full"
                 {...register("phone", { required: "Phone is required" })}
               />
@@ -246,7 +177,7 @@ const TravelerInformation = ({
                       border: "none",
                       padding: "0",
                     }}
-                    options={payOpts}
+                    options={PAYMENT_OPTIONS}
                     onChange={(val) => onChange(val[0].label)}
                     placeholder="Flutterwave"
                   />
