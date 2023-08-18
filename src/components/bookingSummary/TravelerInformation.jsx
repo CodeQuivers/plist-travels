@@ -1,7 +1,7 @@
 import { ErrorMessage } from "@hookform/error-message";
 import React, { useEffect, useState } from "react";
 import Select from "react-dropdown-select";
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import ErrorAlert from "../shared/alert/ErrorAlert";
 import PersonInfo from "./PersonInfo";
 
@@ -16,6 +16,15 @@ const TravelerInformation = ({
 }) => {
   const { adults, children, infants } = travelerInfo || {};
   const [isAlertClose, setIsAlertClose] = useState(true);
+  const { fields: adultList, append: adultListAppend } = useFieldArray({
+    name: "person",
+    control,
+  });
+  const { fields: childList, append: childListAppend } = useFieldArray({
+    name: "child",
+    control,
+  });
+
   const options = [
     {
       value: 1,
@@ -63,7 +72,7 @@ const TravelerInformation = ({
   useEffect(() => {
     for (let i = 1; i <= adults; i++) {
       console.log("00000000000000000000000000000", adults);
-      append({
+      adultListAppend({
         title: "Mr.",
         first_name: "Mashod",
         last_name: "rana",
@@ -72,7 +81,18 @@ const TravelerInformation = ({
         id: "",
       });
     }
-  }, [adults]);
+    for (let i = 1; i <= children; i++) {
+      console.log("00000000000000000000000000000", children);
+      childListAppend({
+        title: "Mr.",
+        first_name: "Mashod",
+        last_name: "rana",
+        dob: "",
+        gender: "Male",
+        id: "",
+      });
+    }
+  }, [adults, children]);
   return (
     <div className="grad-border-olc flex flex-col gap-6 py-5">
       <div>
@@ -83,23 +103,33 @@ const TravelerInformation = ({
       <div className="w-full gray-divider"></div>
 
       {/* ...............Form start here................ */}
-      {/* <PersonInfo
+
+      <div className="flex flex-col gap-5 px-5 mb-7">
+        {adultList.map((item, idx) => (
+          <PersonInfo
+            key={idx}
+            idx={idx}
+            title={"Adult"}
             register={register}
             Controller={Controller}
             control={control}
             errors={errors}
-          />; */}
-      <div className="flex flex-col gap-5 px-5 mb-7">
-        {fields.map((item, idx) => (
+            type={'adult'}
+          />
+        ))}
+        {childList.map((item, idx) => (
           <PersonInfo
             key={idx}
             idx={idx}
+            title={"Child"}
+            type={'child'}
             register={register}
             Controller={Controller}
             control={control}
             errors={errors}
           />
         ))}
+
 
         {/* Third block for information */}
 

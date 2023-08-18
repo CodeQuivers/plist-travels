@@ -8,7 +8,7 @@ import { ErrorMessage } from "@hookform/error-message";
 const BookingSummary = ({ travelerInfo, bookingConfirmationiInfo }) => {
   const { register, handleSubmit, control, formState } = useForm();
   const { errors } = formState || {};
-  const { fields, append } = useFieldArray({ name: "person", control });
+  // const { fields, append } = useFieldArray({ name: "person", control });
   // const { itemInfo, reservationPeriod, paymentInfo, otherInfo } =
   //   bookingConfirmationiInfo;
   const handleOnSubmit = (data) => {
@@ -27,8 +27,8 @@ const BookingSummary = ({ travelerInfo, bookingConfirmationiInfo }) => {
               Controller={Controller}
               control={control}
               errors={errors}
-              fields={fields}
-              append={append}
+              // fields={fields}
+              // append={append}
             />
           </div>
 

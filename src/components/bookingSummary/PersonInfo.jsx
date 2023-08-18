@@ -4,7 +4,7 @@ import Select from "react-dropdown-select";
 import { useForm } from "react-hook-form";
 import ErrorAlert from "../shared/alert/ErrorAlert";
 
-const PersonInfo = ({ register, Controller, control, errors, idx }) => {
+const PersonInfo = ({ title, register, Controller, control, errors, idx, type}) => {
   const options = [
     {
       value: 1,
@@ -36,7 +36,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
   ];
   return (
     <>
-      <h4 className="text-base font-medium text-[#334150]">Adult 1</h4>
+      <h4 className="text-base font-medium text-[#334150]">{title} {idx+1}</h4>
 
       <div className="flex justify-between">
         {/* block of information */}
@@ -46,7 +46,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
           </label>
           <div className="border rounded gray-border px-1 text-black">
             <Controller
-              name={`person.${idx}.title`}
+              name={`${type}.${idx}.title`}
               control={control}
               rules={{ required: "Title is rquired!" }}
               render={({
@@ -80,7 +80,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
               type="text"
               placeholder="MR."
               className="outline-none"
-              {...register(`person.${idx}.first_name`, {
+              {...register(`${type}.${idx}.first_name`, {
                 required: "First name is required!",
                 minLength: {
                   value: 3,
@@ -100,7 +100,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
               type="text"
               placeholder="MR."
               className="outline-none"
-              {...register(`person.${idx}.last_name`)}
+              {...register(`${type}.${idx}.last_name`)}
             />
           </div>
         </div>
@@ -118,7 +118,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
               type="date"
               placeholder="MR."
               className="outline-none"
-              {...register(`person.${idx}.dob`, {
+              {...register(`${type}.${idx}.dob`, {
                 required: "Date of birth is required!",
               })}
             />
@@ -130,7 +130,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
           </label>
           <div className="border rounded gray-border p-1">
             <Controller
-              name={`person.${idx}.gender`}
+              name={`${type}.${idx}.gender`}
               control={control}
               rules={{ required: "Gender is rquired!" }}
               render={({
@@ -160,7 +160,7 @@ const PersonInfo = ({ register, Controller, control, errors, idx }) => {
               type="text"
               placeholder="MR."
               className="outline-none w-full"
-              {...register(`person.${idx}.id`)}
+              {...register(`${type}.${idx}.id`)}
             />
           </div>
         </div>
