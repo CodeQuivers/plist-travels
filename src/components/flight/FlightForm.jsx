@@ -1,15 +1,12 @@
-import { useDebounce } from "use-debounce";
-import { useForm } from "react-hook-form";
 import moment from "moment";
 
 import DropDown from "./dropdown/DropDown";
 import flightFromImg from "../../assets/image/flight/icons/FlightFrom.png";
-// import depature from "../../assets/image/flight/icons/depature.png";
 import flightToImg from "../../assets/image/flight/icons/flightTo.png";
 import "./FlightForm.css";
 
 import Datepicker from "react-tailwindcss-datepicker";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { useGetFlightSearchIdQuery } from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import Select from "react-select";
@@ -71,7 +68,7 @@ const FlightForm = () => {
       infants,
       cabinClass,
       flightType,
-      isDirect
+      isDirect,
     };
     console.log(queryData);
     setSearchQueryParams(queryData);
@@ -87,7 +84,11 @@ const FlightForm = () => {
     <>
       <form onSubmit={handleOnSubmit}>
         <div className="flight-form h-[416px] mt-16 pl-[42px] rounded-lg border-2 grad-border-olc-8 pt-[90px]">
-          <FlightType setFlightType={setFlightType} setIsDirect = {setIsDirect} isDirect={isDirect}  />
+          <FlightType
+            setFlightType={setFlightType}
+            setIsDirect={setIsDirect}
+            isDirect={isDirect}
+          />
 
           {/* flying from .... */}
           <div className="mt-5 flex flex-wrap gap-8">
