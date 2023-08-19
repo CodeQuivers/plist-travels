@@ -1,5 +1,6 @@
 .flight-form .select__control{
     border: 0;
+    box-shadow: none;
 }
 
 .flight-form .select__indicator, .select__indicator-separator {
@@ -18,4 +19,9 @@
 .flight-form .select__input-container{
     padding: 0;
     margin: 0;
+}
+.flight-form .select__control:hover{
+    border: none;
+    outline: none;
+    box-shadow: none;
 }

@@ -1,16 +1,15 @@
 import React, { useState } from "react";
+import { useDebounce } from "use-debounce";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
 import Select from "react-select";
 
-import "./location-search-box.css";
-import { useDebounce } from "use-debounce";
 import { useGetFlighstLocationsQuery } from "../../../redux/features/flight/flightApi";
-import { skipToken } from "@reduxjs/toolkit/dist/query";
 
-const LocationSearchBox = ({setOnChange}) => {
-    const [location, setLocation] = useState(null);
-    const [searchTerm] = useDebounce(location, 500);
 
-    
+const LocationSearchBox = ({ setOnChange }) => {
+  const [location, setLocation] = useState(null);
+  const [searchTerm] = useDebounce(location, 500);
+
   const { data, isLoading, isError } = useGetFlighstLocationsQuery(
     searchTerm || skipToken
   );
@@ -28,7 +27,7 @@ const LocationSearchBox = ({setOnChange}) => {
     <Select
       className="location-search-box text-sm w-full"
       classNamePrefix="select"
-      defaultValue={{label:'Delhi and NCR, India', value:'DEL'}}
+      defaultValue={{ label: "Delhi and NCR, India", value: "DEL" }}
       // isDisabled={isDisabled}
       isLoading={isLoading}
       isClearable={true}
