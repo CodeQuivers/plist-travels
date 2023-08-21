@@ -17,43 +17,50 @@ const FlightCashout = () => {
   const { data, isLoading, isError } = useGetSelectedFlightDataQuery(
     flightId || skipToken
   );
-
+  console.log("first cashout page");
+  console.log(data);
   let bookingConfirmationiInfo = null;
-  if (!isError && data) {
-    const itemCoverPhoto = `${import.meta.env.VITE_APP_AIRLINE_IMG}/${
-      data.airlines
-    }`;
+  if (!isError && data?.onewayFlights) {
+    const oneWayFlights = data.onewayFlights;
+    const airlineCode = oneWayFlights[0].airline_code;
+    const airlineName = oneWayFlights[0].airline_name;
+    const flightType = oneWayFlights[0].CabinClass;
+    const cityFrom = oneWayFlights[0].cityFrom;
+    const cityTo = oneWayFlights[oneWayFlights.length - 1].cityTo;
+    const itemCoverPhoto = `${
+      import.meta.env.VITE_APP_AIRLINE_IMG
+    }/${airlineCode}`;
     const itemInfo = {
-      title: `${data.cityFrom} to ${data.cityTo}`,
-      subTitle: `One Way${data.is_return ? " and Return" : ""} Flight`,
+      title: `${cityFrom} to ${cityTo}`,
+      subTitle: `One Way${data.isReturn ? " and Return" : ""} Flight`,
     };
     const reservationPeriod = [
       {
         label: "Take off",
-        value: moment.unix(data.departure_datetime).format("lll"),
+        value: `${data.departure_date} ${data.departure_time}`,
       },
       {
         label: "Landing",
-        value: moment.unix(data.arrival_datetime).format("lll"),
+        value: `${data.arrival_date} ${data.arrival_time}`,
       },
     ];
 
     const otherInfo = [
-      { label: "Airline", value: data.airlineName },
-      { label: "Flight Type", value: data.typeFlight },
+      { label: "Airline", value: airlineName },
+      { label: "Flight Type", value: flightType },
       {
         label: "Passengers",
         value: `Adult: ${data.adults} Children: ${data.children}`,
       },
-      { label: "Duration", value: getTimeInHoursMinutes(data.duration) },
+      { label: "Duration", value: data.fly_duration },
       { label: "Infants", value: data.infants },
     ];
 
     const paymentInfo = {
       total: data.price,
       other: [
-        { label: "Base Fare", value: data.base_fare },
-        data.tax ? { label: "Tax", value: data.tax } : "",
+        { label: "Base Fare", value: data.actual_price },
+        data.Tax ? { label: "Tax", value: data.Tax } : "",
       ],
     };
     bookingConfirmationiInfo = {
@@ -64,8 +71,7 @@ const FlightCashout = () => {
       otherInfo,
     };
   }
-  console.log("first");
-  console.log(data);
+
   return (
     <div className="mt-28">
       <BookingSummary
