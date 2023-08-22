@@ -23,6 +23,7 @@ import BlogDetail from "../components/blogs/BlogDetail";
 import BusinessLandingPage from "../pages/businessLanding/BusinessLandingPage";
 import Privacy from "../pages/privacy/Privacy";
 import Contact from "../pages/contact/Contact";
+import Payment from "../pages/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -122,6 +123,10 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:"/payment",
+        element:<Payment/>
+      }
     ],
   },
 ]);

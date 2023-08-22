@@ -131,6 +131,13 @@ const flightApi = apiSlice.injectEndpoints({
         };
       },
     }),
+    getPaymentPage: builder.mutation({
+      query: (postData) => ({
+        url: "/flight-final-checkout",
+        method: "POST",
+        body: JSON.stringify(postData),
+      }),
+    }),
   }),
 });
 
@@ -141,4 +148,5 @@ export const {
   useGetFlightListQuery,
   useGetFlightFilterDataQuery,
   useGetSelectedFlightDataQuery,
+  useGetPaymentPageMutation
 } = flightApi;

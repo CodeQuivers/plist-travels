@@ -17,8 +17,7 @@ const FlightCashout = () => {
   const { data, isLoading, isError } = useGetSelectedFlightDataQuery(
     flightId || skipToken
   );
-  console.log("first cashout page");
-  console.log(data);
+
   let bookingConfirmationiInfo = null;
   if (!isError && data?.onewayFlights) {
     const oneWayFlights = data.onewayFlights;

@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import TravelerInformation from "./TravelerInformation";
 import BookingConfirmation from "./bookingConfirmation/BookingConfirmation";
 import "./booking-summary.css";
 import { useForm, Controller, useFieldArray } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import { useGetPaymentPageMutation } from "../../redux/features/flight/flightApi";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
 
 const BookingSummary = ({
   travelerInfo,
   bookingConfirmationiInfo,
   flightData,
 }) => {
+  const [bookingData, setBookingData] = useState({});
+  const [getPaymentPage, { data: paymentData, isLoading, isError }] =
+    useGetPaymentPageMutation();
   const { register, handleSubmit, control, formState } = useForm();
   const { errors } = formState || {};
   // const { fields, append } = useFieldArray({ name: "person", control });
@@ -17,7 +22,7 @@ const BookingSummary = ({
   //   bookingConfirmationiInfo;
   const createDataToPost = (formData) => {
     const OfferId = flightData.OfferId;
-    const id = flightData.id;
+    const id = flightData.id.toString();
     const passenger = {
       adult: {
         title: formData.adult.map((item) => item.title),
@@ -31,25 +36,46 @@ const BookingSummary = ({
         title: formData.children.map((item) => item.title),
         first_name: formData.children.map((item) => item.first_name),
         last_name: formData.children.map((item) => item.last_name),
-        gender: formData.children.map((item) => item.gender),
+        gender: formData.children.map((item) =>
+          item.gender === "Male" ? "m" : item.gender === "Female" ? "f" : "o"
+        ),
         dob: formData.children.map((item) => item.dob),
         id: formData.children.map((item) => item.id),
       },
       email: formData.email,
       phone: formData.phone,
+      address: formData.address,
+      city: "Dhaka",
       country: formData.country,
     };
     const payment_type = formData.payment_type;
     const redirect_url = import.meta.env.VITE_APP_FLIGHT_CONFIRM_REDIRECT_URL;
+    setBookingData({
+      OfferId,
+      id,
+      passenger,
+      payment_type,
+      redirect_url,
+    });
+    getPaymentPage({
+      OfferId,
+      id,
+      passenger,
+      payment_type,
+      redirect_url,
+    });
   };
   const handleOnSubmit = (formData) => {
     // console.log("6666666666666666666666666666666");
-    // console.log(data);
-    createDataToPost(formData)
+    // console.log(formData);
+    createDataToPost(formData);
   };
-  console.log(errors);
-  return (
-    <div className="max-w-[1170px] mx-auto booking-now">
+  console.log(bookingData);
+  let content = null;
+  if (!isError && paymentData) {
+    content = paymentData;
+  } else {
+    content = (
       <form onSubmit={handleSubmit(handleOnSubmit)}>
         <div className="flex justify-between gap-7">
           <div className="w-7/12">
@@ -69,8 +95,10 @@ const BookingSummary = ({
           </div>
         </div>
       </form>
-    </div>
-  );
+    );
+  }
+
+  return <div className="max-w-[1170px] mx-auto booking-now">{content}</div>;
 };
 
 export default BookingSummary;
