@@ -11,7 +11,7 @@ import cal from "../../../assets/image/tours/icons/calender-black.svg";
 const HotelSearch = () => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
-  const { register, handleSubmit, watch, formState, control } = useForm();
+  const { register, handleSubmit, watch, formState, control, setValue } = useForm();
   const { errors } = formState || {};
 
   const options = [
@@ -29,6 +29,7 @@ const HotelSearch = () => {
     },
   ];
   const onSubmit = (data) => console.log(data);
+  // const dateRana = register("dateRana");
   return (
     <div className="">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -48,17 +49,26 @@ const HotelSearch = () => {
             </lable>
             <div className="flex items-center gap-1.5 gray-border px-3 py-3 text-sm">
               <img src={cal} className="w-[20px] h-[14px]" alt="" />
-              <ReactDatePicker
-                selectsRange={true}
-                startDate={startDate}
-                endDate={endDate}
-                onChange={(update) => {
-                  setDateRange(update);
-                }}
-                isClearable={true}
-                placeholderText="2023/06/27 - 2023/06/29"
-                todayButton="TODAY"
-                monthsShown={2}
+              <Controller
+                name="stayTime"
+                // {...register("dateRana")}
+                control={control}
+                render={({ onChange, formState }) => (
+                  <ReactDatePicker
+                    selectsRange={true}
+                    startDate={startDate}
+                    endDate={endDate}
+                    onChange={(update) => {
+                      setDateRange(update);
+                      setValue('stayTime', update)
+                      
+                    }}
+                    // isClearable={true}
+                    placeholderText="2023/06/27 - 2023/06/29"
+                    todayButton="TODAY"
+                    monthsShown={2}
+                  />
+                )}
               />
             </div>
           </div>
