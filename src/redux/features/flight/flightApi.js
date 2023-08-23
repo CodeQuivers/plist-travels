@@ -131,6 +131,15 @@ const flightApi = apiSlice.injectEndpoints({
         };
       },
     }),
+    recheckFlight: builder.query({
+      query: (flightId) => ({
+        url: "/recheck_flight",
+        params: {
+          action: "recheck_flight",
+          id: flightId,
+        },
+      }),
+    }),
     getPaymentPage: builder.mutation({
       query: (postData) => ({
         url: "/flight-final-checkout",
@@ -148,5 +157,6 @@ export const {
   useGetFlightListQuery,
   useGetFlightFilterDataQuery,
   useGetSelectedFlightDataQuery,
-  useGetPaymentPageMutation
+  useRecheckFlightQuery,
+  useGetPaymentPageMutation,
 } = flightApi;

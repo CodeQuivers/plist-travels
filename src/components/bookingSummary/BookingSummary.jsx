@@ -36,9 +36,7 @@ const BookingSummary = ({
         title: formData.children.map((item) => item.title),
         first_name: formData.children.map((item) => item.first_name),
         last_name: formData.children.map((item) => item.last_name),
-        gender: formData.children.map((item) =>
-          item.gender === "Male" ? "m" : item.gender === "Female" ? "f" : "o"
-        ),
+        gender: formData.children.map((item) => item.gender),
         dob: formData.children.map((item) => item.dob),
         id: formData.children.map((item) => item.id),
       },
@@ -48,7 +46,7 @@ const BookingSummary = ({
       city: "Dhaka",
       country: formData.country,
     };
-    const payment_type = formData.payment_type;
+    const payment_type = formData.payment_type.toLowerCase();
     const redirect_url = import.meta.env.VITE_APP_FLIGHT_CONFIRM_REDIRECT_URL;
     setBookingData({
       OfferId,

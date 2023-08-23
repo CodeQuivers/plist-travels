@@ -67,7 +67,7 @@ const PersonInfo = ({
                       }}
                       options={PERSON_TITLE_OPTIONS}
                       placeholder="Mr."
-                      onChange={(val) => onChange(val[0].label)}
+                      onChange={(val) => onChange(val[0].value)}
                     />
                   )}
                 />
@@ -153,7 +153,7 @@ const PersonInfo = ({
                         padding: "0",
                       }}
                       options={GENDER_OPTIONS}
-                      onChange={(val) => onChange(val[0].label)}
+                      onChange={(val) => onChange(val[0].value)}
                       placeholder="Male"
                     />
                   )}

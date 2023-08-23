@@ -4,7 +4,10 @@ import LongArrowRight from "../../assets/image/flight/icons/Long-arrow-right.svg
 import Security from "../../assets/image/flight/icons/Security.svg";
 import { useParams } from "react-router-dom";
 import BookingSummary from "../../components/bookingSummary/BookingSummary";
-import { useGetSelectedFlightDataQuery } from "../../redux/features/flight/flightApi";
+import {
+  useGetSelectedFlightDataQuery,
+  useRecheckFlightQuery,
+} from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import moment from "moment/moment";
 import { getTimeInHoursMinutes } from "../../utils/timeCoversion";
@@ -14,8 +17,9 @@ const bookedItemImg =
 
 const FlightCashout = () => {
   const { flightId } = useParams();
+  const { isSuccess } = useRecheckFlightQuery(flightId || skipToken);
   const { data, isLoading, isError } = useGetSelectedFlightDataQuery(
-    flightId || skipToken
+    isSuccess ? flightId : skipToken
   );
 
   let bookingConfirmationiInfo = null;

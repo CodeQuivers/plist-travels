@@ -1,14 +1,14 @@
 export const PERSON_TITLE_OPTIONS = [
   {
-    value: 1,
+    value: 'mr',
     label: "Mr.",
   },
   {
-    value: 2,
+    value: 'ms',
     label: "Ms.",
   },
   {
-    value: 3,
+    value: 'mrs',
     label: "Mrs.",
   },
 ];
