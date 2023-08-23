@@ -7,6 +7,7 @@ import { useForm, Controller } from "react-hook-form";
 
 // import calenderBlackIcon from "../.../../assets/image/tours/icons/calender-black.svg";
 import cal from "../../../assets/image/tours/icons/calender-black.svg";
+import GuestDropdown from "../../shared/guestDropdown/GuestDropdown";
 
 const HotelSearch = () => {
   const [dateRange, setDateRange] = useState([null, null]);
@@ -72,7 +73,7 @@ const HotelSearch = () => {
               />
             </div>
           </div>
-          <div className="w-full">
+          {/* <div className="w-full">
             <h5 className="font-medium">Guests</h5>
             <div>
               <Select
@@ -87,6 +88,15 @@ const HotelSearch = () => {
                 options={options}
                 placeholder="1 Room(s) - 1 Guest(s)"
               />
+            </div>
+          </div> */}
+          <div className="w-[250px] flex flex-col gap-1.5">
+            <lable className="text-base font-semibold text-[#0D233E]">
+            Guests
+            </lable>
+            <div className="flex items-center gap-1.5 gray-border px-3 py-3 text-sm">
+              <input disabled type="text" placeholder="1 Room - 2 Guests"/>
+              {/* <GuestDropdown/> */}
             </div>
           </div>
           <div className="w-[250px]">
