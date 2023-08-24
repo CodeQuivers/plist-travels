@@ -9,11 +9,24 @@ import { useForm, Controller } from "react-hook-form";
 import cal from "../../../assets/image/tours/icons/calender-black.svg";
 import GuestDropdown from "../../shared/guestDropdown/GuestDropdown";
 import ErrorAlert from "../../shared/alert/ErrorAlert";
+import { useGetHotelSearchSessionQuery } from "../../../redux/features/hotel/hotelApi";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
+import { useDispatch } from "react-redux";
+import { setHotelSearchParams } from "../../../redux/features/hotel/hotelSearchSlice";
+import moment from "moment/moment";
+import { dateReverse } from "../../../utils/dateReverse";
 
-const HotelSearch = () => {
+const HotelSearchForm = () => {
+  const dispatch = useDispatch();
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [showGuestDropdown, setShowGuestDropdown] = useState(false);
+  const [regionId, setRegionId] = useState("");
+  const {
+    data: searchSessionData,
+    isLoading,
+    isError,
+  } = useGetHotelSearchSessionQuery(regionId || skipToken);
   const {
     register,
     handleSubmit,
@@ -32,9 +45,31 @@ const HotelSearch = () => {
   });
   const { errors } = formState || {};
 
-  const onSubmit = (data) => console.log(data);
-  // const dateRana = register("dateRana");
-  console.log(errors);
+  const onSubmit = (data) => {
+    console.log(data);
+    const regionId = data?.location?.value;
+    const destination = data.location.label.split(",")[0];
+    const checkIn = dateReverse(moment(data.stayTime[0]).format('L'))
+    const checkOut = dateReverse(moment(data.stayTime[1]).format('L'))
+    const rooms = data.rooms;
+    const adults = data.guest.map((item) => item.adult).join(",");
+    const childs = data.guest.map((item) => item.child).join(",");
+    const page_number = 1;
+    setRegionId(data?.location?.value);
+
+    dispatch(
+      setHotelSearchParams({
+        regionId,
+        destination,
+        checkIn,
+        checkOut,
+        rooms,
+        adults,
+        childs,
+        page_number,
+      })
+    );
+  };
   return (
     <div className="">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -70,6 +105,7 @@ const HotelSearch = () => {
                     placeholderText="2023/06/27 - 2023/06/29"
                     todayButton="TODAY"
                     monthsShown={2}
+                    dateFormat={'yyyy/MM/dd'}
                   />
                 )}
               />
@@ -111,4 +147,4 @@ const HotelSearch = () => {
   );
 };
 
-export default HotelSearch;
+export default HotelSearchForm;

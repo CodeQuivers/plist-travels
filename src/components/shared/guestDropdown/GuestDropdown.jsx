@@ -32,7 +32,7 @@ const GuestDropdown = ({
     }
   };
   return (
-    <div className="relative ">
+    <div className="relative z-20">
       <div className="absolute p-2 drop-shadow-md rounded bg-white mt-3 flex flex-col gap-5">
         <div className="flex justify-between gap-4">
           <p>Rooms</p>

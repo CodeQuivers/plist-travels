@@ -1,6 +1,7 @@
 import HotelFaq from "../../components/hotel/HotelFaq";
 import HotelBanner from "../../components/hotel/hotelBanner/HotelBanner";
-import HotelSearch from "../../components/hotel/hotelSearch/HotelSearch";
+import HotelSearchForm from "../../components/hotel/hotelSearch/HotelSearchForm";
+// import HotelSearch from "../../components/hotel/hotelSearch/HotelSearchForm";
 import HotelExploreCards from "../../components/hotel/landingCards/HotelExploreCards";
 import NearLogos from "../../components/hotel/landingCards/NearLogos";
 import VarietyOfStaysCard from "../../components/hotel/landingCards/VarietyOfStaysCard";
@@ -12,7 +13,7 @@ const Hotel = () => {
   return (
     <section className="max-w-[1170px] mx-auto ">
       {/* Search Hotel */}
-      <HotelSearch />
+      <HotelSearchForm />
       {/* hotel explore*/}
       <HotelExploreCards />
       <HotelBanner />

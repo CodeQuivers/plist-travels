@@ -1,4 +1,5 @@
 import { apiSlice } from "../apiSlice";
+import { setHotelSearchSession } from "./hotelSearchSlice";
 
 const hotelApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -14,7 +15,23 @@ const hotelApi = apiSlice.injectEndpoints({
         };
       },
     }),
+    getHotelSearchSession: builder.query({
+      query: (regionId) => ({
+        url: "/get_search_id",
+        params: {
+          regionid: regionId,
+        },
+      }),
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;          
+          dispatch(setHotelSearchSession(data.search_id));
+        } catch (err) {
+          console.log(err);
+        }
+      },
+    }),
   }),
 });
 
-export const { useGetHotelLocationsQuery } = hotelApi;
+export const { useGetHotelLocationsQuery, useGetHotelSearchSessionQuery } = hotelApi;
