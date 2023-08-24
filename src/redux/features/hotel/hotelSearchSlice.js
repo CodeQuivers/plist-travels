@@ -10,6 +10,7 @@ const initialState = {
   childs: "",
   childAge: null,
   search_session: "",
+  page_number:1
 };
 
 const hotelSearchSlice = createSlice({

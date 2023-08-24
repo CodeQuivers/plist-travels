@@ -24,14 +24,33 @@ const hotelApi = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled;          
+          const { data } = await queryFulfilled;
           dispatch(setHotelSearchSession(data.search_id));
         } catch (err) {
           console.log(err);
         }
       },
     }),
+    getSearchedHotelList: builder.query({
+      query: (queryParams) => {
+        // console.log(queryParams)
+        const params = {
+          action: "set_hotel_list",
+          ...queryParams
+        };
+        console.log("request params")
+        console.log(params)
+        return {
+          url: "/set_hotel_list",
+          params: params,
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetHotelLocationsQuery, useGetHotelSearchSessionQuery } = hotelApi;
+export const {
+  useGetHotelLocationsQuery,
+  useGetHotelSearchSessionQuery,
+  useGetSearchedHotelListQuery,
+} = hotelApi;
