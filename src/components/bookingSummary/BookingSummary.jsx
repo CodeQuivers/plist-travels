@@ -7,6 +7,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useGetPaymentPageMutation } from "../../redux/features/flight/flightApi";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 
+
 const BookingSummary = ({
   travelerInfo,
   bookingConfirmationiInfo,
@@ -71,7 +72,11 @@ const BookingSummary = ({
   console.log(bookingData);
   let content = null;
   if (!isError && paymentData) {
-    content = paymentData;
+    // content = paymentData;
+    console.log("printing .........")
+    console.log(paymentData)
+    const redirectUrl = paymentData.redirect_page;
+    window.location.href = redirectUrl
   } else {
     content = (
       <form onSubmit={handleSubmit(handleOnSubmit)}>

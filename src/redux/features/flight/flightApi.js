@@ -142,10 +142,22 @@ const flightApi = apiSlice.injectEndpoints({
     }),
     getPaymentPage: builder.mutation({
       query: (postData) => ({
-        url: "/flight-final-checkout",
-        method: "POST",
-        body: JSON.stringify(postData),
+        url: "/api/flight-final-checkout",
+        method: 'POST',
+        body: postData,
       }),
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const response = await queryFulfilled;
+          console.log('ON query started%%%%%%%%%%%%%%%%%%%')
+          console.log(response)
+          
+        } catch (err) {
+          console.log(err);
+          console.log(err.meta.response.url)
+          window.location.replace(err.meta.response.url);
+        }
+      },
     }),
   }),
 });
