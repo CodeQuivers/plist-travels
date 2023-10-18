@@ -46,11 +46,12 @@ const HotelSearchForm = () => {
   const { errors } = formState || {};
 
   const onSubmit = (data) => {
+    console.log("I am in the on submit ...........");
     console.log(data);
     const regionId = data?.location?.value;
     const destination = data.location.label.split(",")[0];
-    const checkIn = dateReverse(moment(data.stayTime[0]).format('L'))
-    const checkOut = dateReverse(moment(data.stayTime[1]).format('L'))
+    const checkIn = dateReverse(moment(data.stayTime[0]).format("L"));
+    const checkOut = dateReverse(moment(data.stayTime[1]).format("L"));
     const rooms = data.rooms;
     const adults = data.guest.map((item) => item.adult).join(",");
     const childs = data.guest.map((item) => item.child).join(",");
@@ -105,7 +106,7 @@ const HotelSearchForm = () => {
                     placeholderText="2023/06/27 - 2023/06/29"
                     todayButton="TODAY"
                     monthsShown={2}
-                    dateFormat={'yyyy/MM/dd'}
+                    dateFormat={"yyyy/MM/dd"}
                   />
                 )}
               />
@@ -117,7 +118,10 @@ const HotelSearchForm = () => {
               Guests
             </lable>
             <div className="gap-1.5 gray-border px-3 py-3 text-sm">
-              <button onClick={() => setShowGuestDropdown(!showGuestDropdown)}>
+              <button
+                type="button"
+                onClick={() => setShowGuestDropdown(!showGuestDropdown)}
+              >
                 {getValues("rooms")} Room(s) - {getValues("totalGuest")}{" "}
                 Guest(s)
               </button>
@@ -128,6 +132,7 @@ const HotelSearchForm = () => {
                   setValue={setValue}
                   getValues={getValues}
                   control={control}
+                  setShowGuestDropdown={setShowGuestDropdown}
                 />
               )}
             </div>

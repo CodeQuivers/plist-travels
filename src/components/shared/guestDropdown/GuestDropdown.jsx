@@ -7,6 +7,7 @@ const GuestDropdown = ({
   setValue,
   control,
   getValues,
+  setShowGuestDropdown,
 }) => {
   const fieldArrayName = "guest";
   const { fields, append, remove } = useFieldArray({
@@ -15,20 +16,19 @@ const GuestDropdown = ({
   });
   const handleNumberOfRoomChange = (flag) => {
     const numOfRoom = parseInt(getValues("rooms"));
-    const totalGuest = parseInt(getValues('totalGuest'));
+    const totalGuest = parseInt(getValues("totalGuest"));
     if (flag && numOfRoom < 4) {
       setValue("rooms", numOfRoom + 1);
       append({
         adult: 1,
         child: 0,
       });
-      setValue('totalGuest', totalGuest+1)
+      setValue("totalGuest", totalGuest + 1);
     }
     if (!flag && numOfRoom > 1) {
       remove(numOfRoom - 1);
       setValue("rooms", numOfRoom - 1);
-      setValue('totalGuest', totalGuest-1)
-
+      setValue("totalGuest", totalGuest - 1);
     }
   };
   return (
@@ -38,6 +38,7 @@ const GuestDropdown = ({
           <p>Rooms</p>
           <p className="flex text-base gap-2 justify-between items-center">
             <button
+              type="button"
               className="bg-gray-200 rounded-full text-center w-6 h-6"
               onClick={() => handleNumberOfRoomChange(false)}
             >
@@ -46,6 +47,7 @@ const GuestDropdown = ({
             <input className="hidden" type="number" {...register("rooms")} />
             <span>{getValues("rooms")}</span>
             <button
+              type="button"
               className="bg-gray-200 rounded-full text-center w-6 h-6"
               onClick={() => handleNumberOfRoomChange(true)}
             >
@@ -65,9 +67,7 @@ const GuestDropdown = ({
             fieldArrayName={fieldArrayName}
           />
         ))}
-        <button
-        //   onClick={setIsOpen(false)}
-        >
+        <button type="button" onClick={() => setShowGuestDropdown(false)}>
           Close
         </button>
       </div>

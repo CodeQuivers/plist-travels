@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const GuestDetail = ({
   register,
@@ -18,6 +18,7 @@ const GuestDetail = ({
   //       setValue(variableName, variableValue - 1);
   //     }
   //   };
+  const [testState, setTestState] = useState(0);
   const handleOnClick = (isIncrement, propName) => {
     const filedName = `${fieldArrayName}.${idx}.${propName}`;
     const fieldValue = parseInt(getValues(filedName));
@@ -28,6 +29,7 @@ const GuestDetail = ({
     }
     if (isIncrement && fieldValue < 4) {
       setValue(filedName, fieldValue + 1);
+      setTestState(fieldValue + 1);
       setValue("totalGuest", totalGuest + 1);
     }
   };
@@ -45,15 +47,18 @@ const GuestDetail = ({
         <p>Adults</p>
         <p className="flex gap-2 text-base">
           <button
+            type="button"
             onClick={() => handleOnClick(false, ADULT)}
             className="bg-gray-200 rounded-full text-center w-6 h-6"
           >
             -
           </button>
           <span className="w-4 text-center ">
-            {getValues(`${fieldArrayName}.${idx}.adult`)}
+            {/* {getValues(`${fieldArrayName}.${idx}.adult`)} */}
+            {testState}
           </span>
           <button
+            type="button"
             onClick={() => handleOnClick(true, ADULT)}
             className="bg-gray-200 rounded-full text-center w-6 h-6"
           >
@@ -65,6 +70,7 @@ const GuestDetail = ({
         <p>Child</p>
         <p className="flex gap-2 text-base">
           <button
+            type="button"
             onClick={() => handleOnClick(false, CHILD)}
             className="bg-gray-200 rounded-full text-center w-6 h-6"
           >
@@ -74,6 +80,7 @@ const GuestDetail = ({
             {getValues(`${fieldArrayName}.${idx}.child`)}
           </span>
           <button
+            type="button"
             onClick={() => handleOnClick(true, CHILD)}
             className="bg-gray-200 rounded-full text-center w-6 h-6"
           >
