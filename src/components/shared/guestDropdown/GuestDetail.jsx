@@ -10,15 +10,10 @@ const GuestDetail = ({
 }) => {
   const ADULT = "adult";
   const CHILD = "child";
+  
+  const [numOfChild, setNumofChild] = useState(getValues(`${fieldArrayName}.${idx}.child`));
+  const [numOfAdult, setNumOfAdult] = useState(getValues(`${fieldArrayName}.${idx}.adult`));
 
-  //   const handleOnClick = (isIncrement, variableName) => {
-  //     const filedName = `${fieldArrayName}.${idx}.${variableName}`;
-  //     const variableValue = parseInt(getValues(variableName));
-  //     if (variableValue > 1) {
-  //       setValue(variableName, variableValue - 1);
-  //     }
-  //   };
-  const [testState, setTestState] = useState(0);
   const handleOnClick = (isIncrement, propName) => {
     const filedName = `${fieldArrayName}.${idx}.${propName}`;
     const fieldValue = parseInt(getValues(filedName));
@@ -26,11 +21,24 @@ const GuestDetail = ({
     if (!isIncrement && fieldValue > 1) {
       setValue(filedName, fieldValue - 1);
       setValue("totalGuest", totalGuest - 1);
+
+      if(propName===ADULT){
+        setNumOfAdult(fieldValue-1);
+      }
+      else if(propName===CHILD){
+        setNumofChild(fieldValue-1);
+      }
     }
     if (isIncrement && fieldValue < 4) {
       setValue(filedName, fieldValue + 1);
-      setTestState(fieldValue + 1);
       setValue("totalGuest", totalGuest + 1);
+
+      if(propName===ADULT){
+        setNumOfAdult(fieldValue+1);
+      }
+      else if(propName===CHILD){
+        setNumofChild(fieldValue+1);
+      }
     }
   };
   return (
@@ -55,7 +63,7 @@ const GuestDetail = ({
           </button>
           <span className="w-4 text-center ">
             {/* {getValues(`${fieldArrayName}.${idx}.adult`)} */}
-            {testState}
+            {numOfAdult}
           </span>
           <button
             type="button"
@@ -77,7 +85,8 @@ const GuestDetail = ({
             -
           </button>
           <span className="w-4 text-center ">
-            {getValues(`${fieldArrayName}.${idx}.child`)}
+            {/* {getValues(`${fieldArrayName}.${idx}.child`)} */}
+            {numOfChild}
           </span>
           <button
             type="button"

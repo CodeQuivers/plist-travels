@@ -14,23 +14,24 @@ const GuestDropdown = ({
     name: fieldArrayName,
     control,
   });
+
   const handleNumberOfRoomChange = (flag) => {
     const numOfRoom = parseInt(getValues("rooms"));
-    const totalGuest = parseInt(getValues("totalGuest"));
     if (flag && numOfRoom < 4) {
       setValue("rooms", numOfRoom + 1);
       append({
         adult: 1,
         child: 0,
       });
-      setValue("totalGuest", totalGuest + 1);
     }
     if (!flag && numOfRoom > 1) {
       remove(numOfRoom - 1);
       setValue("rooms", numOfRoom - 1);
-      setValue("totalGuest", totalGuest - 1);
     }
+    const totalGuest = getValues("guest").reduce((total, obj) => total + obj.child + obj.adult, 0);
+    setValue("totalGuest", totalGuest);
   };
+  
   return (
     <div className="relative z-20">
       <div className="absolute p-2 drop-shadow-md rounded bg-white mt-3 flex flex-col gap-5">
