@@ -9,7 +9,7 @@ const initialState = {
   adults: "",
   childs: "",
   childAge: null,
-  search_session: "",
+  search_id: "",
   page_number:1
 };
 
