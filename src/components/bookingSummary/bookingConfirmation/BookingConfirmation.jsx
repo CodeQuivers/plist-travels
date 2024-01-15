@@ -39,7 +39,7 @@ const BookingConfirmation = ({
         <GrayDivider />
 
         {/* Reservation Period */}
-        <BookingPeriod {...reservationPeriod} />
+        <BookingPeriod reservationPeriod={reservationPeriod} />
 
         <GrayDivider />
 
@@ -51,7 +51,9 @@ const BookingConfirmation = ({
       </div>
       <div className="w-11/12 flex flex-col gap-5">
         <div className="w-full">
-          <button className="w-full py-4 rounded-md text-bold text-white old-logo-color">
+          <button 
+          type="submit"
+          className="w-full py-4 rounded-md text-bold text-white old-logo-color">
             Book Now
           </button>
         </div>

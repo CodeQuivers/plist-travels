@@ -1,0 +1,27 @@
+.flight-form .select__control{
+    border: 0;
+    box-shadow: none;
+}
+
+.flight-form .select__indicator, .select__indicator-separator {
+    display:none;
+} 
+.flight-form .css-13cymwt-control{
+    min-height: auto;
+}
+.flight-form .css-13cymwt-control{
+    min-height: fit-content;
+}
+.flight-form .select__value-container{
+    padding: 0;
+    margin: 0;
+}
+.flight-form .select__input-container{
+    padding: 0;
+    margin: 0;
+}
+.flight-form .select__control:hover{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
