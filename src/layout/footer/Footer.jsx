@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import footerlogo from "../../assets/image/footer/footer-logo.png";
-import "./footer.css";
+import footerLogo from "../../assets/image/footer/footer-logo.png";
 import phone from "../../assets/image/home/phone.png";
 import bankNote from "../../assets/image/home/banknote.png";
 import closePayment from "../../assets/image/home/x.png";
@@ -46,7 +45,7 @@ const Footer = () => {
       <div className="footer-1 ">
         <div className="container mx-auto">
           <div className="box-1">
-            <img src={footerlogo} alt="" className="w-[58px] h-[52px]" />
+            <img src={footerLogo} alt="" className="w-[58px] h-[52px]" />
             <p className="footer-2">
               Explore some of the most trendy cities and local areas in Nigeria
               to visit. Whether you need to go on a family vacation, a business
@@ -126,7 +125,7 @@ const Footer = () => {
           <h1 className="rights">© 2023 . All rights reserved.</h1>
           <div className="flex gap-3 terms">
             <p>Terms</p>
-            <p>Privecy</p>
+            <p>Privacy</p>
             <p>Cookies</p>
           </div>
         </div>
